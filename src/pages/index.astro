@@ -2,59 +2,100 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Agentes de IA e Industria 4.0">
+<Layout title="MADECEM | Agentes de IA e Industria 4.0">
     <main class="relative isolate bg-[#020617]">
         
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-60" aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0ea5e9] to-[#2563eb] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
         </div>
 
-        <div class="mx-auto max-w-7xl px-6 pb-24 pt-4 sm:pb-32 lg:flex lg:px-8 lg:py-20 items-center gap-12">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0">
-                <div class="mt-4 sm:mt-8 lg:mt-0">
-                    <span class="rounded-full bg-blue-500/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-400 ring-1 ring-inset ring-blue-500/20">
-                        MADECEM 2026: Inteligencia Aplicada
-                    </span>
+        <section class="relative mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:px-8 lg:py-24 overflow-hidden">
+            <div id="hero-carousel" class="relative">
+                
+                <div class="carousel-slide flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000">
+                    <div class="lg:w-1/2 lg:flex-shrink-0">
+                        <span class="rounded-full bg-blue-500/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-400 ring-1 ring-inset ring-blue-500/20">
+                            Eficiencia Autónoma
+                        </span>
+                        <h1 class="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                            IA que <span class="text-blue-500 text-glow">elimina</span> tus costes de inactividad.
+                        </h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                            No esperes a que tus operarios detecten el cuello de botella. Nuestros agentes autónomos toman decisiones en milisegundos para mantener tu planta al 100% de su capacidad.
+                        </p>
+                        <div class="mt-10 flex items-center gap-x-6">
+                            <a href="mailto:info@madecem.com?subject=Interés: Despliegue de Agentes IA&body=Hola Madecem, quiero eliminar las ineficiencias de mi planta. Contadme más sobre los Agentes Autónomos." 
+                               class="rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:scale-105 transition-all">
+                                Desplegar mi Agente IA
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 flex justify-center relative">
+                        <img src="/hero-ia.webp" alt="IA Industrial MADECEM" class="w-full max-w-[500px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover" />
+                    </div>
                 </div>
 
-                <h1 class="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                    La Inteligencia que <span class="text-blue-500 text-glow">mueve</span> tu industria.
-                </h1>
+                <div class="carousel-slide hidden flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000">
+                    <div class="lg:w-1/2 lg:flex-shrink-0">
+                        <span class="rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-semibold leading-6 text-emerald-400 ring-1 ring-inset ring-emerald-500/20">
+                            Control de Calidad 4.0
+                        </span>
+                        <h2 class="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                            Si tu ojo falla, <span class="text-emerald-500 text-glow">nuestra IA no</span>.
+                        </h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                            Inspección automática con precisión quirúrgica. Detecta defectos invisibles al ojo humano y garantiza que ni un solo producto defectuoso salga de tu cadena.
+                        </p>
+                        <div class="mt-10 flex items-center gap-x-6">
+                            <a href="mailto:info@madecem.com?subject=Interés: Visión Artificial Industrial&body=Hola Madecem, me interesa mejorar mi control de calidad con visión artificial. ¿Cómo podemos empezar?" 
+                               class="rounded-md bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-500 hover:scale-105 transition-all">
+                                Implementar Visión Artificial
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 flex justify-center relative">
+                        <img src="/hero-vision.webp" alt="Visión Artificial MADECEM" class="w-full max-w-[500px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover" />
+                        <div class="absolute -inset-4 bg-emerald-500/10 blur-2xl -z-10 rounded-full"></div>
+                    </div>
+                </div>
 
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                    Implementamos agentes de IA autónomos diseñados para optimizar plantas de producción, reducir tiempos muertos y escalar tu software al nivel de la Industria 4.0. 
-                </p>
+                <div class="carousel-slide hidden flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000">
+                    <div class="lg:w-1/2 lg:flex-shrink-0">
+                        <span class="rounded-full bg-purple-500/10 px-3 py-1 text-sm font-semibold leading-6 text-purple-400 ring-1 ring-inset ring-purple-500/20">
+                            Mantenimiento Inteligente
+                        </span>
+                        <h2 class="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                            Deja de reparar. <span class="text-purple-500 text-glow">Anticípate</span> al fallo.
+                        </h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                            Utilizamos Deep Learning para predecir averías semanas antes de que ocurran. Convierte el mantenimiento reactivo en una ventaja competitiva de ahorro masivo.
+                        </p>
+                        <div class="mt-10 flex items-center gap-x-6">
+                            <a href="mailto:info@madecem.com?subject=Interés: Análisis Predictivo y Mantenimiento&body=Hola Madecem, quiero reducir mis costes de mantenimiento. Me gustaría saber más sobre vuestro análisis predictivo." 
+                               class="rounded-md bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/30 hover:bg-purple-500 hover:scale-105 transition-all">
+                                Activar Mantenimiento Predictivo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 flex justify-center relative">
+                        <img src="/hero-predictivo.webp" alt="Análisis Predictivo MADECEM" class="w-full max-w-[500px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover" />
+                        <div class="absolute -inset-4 bg-purple-500/10 blur-2xl -z-10 rounded-full"></div>
+                    </div>
+                </div>
 
-                <div class="mt-10 flex items-center gap-x-6">
-                    <a href="mailto:info@madecem.com?subject=Solicitud%20de%20información:%20Despliegue%20de%20Agente%20IA&body=Hola%20equipo%20de%20MADECEM,%0D%0A%0D%0AMe%20gustaría%20recibir%20más%20información%20sobre%20el%20despliegue%20de%20agentes%20de%20IA%20para%20mi%20empresa.%0D%0A%0D%0AMis%20datos%20de%20contacto%20son:%0D%0A-%20Nombre:%0D%0A-%20Empresa:%0D%0A-%20Teléfono:%0D%0A%0D%0AUn%20saludo." 
-                       class="rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:scale-105 transition-all">
-                        Desplegar mi Agente IA
-                    </a>
-                    <a href="#servicios" class="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors">
-                        Ver servicios <span aria-hidden="true">→</span>
-                    </a>
+                <div class="mt-12 flex justify-center gap-3">
+                    <button class="dot h-1.5 w-8 rounded-full bg-blue-600 transition-all"></button>
+                    <button class="dot h-1.5 w-8 rounded-full bg-white/20 transition-all"></button>
+                    <button class="dot h-1.5 w-8 rounded-full bg-white/20 transition-all"></button>
                 </div>
             </div>
-
-            <div class="mt-12 lg:mt-0 lg:flex-auto flex justify-center">
-                <div class="relative w-full max-w-lg lg:max-w-none">
-                    <img 
-                        src="/hero-ia.png" 
-                        alt="IA Industrial MADECEM" 
-                        class="w-full max-w-[450px] lg:max-w-[550px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover"
-                    />
-                    <div class="absolute -inset-4 bg-blue-500/20 blur-2xl -z-10 rounded-full"></div>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <section id="servicios" class="py-24 sm:py-32 bg-black/40 border-y border-white/5 relative overflow-hidden">
             <div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
                 <div class="mx-auto max-w-2xl lg:text-center mb-16">
                     <h2 class="text-base font-semibold leading-7 text-blue-500 uppercase tracking-widest">Capacidades</h2>
-                    <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                        Soluciones de Grado Industrial
-                    </p>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Soluciones de Grado Industrial</p>
                 </div>
 
                 <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -136,7 +177,6 @@ import Layout from '../layouts/Layout.astro';
                         <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Tecnología con propósito industrial</p>
                         <div class="mt-6 text-lg leading-8 text-gray-300 space-y-6">
                             <p>En MADECEM, entendemos el lenguaje de las máquinas para democratizar el acceso a los Agentes de IA industriales. No solo instalamos software; transformamos operativas.</p>
-                            
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3">
                                     <span class="text-blue-500 font-bold text-xl">✓</span>
@@ -153,7 +193,7 @@ import Layout from '../layouts/Layout.astro';
                             </ul>
                             
                             <div class="pt-8">
-                                <a href="mailto:info@madecem.com?subject=Solicitud%20de%20información:%20Comenzar%20Transformación&body=Hola%20equipo%20de%20MADECEM,%0D%0A%0D%0AEstoy%20interesado%20en%20comenzar%20la%20transformación%20digital%20de%20mi%20industria.%0D%0A%0D%0APor%20favor,%20contactadme%20para%20una%20reunión%20inicial." 
+                                <a href="mailto:info@madecem.com?subject=Solicitud de información: Comenzar Transformación" 
                                    class="inline-flex items-center gap-x-2 rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-600/20 hover:bg-blue-500 hover:scale-105 transition-all group">
                                     Comenzar transformación
                                     <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
@@ -168,14 +208,13 @@ import Layout from '../layouts/Layout.astro';
         <footer class="bg-[#010409] border-t border-white/5 pt-16 pb-8">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                    
                     <div class="space-y-8">
                         <div class="flex items-center gap-3">
                             <img src="/logo-madecem.png" alt="Logo MADECEM" class="h-12 w-auto rounded-lg shadow-lg shadow-blue-500/10">
                             <span class="text-2xl font-bold tracking-tighter uppercase text-white">Madecem</span>
                         </div>
                         <p class="text-sm leading-7 text-gray-400 max-w-sm">
-                            Especialistas en la convergencia entre la ingeniería operativa y la inteligencia artificial avanzada. En MADECEM transformamos plantas industriales convencionales en ecosistemas autónomos mediante el despliegue de agentes inteligentes y sistemas de visión artificial.
+                            Especialistas en la convergencia entre la ingeniería operativa y la inteligencia artificial avanzada. Transformamos plantas convencionales en ecosistemas autónomos.
                         </p>
                     </div>
 
@@ -187,39 +226,19 @@ import Layout from '../layouts/Layout.astro';
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Visión Artificial</a></li>
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Software Industrial</a></li>
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Análisis Predictivo</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Mantenimiento 4.0</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Consultoría Digital</a></li>
                             </ul>
                         </div>
-
                         <div>
                             <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Contacto</h3>
                             <ul role="list" class="mt-6 space-y-4">
-                                <li class="text-sm leading-6 text-gray-400 flex items-center gap-2">
-                                    <span class="text-blue-500">📧</span> info@madecem.com
-                                </li>
-                                <li class="text-sm leading-6 text-gray-400 flex items-center gap-2">
-                                    <span class="text-blue-500">📍</span> España · Soporte Global
-                                </li>
-                                <li class="pt-4">
-                                    <a href="mailto:info@madecem.com?subject=Solicitud%20de%20Presupuesto%20Industrial&body=Hola%20equipo%20de%20MADECEM,%0D%0A%0D%0ANos%20gustaría%20solicitar%20un%20estudio%20previo%20para%20la%20implementación%20de%20soluciones%20IA%20en%20nuestras%20instalaciones." class="inline-block rounded-md bg-blue-600/10 px-4 py-2 text-sm font-bold text-blue-400 ring-1 ring-inset ring-blue-500/20 hover:bg-blue-600 hover:text-white transition-all">
-                                        Solicitar Presupuesto Industrial &rarr;
-                                    </a>
-                                </li>
+                                <li class="text-sm leading-6 text-gray-400">📧 info@madecem.com</li>
+                                <li class="text-sm leading-6 text-gray-400">📍 España · Soporte Global</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <div class="mt-16 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-xs leading-5 text-gray-500">
-                        &copy; 2026 MADECEM S.L. Inteligencia Aplicada a la Industria.
-                    </p>
-                    <div class="flex gap-6">
-                        <span class="text-[10px] text-gray-600 uppercase tracking-[0.2em]">Innovación</span>
-                        <span class="text-[10px] text-gray-600 uppercase tracking-[0.2em]">Autonomía</span>
-                        <span class="text-[10px] text-gray-600 uppercase tracking-[0.2em]">Eficiencia</span>
-                    </div>
+                <div class="mt-16 border-t border-white/5 pt-8 text-center">
+                    <p class="text-xs leading-5 text-gray-500">&copy; 2026 MADECEM S.L. Inteligencia Aplicada a la Industria.</p>
                 </div>
             </div>
         </footer>
@@ -231,4 +250,42 @@ import Layout from '../layouts/Layout.astro';
     .text-glow {
         text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     }
+    .carousel-slide {
+        animation: fadeIn 0.8s ease-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
 </style>
+
+<script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('hidden', i !== index);
+            dots[i].classList.toggle('bg-blue-600', i === index);
+            dots[i].classList.toggle('bg-white/20', i !== index);
+            dots[i].style.width = i === index ? '2rem' : '0.5rem';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Cambio automático cada 6 segundos
+    setInterval(nextSlide, 6000);
+
+    // Permitir clic en los puntitos
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentSlide = i;
+            showSlide(currentSlide);
+        });
+    });
+</script>
