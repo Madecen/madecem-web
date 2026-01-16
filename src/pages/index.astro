@@ -26,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="mt-10 flex items-center gap-x-6">
                             <a href="mailto:info@madecem.com?subject=Interés: Despliegue de Agentes IA&body=Hola Madecem, quiero eliminar las ineficiencias de mi planta. Contadme más sobre los Agentes Autónomos." 
                                class="rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:scale-105 transition-all">
-                                Desplegar mi Agente IA
+                                 Desplegar mi Agente IA
                             </a>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="mt-10 flex items-center gap-x-6">
                             <a href="mailto:info@madecem.com?subject=Interés: Visión Artificial Industrial&body=Hola Madecem, me interesa mejorar mi control de calidad con visión artificial. ¿Cómo podemos empezar?" 
                                class="rounded-md bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-500 hover:scale-105 transition-all">
-                                Implementar Visión Artificial
+                                 Implementar Visión Artificial
                             </a>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="mt-10 flex items-center gap-x-6">
                             <a href="mailto:info@madecem.com?subject=Interés: Análisis Predictivo y Mantenimiento&body=Hola Madecem, quiero reducir mis costes de mantenimiento. Me gustaría saber más sobre vuestro análisis predictivo." 
                                class="rounded-md bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/30 hover:bg-purple-500 hover:scale-105 transition-all">
-                                Activar Mantenimiento Predictivo
+                                 Activar Mantenimiento Predictivo
                             </a>
                         </div>
                     </div>
@@ -226,13 +226,20 @@ import Layout from '../layouts/Layout.astro';
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Visión Artificial</a></li>
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Software Industrial</a></li>
                                 <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Análisis Predictivo</a></li>
+                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Mantenimiento Evolutivo</a></li>
+                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Consultoría 4.0</a></li>
                             </ul>
                         </div>
                         <div>
                             <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Contacto</h3>
                             <ul role="list" class="mt-6 space-y-4">
-                                <li class="text-sm leading-6 text-gray-400">📧 info@madecem.com</li>
+                                <li class="text-sm leading-6 text-gray-400 hover:text-white transition-colors">📧 <a href="mailto:info@madecem.com">info@madecem.com</a></li>
                                 <li class="text-sm leading-6 text-gray-400">📍 España · Soporte Global</li>
+                                <li class="pt-4">
+                                    <a href="#hero-carousel" class="text-xs font-medium text-blue-500 hover:text-blue-400 flex items-center gap-1">
+                                        Volver arriba ↑
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -269,7 +276,7 @@ import Layout from '../layouts/Layout.astro';
             slide.classList.toggle('hidden', i !== index);
             dots[i].classList.toggle('bg-blue-600', i === index);
             dots[i].classList.toggle('bg-white/20', i !== index);
-            dots[i].style.width = i === index ? '2rem' : '0.5rem';
+            (dots[i] as HTMLElement).style.width = i === index ? '2rem' : '0.5rem';
         });
     }
 
@@ -278,10 +285,8 @@ import Layout from '../layouts/Layout.astro';
         showSlide(currentSlide);
     }
 
-    // Cambio automático cada 6 segundos
     setInterval(nextSlide, 6000);
 
-    // Permitir clic en los puntitos
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
             currentSlide = i;
