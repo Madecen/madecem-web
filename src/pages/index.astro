@@ -215,40 +215,64 @@ import Layout from '../layouts/Layout.astro';
 
         <footer class="bg-[#010409] border-t border-white/5 pt-16 pb-8">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div class="space-y-8">
+                <div class="xl:grid xl:grid-cols-4 xl:gap-12">
+                    <div class="space-y-8 col-span-1">
                         <div class="flex items-center gap-3">
                             <img src="/logo-madecem.png" alt="Logo MADECEM" class="h-12 w-auto rounded-lg shadow-lg shadow-blue-500/10">
                             <span class="text-2xl font-bold tracking-tighter uppercase text-white">Madecem</span>
                         </div>
-                        <p class="text-sm leading-7 text-gray-400 max-w-sm">
-                            Especialistas en la convergencia entre la ingeniería operativa y la inteligencia artificial avanzada. Transformamos plantas convencionales en ecosistemas autónomos.
+                        <p class="text-sm leading-7 text-gray-400">
+                            Convergencia entre ingeniería operativa e inteligencia artificial avanzada. Transformamos plantas en ecosistemas autónomos.
                         </p>
                     </div>
 
-                    <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-                        <div>
-                            <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Servicios</h3>
-                            <ul role="list" class="mt-6 space-y-4">
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Agentes IA 24/7</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Visión Artificial</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Software Industrial</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Análisis Predictivo</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Mantenimiento Evolutivo</a></li>
-                                <li><a href="#servicios" class="text-sm leading-6 text-gray-400 hover:text-blue-500 transition-colors">Consultoría 4.0</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Contacto</h3>
-                            <ul role="list" class="mt-6 space-y-4">
-                                <li class="text-sm leading-6 text-gray-400 hover:text-white transition-colors">📧 <a href="mailto:info@madecem.com">info@madecem.com</a></li>
-                                <li class="text-sm leading-6 text-gray-400">📍 España · Soporte Global</li>
-                            </ul>
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Servicios</h3>
+                        <ul role="list" class="mt-6 space-y-4 text-sm leading-6 text-gray-400">
+                            <li><a href="#servicios" class="hover:text-blue-500 transition-colors">Agentes IA 24/7</a></li>
+                            <li><a href="#servicios" class="hover:text-blue-500 transition-colors">Visión Artificial</a></li>
+                            <li><a href="#servicios" class="hover:text-blue-500 transition-colors">Análisis Predictivo</a></li>
+                            <li><a href="#servicios" class="hover:text-blue-500 transition-colors">Software Industrial</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Contacto</h3>
+                        <ul role="list" class="mt-6 space-y-4 text-sm leading-6 text-gray-400">
+                            <li class="flex gap-2 items-center hover:text-white transition-colors">
+                                <span class="text-blue-500">📧</span> <a href="mailto:info@madecem.com">info@madecem.com</a>
+                            </li>
+                            <li class="flex gap-2 items-center hover:text-white transition-colors">
+                                <span class="text-blue-500">📞</span> <a href="tel:+34637819789">+34 637 81 97 89</a>
+                            </li>
+                            <li class="flex gap-2 items-start transition-colors">
+                                <span class="text-blue-500 text-lg">📍</span> 
+                                <span>Calle San Anton, 2<br/>19171 Cabanillas del Campo<br/>Guadalajara, España</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-white uppercase tracking-widest border-b border-blue-500/30 pb-2 w-fit">Ubicación</h3>
+                        <div class="mt-6">
+                            <div class="relative group h-32 w-full rounded-xl overflow-hidden border border-white/10 bg-blue-900/10 backdrop-blur-sm">
+                                <div class="absolute inset-0 opacity-30 bg-[url('https://www.google.com/maps/vt/pb=!1m4!1m3!1i15!2i16065!3i12181!2m3!1e0!2sm!3i633140934!3m17!2ses!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4m6!1e1!5m4!2bm!4b1!7i20!10b1!41m1!1e1!49m1!1e3!50m1!1e2!51m1!1e1!62m1!1e3')] bg-cover"></div>
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-center group-hover:from-blue-900/80 transition-all duration-300">
+                                    <div class="text-center">
+                                        <div class="text-blue-500 mb-1 scale-125">📍</div>
+                                        <span class="text-[10px] text-white font-bold tracking-widest px-3 py-1 bg-blue-600/50 rounded-full border border-blue-400/30 group-hover:bg-blue-600 transition-colors">ABRIR MAPA</span>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Calle+San+Anton+2+Cabanillas+del+Campo+Guadalajara" target="_blank" class="absolute inset-0 z-10" aria-label="Ver dirección en Google Maps"></a>
+                            </div>
+                            <p class="mt-3 text-[10px] text-gray-500 uppercase tracking-tighter text-center xl:text-left">Sede Central y Consultoría IA</p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="mt-16 border-t border-white/5 pt-8 text-center">
-                    <p class="text-xs leading-5 text-gray-500">&copy; 2026 MADECEM S.L. Inteligencia Aplicada a la Industria.</p>
+                    <p class="text-xs leading-5 text-gray-500">© 2026 MADECEM S.L. Inteligencia Aplicada a la Industria.</p>
                 </div>
             </div>
         </footer>
