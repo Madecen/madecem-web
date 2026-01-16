@@ -163,13 +163,11 @@ import Layout from '../layouts/Layout.astro';
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 items-center">
                     <div class="relative">
-                        <div class="aspect-square rounded-2xl bg-gradient-to-tr from-blue-600/20 to-blue-400/5 border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
-                            <div class="p-12 text-center">
-                                <span class="text-6xl mb-6 block">🚀</span>
-                                <h3 class="text-2xl font-bold text-white mb-4">Nuestra Visión</h3>
-                                <p class="text-gray-400 italic">"Ser el puente entre la ingeniería tradicional y la autonomía total de la IA en la industria española."</p>
-                            </div>
-                        </div>
+                        <img 
+                            src="/puente.png" 
+                            alt="Visión de MADECEM" 
+                            class="aspect-square w-full rounded-2xl border border-white/10 object-cover shadow-2xl"
+                        />
                     </div>
 
                     <div>
@@ -245,11 +243,6 @@ import Layout from '../layouts/Layout.astro';
                             <ul role="list" class="mt-6 space-y-4">
                                 <li class="text-sm leading-6 text-gray-400 hover:text-white transition-colors">📧 <a href="mailto:info@madecem.com">info@madecem.com</a></li>
                                 <li class="text-sm leading-6 text-gray-400">📍 España · Soporte Global</li>
-                                <li class="pt-4">
-                                    <a href="#hero-carousel" class="text-xs font-medium text-blue-500 hover:text-blue-400 flex items-center gap-1">
-                                        Volver arriba ↑
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -304,11 +297,10 @@ import Layout from '../layouts/Layout.astro';
         });
     });
 
-    // NUEVA LÓGICA: Control del botón guiado por el scroll del usuario
     const backToTopBtn = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) { // Aparece cuando el usuario ha bajado 400px
+        if (window.scrollY > 400) {
             backToTopBtn?.classList.remove('opacity-0', 'translate-y-20');
             backToTopBtn?.classList.add('opacity-100', 'translate-y-0');
         } else {
