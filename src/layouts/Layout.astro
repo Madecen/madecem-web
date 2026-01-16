@@ -3,9 +3,15 @@ import '../styles/global.css';
 
 interface Props {
     title: string;
+    description?: string; // He añadido descripción opcional
 }
 
-const { title } = Astro.props;
+const { 
+    title, 
+    description = "Especialistas en Agentes de IA, Visión Artificial y Mantenimiento Predictivo para la Industria 4.0 en España." 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://madecem.com");
 ---
 
 <!doctype html>
@@ -14,7 +20,61 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>{title} | MADECEM</title>
+        <link rel="canonical" href={canonicalURL} />
+
+        <title>{title} | MADECEM - IA Industrial y Automatización</title>
+        <meta name="title" content={`${title} | MADECEM`} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content="IA industrial, Agentes de IA, Industria 4.0, Visión Artificial, Mantenimiento Predictivo, Guadalajara, Cabanillas del Campo, Transformación Digital" />
+        <meta name="author" content="MADECEM" />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/hero-ia.webp" /> <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="/hero-ia.webp" />
+
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "MADECEM",
+            "image": "/logo-madecem.svg",
+            "description": "Expertos en Inteligencia Artificial y Visión Artificial para el sector industrial.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle San Anton, 2",
+              "addressLocality": "Cabanillas del Campo",
+              "addressRegion": "Guadalajara",
+              "postalCode": "19171",
+              "addressCountry": "ES"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.6385, 
+              "longitude": -3.2355
+            },
+            "url": "https://madecem.com",
+            "telephone": "+34637819789",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          }
+        </script>
     </head>
     <body class="m-0 w-full h-full bg-[#020617] text-white antialiased">
         
@@ -24,7 +84,7 @@ const { title } = Astro.props;
                 <div class="flex items-center gap-2">
                     <img 
                         src="/logo-madecem.svg" 
-                        alt="Logo MADECEM" 
+                        alt="Logo MADECEM - Inteligencia Artificial Industrial" 
                         class="h-10 w-auto rounded-lg"
                     />
                     <span class="text-xl font-bold tracking-tighter uppercase ml-1">Madecem</span>
