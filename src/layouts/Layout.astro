@@ -3,7 +3,7 @@ import '../styles/global.css';
 
 interface Props {
     title: string;
-    description?: string; // He añadido descripción opcional
+    description?: string;
 }
 
 const { 
@@ -11,7 +11,7 @@ const {
     description = "Especialistas en Agentes de IA, Visión Artificial y Mantenimiento Predictivo para la Industria 4.0 en España." 
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://madecem.com");
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://www.madecem.com");
 ---
 
 <!doctype html>
@@ -33,18 +33,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://madecem.
         <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/hero-ia.webp" /> <meta property="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content="https://www.madecem.com/logo-madecem.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={canonicalURL} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="/hero-ia.webp" />
+        <meta property="twitter:image" content="https://www.madecem.com/logo-madecem.png" />
 
         <script type="application/ld+json">
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "MADECEM",
-            "image": "/logo-madecem.svg",
+            "image": "https://www.madecem.com/logo-madecem.png",
             "description": "Expertos en Inteligencia Artificial y Visión Artificial para el sector industrial.",
             "address": {
               "@type": "PostalAddress",
@@ -59,7 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://madecem.
               "latitude": 40.6385, 
               "longitude": -3.2355
             },
-            "url": "https://madecem.com",
+            "url": "https://www.madecem.com",
             "telephone": "+34637819789",
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
