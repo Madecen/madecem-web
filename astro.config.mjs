@@ -2,10 +2,16 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.madecem.com', // <--- AÑADE ESTO
+  // <--- AÑADE ESTO
+  site: 'https://www.madecem.com',
+
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  integrations: [sitemap()]
 });

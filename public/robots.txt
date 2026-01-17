@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Indica a Google dónde está el mapa de tu sitio
+Sitemap: https://www.madecem.com/sitemap-index.xml
