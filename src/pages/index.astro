@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
-// Asegúrate de que estos archivos existan en src/assets/
+// Importación desde src/assets/ según tu estructura de carpetas
 import heroIA from '../assets/hero-ia.webp';
 import heroVision from '../assets/hero-vision.webp';
 import puenteImg from '../assets/puente.webp'; 
@@ -40,13 +40,13 @@ import logoMadecem from '../assets/logo-madecem.svg';
                         <Image 
                             src={heroIA} 
                             alt="IA Industrial MADECEM" 
-                            width={500} 
-                            height={500}
+                            width={400} 
+                            height={400}
                             format="webp"
                             quality="mid"
                             loading="eager" 
                             fetchpriority="high" 
-                            class="w-full max-w-[500px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover" 
+                            class="w-full max-w-[400px] rounded-2xl shadow-2xl ring-1 ring-white/10 object-cover" 
                         />
                     </div>
                 </div>
@@ -61,12 +61,12 @@ import logoMadecem from '../assets/logo-madecem.svg';
                         <Image 
                             src={heroVision} 
                             alt="Visión Artificial" 
-                            width={500} 
-                            height={500}
+                            width={400} 
+                            height={400}
                             format="webp"
                             quality="mid"
                             loading="lazy"
-                            class="w-full max-w-[500px] rounded-2xl shadow-2xl object-cover" 
+                            class="w-full max-w-[400px] rounded-2xl shadow-2xl object-cover" 
                         />
                     </div>
                 </div>
@@ -85,13 +85,13 @@ import logoMadecem from '../assets/logo-madecem.svg';
                         <Image 
                             src={puenteImg} 
                             alt="Visión estratégica de MADECEM" 
-                            width={500} 
-                            height={500}
-                            format="webp"
-                            quality={70} 
+                            width={400} 
+                            height={400}
+                            format="avif" 
+                            quality="mid"
                             loading="lazy"
                             decoding="async"
-                            class="aspect-square w-full max-w-[500px] rounded-2xl border border-white/10 object-cover shadow-2xl"
+                            class="aspect-square w-full max-w-[400px] rounded-2xl border border-white/10 object-cover shadow-2xl"
                         />
                     </div>
 
