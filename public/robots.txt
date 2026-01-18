@@ -1,6 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# MADECEM SEO Optimization
 User-agent: *
 Allow: /
 
-# Sitemaps (Asegúrate de tener instalado @astrojs/sitemap)
+# Sitemaps (Asegúrate de tener instalado el @astrojs/sitemap)
 Sitemap: https://madecem.com/sitemap-index.xml
