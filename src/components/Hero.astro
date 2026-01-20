@@ -1,0 +1,18 @@
+---
+const { title, subtitle, primaryCTA, secondaryCTA } = Astro.props;
+---
+
+<section class="hero">
+  <h1>{title}</h1>
+  <p>{subtitle}</p>
+
+  <div class="hero-actions">
+    <a href={primaryCTA.href} class="btn primary">
+      {primaryCTA.label}
+    </a>
+
+    <a href={secondaryCTA.href} class="btn secondary">
+      {secondaryCTA.label}
+    </a>
+  </div>
+</section>

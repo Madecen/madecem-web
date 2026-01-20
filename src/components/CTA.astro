@@ -1,0 +1,10 @@
+---
+const { text, button } = Astro.props;
+---
+
+<section class="cta">
+  <h2>{text}</h2>
+  <a href={button.href} class="btn primary">
+    {button.label}
+  </a>
+</section>
