@@ -16,7 +16,7 @@ import logoMadecem from '../assets/logo-madecem.svg';
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0ea5e9] to-[#2563eb] opacity-20 sm:left-[calc(50%-30rem)] sm:w-full"></div>
         </div>
 
-        <section class="relative mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:px-8 lg:py-24 overflow-hidden">
+        <section id="top" class="relative mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:px-8 lg:py-24 overflow-hidden">
             <div id="hero-carousel" class="relative">
                 <div class="carousel-slide flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000">
                     <div class="lg:w-1/2 lg:flex-shrink-0">
@@ -166,17 +166,56 @@ import logoMadecem from '../assets/logo-madecem.svg';
             </div>
         </section>
 
-        <footer class="bg-[#010409] border-t border-white/5 pt-16 pb-8">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-3">
-                    <Image src={logoMadecem} alt="Logo MADECEM" width={48} height={48} />
-                    <span class="text-2xl font-bold tracking-tighter uppercase">Madecem</span>
+        <footer class="bg-[#010409] border-t border-white/10 pt-20 pb-10">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <Image src={logoMadecem} alt="Logo MADECEM" width={40} height={40} class="w-10 h-auto" />
+                            <span class="text-2xl font-black tracking-tighter uppercase text-white">Madecem</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Líderes en el despliegue de Agentes de Inteligencia Artificial para la industria 4.0. Optimizamos procesos.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-6">Empresa</h3>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li><a href="#top" class="hover:text-blue-500 transition-colors">Inicio</a></li>
+                            <li><a href="#nosotros" class="hover:text-blue-500 transition-colors">Sobre Nosotros</a></li>
+                            <li><a href="#servicios" class="hover:text-blue-500 transition-colors">Capacidades</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-6">Soluciones IA</h3>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li><span class="hover:text-blue-500 cursor-default transition-colors">Visión Artificial</span></li>
+                            <li><span class="hover:text-blue-500 cursor-default transition-colors">Predictivo</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-6">Contacto Directo</h3>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li class="flex items-center gap-3"><span class="text-blue-500">📍</span> Madrid, España</li>
+                            <li class="flex items-center gap-3"><span class="text-blue-500">✉️</span> info@madecem.com</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="text-xs text-gray-500">
-                    © 2026 MADECEM S.L. Inteligencia Aplicada a la Industria.
+                <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-gray-500">© 2026 MADECEM S.L.</p>
                 </div>
             </div>
         </footer>
+
+        <button 
+            id="back-to-top" 
+            class="fixed bottom-8 right-8 z-[9999] p-4 rounded-full bg-blue-600 text-white shadow-2xl shadow-blue-500/40 opacity-0 pointer-events-none transition-all duration-300 hover:bg-blue-500 hover:scale-110"
+            aria-label="Volver arriba"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+            </svg>
+        </button>
 
     </main>
 </Layout>
@@ -186,36 +225,74 @@ import logoMadecem from '../assets/logo-madecem.svg';
     .carousel-slide { animation: fadeIn 0.8s ease-out; min-height: 450px; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .dot { cursor: pointer; }
+    
+    /* Clase para mostrar el botón con visibilidad total */
+    .show-button {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
 </style>
 
 <script>
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
+    // Usamos una función que se ejecute siempre que el DOM esté listo
+    const setupBackToTop = () => {
+        const backToTopBtn = document.getElementById('back-to-top');
 
-    function showSlide(index: number) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('hidden', i !== index);
-            if(dots[i]) {
-                dots[i].classList.toggle('bg-blue-600', i === index);
-                dots[i].classList.toggle('bg-white/20', i !== index);
-                (dots[i] as HTMLElement).style.width = i === index ? '2rem' : '0.5rem';
+        const toggleButton = () => {
+            if (window.scrollY > 300) {
+                backToTopBtn?.classList.add('show-button');
+            } else {
+                backToTopBtn?.classList.remove('show-button');
             }
+        };
+
+        window.addEventListener('scroll', toggleButton);
+
+        backToTopBtn?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    }
+    };
 
-    function nextSlide() {
-        if (slides.length === 0) return;
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
+    // Lógica del Carrusel (Mantenida)
+    const setupCarousel = () => {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
 
-    setInterval(nextSlide, 8000);
+        function showSlide(index: number) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('hidden', i !== index);
+                if(dots[i]) {
+                    dots[i].classList.toggle('bg-blue-600', i === index);
+                    dots[i].classList.toggle('bg-white/20', i !== index);
+                }
+            });
+        }
 
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            currentSlide = i;
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
+        }, 8000);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                showSlide(currentSlide);
+            });
         });
+    };
+
+    // Ejecutar todas las configuraciones al cargar
+    setupBackToTop();
+    setupCarousel();
+
+    // Para Astro View Transitions (si las usas en el futuro)
+    document.addEventListener('astro:after-swap', () => {
+        setupBackToTop();
+        setupCarousel();
     });
 </script>
