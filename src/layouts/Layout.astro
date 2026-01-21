@@ -1,5 +1,7 @@
 ---
 // src/layouts/Layout.astro
+import logoMadecem from '../assets/logo-madecem.svg'; // <--- IMPORTANTE: Importamos el logo aquí
+
 interface Props {
 	title: string;
 	description?: string;
@@ -7,19 +9,6 @@ interface Props {
 }
 
 const { title, description = "Ingeniería de IA para negocios reales", theme } = Astro.props;
-
-// Lógica de colores según el sector
-const themeColors = {
-	carniceria: 'hover:text-red-500 border-red-500 bg-red-600 shadow-red-600/20',
-	taller: 'hover:text-orange-500 border-orange-500 bg-orange-600 shadow-orange-600/20',
-	peluqueria: 'hover:text-blue-500 border-blue-500 bg-blue-600 shadow-blue-600/20',
-	restaurante: 'hover:text-yellow-500 border-yellow-500 bg-yellow-600 shadow-yellow-600/20',
-	empresa: 'hover:text-indigo-500 border-indigo-500 bg-indigo-600 shadow-indigo-600/20',
-	default: 'hover:text-blue-400 border-blue-400 bg-blue-600 shadow-blue-600/20'
-};
-
-const currentTheme = theme ? themeColors[theme] : themeColors.default;
-const buttonColor = theme ? themeColors[theme].split(' ')[2] : themeColors.default.split(' ')[2];
 ---
 
 <!doctype html>
@@ -33,72 +22,90 @@ const buttonColor = theme ? themeColors[theme].split(' ')[2] : themeColors.defau
 	</head>
 	<body class="bg-[#020617] text-white font-sans selection:bg-blue-500/30">
 		
-		<nav class="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-white/5">
+		<nav class="fixed top-0 w-full z-[100] bg-[#020617]/90 backdrop-blur-xl border-b border-white/5">
 			<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-				<a href="/" class="flex items-center gap-2 group">
-					<div class="w-8 h-8 bg-blue-600 rounded-lg shadow-lg group-hover:rotate-12 transition-transform"></div>
-					<span class="text-2xl font-black tracking-tighter">MADECEM</span>
+				
+				<a href="/" class="flex items-center gap-3 group">
+					<div class="h-10 flex items-center justify-center">
+                        <img 
+                            src={logoMadecem.src} 
+                            alt="Logotipo MADECEM" 
+                            class="h-full w-auto object-contain group-hover:scale-105 transition-transform"
+                        />
+					</div>
+					<span class="text-2xl font-black tracking-tighter text-white">MADECEM</span>
 				</a>
 				
-				<div class="hidden md:flex gap-8 items-center text-sm font-bold uppercase tracking-widest">
-					<a href="/#soluciones" class="text-slate-400 hover:text-white transition-colors">Soluciones</a>
-					<a href="/empresa" class="text-slate-400 hover:text-white transition-colors">Empresa</a>
-					<a href="/#contacto" class={`${buttonColor} text-white px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105 active:scale-95`}>
+				<div class="hidden md:flex gap-8 items-center">
+					<a href="/#soluciones" class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">Soluciones</a>
+					<a href="/empresa" class="text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">Empresa</a>
+					<a href="/#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-600/20 transition-all hover:scale-105">
 						Contacto
 					</a>
 				</div>
+
+				<button id="mobile-menu-button" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+					</svg>
+				</button>
+			</div>
+
+			<div id="mobile-menu" class="hidden md:hidden bg-[#020617] border-b border-white/5 px-6 py-8 space-y-6 shadow-2xl">
+				<a href="/#soluciones" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Soluciones</a>
+				<a href="/empresa" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Empresa</a>
+				<a href="/#contacto" class="block w-full text-center bg-blue-600 text-white py-4 rounded-2xl font-black mobile-link active:scale-95 transition-transform">
+					Solicitar Información
+				</a>
 			</div>
 		</nav>
 
-		<main>
+		<main class="pt-20">
 			<slot />
 		</main>
 
 		<footer class="bg-[#010413] border-t border-white/5 py-20">
-			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 				<div class="md:col-span-2">
-					<div class="flex items-center gap-2 mb-6">
-						<div class="w-6 h-6 bg-blue-600 rounded"></div>
-						<span class="text-xl font-bold tracking-tighter">MADECEM AI</span>
-					</div>
-					<p class="text-slate-500 max-w-sm leading-relaxed mb-6">
-						Ingeniería de automatización pragmática. No instalamos software, resolvemos problemas de negocio mediante inteligencia artificial aplicada.
+					<span class="text-xl font-black tracking-tighter text-white mb-6 block">MADECEM AI</span>
+					<p class="text-slate-500 max-w-sm mx-auto md:mx-0 leading-relaxed">
+						Ingeniería de automatización pragmática para PYMEs en España.
+                        Recuperamos tu tiempo eliminando el trabajo manual repetitivo.
 					</p>
-					<p class="text-xs text-slate-600 font-mono">EST. 2026 // MADRID, ESPAÑA</p>
 				</div>
-				
 				<div>
-					<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sectores</h4>
+					<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sectores 2026</h4>
 					<ul class="text-slate-500 space-y-3 text-sm">
 						<li><a href="/negocios/taller" class="hover:text-orange-500 transition-colors">Talleres Mecánicos</a></li>
 						<li><a href="/negocios/carniceria" class="hover:text-red-500 transition-colors">Carnicerías</a></li>
-						<li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors">Restauración</a></li>
-						<li><a href="/negocios/peluqueria" class="hover:text-blue-500 transition-colors">Peluquerías</a></li>
+						<li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors">Hostelería</a></li>
 					</ul>
 				</div>
-
 				<div>
 					<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
 					<ul class="text-slate-500 space-y-3 text-sm">
-						<li><a href="#" class="hover:text-white transition-colors">Cumplimiento Veri*Factu</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Veri*Factu Compliant</a></li>
 						<li><a href="#" class="hover:text-white transition-colors">Privacidad de Datos</a></li>
-						<li><a href="#" class="hover:text-white transition-colors">Términos de Servicio</a></li>
 					</ul>
-				</div>
-			</div>
-			
-			<div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-				<p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2026 MADECEM AUTOMATION SYSTEMS. Todos los derechos reservados.</p>
-				<div class="flex gap-6">
-					<span class="text-[10px] text-emerald-500 font-bold uppercase">System Status: Operational</span>
 				</div>
 			</div>
 		</footer>
 
+		<script>
+			const btn = document.getElementById('mobile-menu-button');
+			const menu = document.getElementById('mobile-menu');
+			const links = document.querySelectorAll('.mobile-link');
+
+			btn?.addEventListener('click', () => {
+				menu?.classList.toggle('hidden');
+			});
+
+			links.forEach(link => {
+				link.addEventListener('click', () => {
+					menu?.classList.add('hidden');
+				});
+			});
+		</script>
+
 	</body>
 </html>
-
-<style is:global>
-	:root { --accent: 37, 99, 235; }
-	html { font-family: 'Inter', system-ui, sans-serif; background: #020617; }
-</style>

@@ -1,128 +1,176 @@
 ---
-// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="MADECEM | Recupera +10h de tu semana con Ingeniería de IA">
+<Layout title="MADECEM AI | Automatización Inteligente">
 	
-	<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex flex-col justify-center">
-		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
-
-		<div class="max-w-7xl mx-auto px-6 z-10 relative">
-			<div class="text-center mb-16">
-				<div class="inline-flex items-center gap-2 bg-blue-950/50 border border-blue-800/50 text-blue-300 px-4 py-1.5 rounded-full text-xs font-bold mb-8 uppercase tracking-widest">
-					Ingeniería de Automatización Pragmática
-				</div>
-				<h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
-					Recupera <span class="text-blue-500">10 horas</span><br>de tu semana.
-				</h1>
-				<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-					Eliminamos el trabajo manual que te frena. Instalamos cerebros digitales que gestionan citas, pedidos y facturación mientras tú escalas tu negocio.
-				</p>
-				<div class="flex flex-wrap justify-center gap-4">
-					<a href="/#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl shadow-blue-600/20 transition-all hover:scale-105">
-						Empezar Auditoría Gratuita
-					</a>
-				</div>
+	<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+		<div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+		
+		<div class="relative max-w-7xl mx-auto px-6 text-center">
+			<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-sm mb-8 animate-fade-in-up">
+				<span class="relative flex h-2 w-2">
+				  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+				  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+				</span>
+				Ingeniería de IA aplicada a Negocios Físicos
 			</div>
-
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 py-12 border-y border-white/5 bg-white/[0.02] backdrop-blur-sm rounded-3xl px-8">
-				<div class="text-center">
-					<p class="text-4xl font-black text-blue-500 mb-1">+10h</p>
-					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Ahorro Semanal</p>
-				</div>
-				<div class="text-center md:border-l border-white/10">
-					<p class="text-4xl font-black text-emerald-500 mb-1">0%</p>
-					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Error Humano</p>
-				</div>
-				<div class="text-center border-l border-white/10">
-					<p class="text-4xl font-black text-orange-500 mb-1">24/7</p>
-					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Disponibilidad IA</p>
-				</div>
-				<div class="text-center border-l border-white/10">
-					<p class="text-4xl font-black text-indigo-500 mb-1">100%</p>
-					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Ley Veri*Factu</p>
-				</div>
+			
+			<h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+				Recupera tu tiempo.<br/>
+				<span class="text-blue-500">Automatiza lo aburrido.</span>
+			</h1>
+			
+			<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+				Creamos agentes de IA que atienden a tus clientes, gestionan citas y organizan pedidos mientras tú te dedicas a lo importante: tu oficio.
+			</p>
+			
+			<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+				<a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg shadow-blue-600/25">
+					Auditoría Gratuita
+				</a>
+				<a href="#soluciones" class="text-slate-300 hover:text-white px-8 py-4 font-bold transition-colors flex items-center gap-2">
+					Ver Soluciones <span aria-hidden="true">→</span>
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<section id="soluciones" class="py-24 relative bg-slate-950/50">
+	<section id="soluciones" class="py-24 bg-[#010413]">
 		<div class="max-w-7xl mx-auto px-6">
-			<h2 class="text-4xl font-black text-white mb-16 text-center">Sectores Optimizados</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<a href="/negocios/peluqueria" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/50 transition-all">
-					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">💇‍♀️</div>
-					<h3 class="text-2xl font-bold text-white mb-4">Peluquerías y Estética</h3>
-					<p class="text-slate-400 text-sm leading-relaxed">Agenda llena sin tocar el teléfono. Gestión de citas y recordatorios automáticos.</p>
-				</a>
-				<a href="/negocios/taller" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-orange-500/50 transition-all">
-					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🔧</div>
-					<h3 class="text-2xl font-bold text-white mb-4">Talleres Mecánicos</h3>
-					<p class="text-slate-400 text-sm leading-relaxed">Recepción virtual y control de entradas. Avisos de ITV y presupuestos instantáneos.</p>
-				</a>
-				<a href="/negocios/carniceria" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-red-500/50 transition-all">
-					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🥩</div>
-					<h3 class="text-2xl font-bold text-white mb-4">Carnicerías y Alimentación</h3>
-					<p class="text-slate-400 text-sm leading-relaxed">De WhatsApp a tu tablet de preparación. Sin audios, sin errores, más despacho.</p>
-				</a>
-				<a href="/negocios/restaurante" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-yellow-500/50 transition-all">
-					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🥂</div>
-					<h3 class="text-2xl font-bold text-white mb-4">Hostelería y Hoteles</h3>
-					<p class="text-slate-400 text-sm leading-relaxed">Reservas inteligentes sin comisiones y Room Service automatizado por IA.</p>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-32">
-		<div class="max-w-4xl mx-auto px-6 text-center">
-			<div class="bg-gradient-to-br from-blue-900/10 to-transparent p-12 rounded-[3rem] border border-blue-500/10 backdrop-blur-sm">
-				<h2 class="text-3xl font-bold text-white mb-8">El Compromiso Madecem</h2>
-				<p class="text-2xl text-slate-300 italic font-light leading-relaxed">
-					"No somos una agencia de marketing, somos <strong>ingenieros</strong>. Bajamos al barro de tu negocio para eliminar las fugas de tiempo. Si nuestra IA no te devuelve horas de vida desde el primer mes, no hemos hecho bien nuestro trabajo."
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No es magia, es <span class="text-blue-500">Ingeniería</span></h2>
+				<p class="text-slate-400 text-lg max-w-2xl mx-auto">
+					Sustituimos tareas manuales repetitivas por sistemas autónomos robustos.
 				</p>
 			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all group hover:-translate-y-1">
+					<div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-3">Atención 24/7</h3>
+					<p class="text-slate-400 leading-relaxed">
+						Agentes de voz y texto que responden dudas, dan precios y filtran clientes curiosos de los reales.
+					</p>
+				</div>
+
+				<div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all group hover:-translate-y-1">
+					<div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-3">Agendamiento</h3>
+					<p class="text-slate-400 leading-relaxed">
+						Tu calendario se llena solo. El sistema negocia huecos libres y confirma asistencia sin molestarte.
+					</p>
+				</div>
+
+				<div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all group hover:-translate-y-1">
+					<div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold mb-3">Gestión de Pedidos</h3>
+					<p class="text-slate-400 leading-relaxed">
+						Entrada de pedidos por WhatsApp transcritos automáticamente a tu ERP, Excel o TPV.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="contacto" class="py-24 relative overflow-hidden">
-		<div class="max-w-4xl mx-auto px-6 relative z-10">
-			<div class="bg-slate-900 border border-white/10 p-8 md:p-16 rounded-[3rem] shadow-2xl">
-				<div class="text-center mb-12">
-					<h2 class="text-4xl font-black text-white mb-4">¿Hablamos de rentabilidad?</h2>
-					<p class="text-slate-400">Nuestro equipo de ingeniería analizará tu caso y te propondrá una solución en menos de 24h.</p>
+	<section class="py-24 border-t border-white/5">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+				<div>
+					<h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-4">Sectores 2026</h2>
+					<p class="text-slate-400 text-lg max-w-xl">
+						Soluciones verticalizadas listas para desplegar en 48 horas.
+					</p>
 				</div>
-				
-				<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<div>
-						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">Nombre Completo</label>
-						<input type="text" class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all" placeholder="Ej: Ramón García">
-					</div>
-					<div>
-						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">WhatsApp de contacto</label>
-						<input type="tel" class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all" placeholder="+34 ...">
-					</div>
-					<div class="md:col-span-2">
-						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">Negocio o Sector</label>
-						<select class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all appearance-none">
-							<option>Taller Mecánico</option>
-							<option>Peluquería / Estética</option>
-							<option>Carnicería / Alimentación</option>
-							<option>Restaurante / Hotel</option>
-							<option>Empresa B2B / Consultoría</option>
-						</select>
-					</div>
-					<div class="md:col-span-2">
-						<button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl shadow-xl shadow-blue-600/20 transition-all hover:scale-[1.02]">
-							Solicitar Auditoría Gratuita
-						</button>
-						<p class="text-center text-[10px] text-slate-600 mt-6 italic uppercase tracking-widest">
-							Cero spam. Solo soluciones de ingeniería.
-						</p>
-					</div>
-				</form>
+				<a href="/empresa" class="text-white font-bold hover:text-blue-500 transition-colors flex items-center gap-2">
+					Ver todos los sectores <span aria-hidden="true">→</span>
+				</a>
 			</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				
+                <a href="/negocios/taller" class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-orange-500/50 transition-colors group relative overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative z-10">
+						<div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 text-orange-500">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold mb-2 group-hover:text-orange-500 transition-colors">Talleres Mecánicos</h3>
+						<p class="text-sm text-slate-400">Gestión automática de citas, estado del vehículo y recambios.</p>
+					</div>
+				</a>
+
+                <a href="/negocios/carniceria" class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/50 transition-colors group relative overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative z-10">
+						<div class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">Carnicerías</h3>
+						<p class="text-sm text-slate-400">Pedidos por WhatsApp directos a lista de corte y balanza.</p>
+					</div>
+				</a>
+
+                <a href="/negocios/restaurante" class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-yellow-500/50 transition-colors group relative overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative z-10">
+						<div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6 text-yellow-500">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold mb-2 group-hover:text-yellow-500 transition-colors">Hostelería</h3>
+						<p class="text-sm text-slate-400">Reservas de mesa automáticas y gestión de carta digital.</p>
+					</div>
+				</a>
+
+                <a href="/negocios/peluqueria" class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-pink-500/50 transition-colors group relative overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative z-10">
+						<div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 text-pink-500">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold mb-2 group-hover:text-pink-500 transition-colors">Peluquerías</h3>
+						<p class="text-sm text-slate-400">Agenda inteligente, recordatorios de cita y cancelación automática.</p>
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="contacto" class="py-24 bg-gradient-to-b from-[#010413] to-blue-950/20">
+		<div class="max-w-4xl mx-auto px-6 text-center">
+			<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">¿Listo para dejar de trabajar en tareas de robots?</h2>
+			<p class="text-xl text-slate-400 mb-10">
+				La primera consulta es gratuita. Analizamos tus procesos y te decimos cuánto dinero estás perdiendo en tareas manuales.
+			</p>
+			<form class="max-w-md mx-auto space-y-4">
+				<input type="email" placeholder="tu@empresa.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+				<button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-xl shadow-blue-600/20">
+					Solicitar Auditoría
+				</button>
+				<p class="text-xs text-slate-500 mt-4">Sin compromiso. Respuesta en menos de 2 horas.</p>
+			</form>
 		</div>
 	</section>
 
