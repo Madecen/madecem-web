@@ -1,0 +1,151 @@
+---
+// src/pages/empresa.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="MADECEM | Consultoría y Desarrollo de IA a Medida" description="Sistemas de OCR, Visión Digital y Automatización Corporativa." theme="empresa">
+  
+  <section class="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-[#020617]">
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-indigo-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-cyan-600/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl w-full mx-auto px-6 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 px-4 py-1.5 rounded-full text-xs font-bold mb-8 uppercase tracking-widest backdrop-blur-md">
+        Ingeniería de Software & IA
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+        Desarrollos a medida para<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-blue-500">
+            Empresas de Alto Rendimiento.
+        </span>
+      </h1>
+
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-12 font-light">
+        No instalamos software, creamos ecosistemas inteligentes. Desde sistemas de stock con visión digital hasta facturación automática por voz. Tu empresa, automatizada de extremo a extremo.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-20">
+        
+        <div class="lg:col-span-4 order-2 lg:order-1 flex justify-center">
+            <div class="phone-frame scale-90 lg:scale-100 shadow-[0_0_50px_rgba(79,70,229,0.3)]">
+                <div class="notch"></div>
+                <div class="screen bg-slate-900 p-4">
+                    <div class="text-left">
+                        <p class="text-[10px] text-cyan-400 font-mono mb-2">SCANNER_VISION_v2.1</p>
+                        <div class="w-full h-32 border-2 border-dashed border-cyan-500/30 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-0.5 bg-cyan-500 animate-scan"></div>
+                            <span class="text-[40px]">📦</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="bg-slate-800 p-2 rounded text-[10px] text-white flex justify-between">
+                                <span>Producto:</span> <span class="text-cyan-400">Motor V8-A2</span>
+                            </div>
+                            <div class="bg-slate-800 p-2 rounded text-[10px] text-white flex justify-between">
+                                <span>Stock Detectado:</span> <span class="text-cyan-400">42 unidades</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-4 order-1 lg:order-2 text-center px-4">
+            <h3 class="text-2xl font-bold text-white mb-4">Control Inteligente</h3>
+            <p class="text-slate-400 text-sm mb-6">Sincronización en tiempo real de stock, citas y reuniones. Todo bajo un mismo mando.</p>
+            <div class="h-px w-20 bg-indigo-500 mx-auto mb-6"></div>
+            <ul class="text-left text-xs space-y-3 text-slate-300 inline-block">
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Creación de Albaranes instantáneos</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Facturas automáticas (Voz o Texto)</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Detección OCR de documentos</li>
+            </ul>
+        </div>
+
+        <div class="lg:col-span-4 order-3 flex justify-center">
+            <div class="phone-frame scale-90 lg:scale-100 shadow-[0_0_50px_rgba(34,211,238,0.3)]">
+                <div class="notch"></div>
+                <div class="screen bg-slate-900 flex flex-col">
+                    <div class="p-4 flex-1">
+                        <p class="text-[10px] text-indigo-400 font-mono mb-4 text-left">VOICE_TO_INVOICE</p>
+                        <div class="bg-indigo-950/30 p-3 rounded-lg mb-4 italic text-[11px] text-indigo-200 text-left border-l-2 border-indigo-500">
+                            "Genera una factura para Talleres Ruiz por 4 neumáticos y mano de obra..."
+                        </div>
+                        <div class="bg-white rounded p-3">
+                            <p class="text-[8px] text-slate-400 mb-2">FACTURA #8821</p>
+                            <div class="space-y-1">
+                                <div class="h-1 bg-slate-200 w-full"></div>
+                                <div class="h-1 bg-slate-200 w-3/4"></div>
+                                <div class="flex justify-between mt-4">
+                                    <div class="h-2 bg-indigo-600 w-8"></div>
+                                    <div class="h-2 bg-indigo-600 w-12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-12 bg-slate-800 flex items-center justify-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-indigo-500 animate-bounce"></div>
+                        <div class="w-2 h-2 rounded-full bg-indigo-500 animate-bounce [animation-delay:0.2s]"></div>
+                        <div class="w-2 h-2 rounded-full bg-indigo-500 animate-bounce [animation-delay:0.4s]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-950 relative border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="p-8 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-colors group">
+                <div class="text-4xl mb-6">👁️</div>
+                <h4 class="text-xl font-bold text-white mb-4">Visión Artificial</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Sistemas de detección de productos y control de calidad mediante cámaras inteligentes. Automatiza el inventario sin intervención humana.</p>
+            </div>
+
+            <div class="p-8 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-cyan-500/50 transition-colors group">
+                <div class="text-4xl mb-6">📄</div>
+                <h4 class="text-xl font-bold text-white mb-4">OCR & Extracción</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Lectura inteligente de documentos, facturas y DNIs. Digitaliza tu archivo físico y conviértelo en datos útiles al instante.</p>
+            </div>
+
+            <div class="p-8 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition-colors group">
+                <div class="text-4xl mb-6">🎙️</div>
+                <h4 class="text-xl font-bold text-white mb-4">Control por Voz</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Dicta albaranes, pedidos o notas de reunión. Nuestra IA procesa el lenguaje natural y actualiza tu base de datos automáticamente.</p>
+            </div>
+
+        </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+    @keyframes scan {
+        0%, 100% { top: 0; }
+        50% { top: 100%; }
+    }
+    .animate-scan {
+        animation: scan 3s linear infinite;
+        box-shadow: 0 0 10px #06b6d4;
+    }
+
+    .phone-frame {
+        position: relative; width: 260px; height: 520px;
+        background: #020617; border-radius: 40px;
+        padding: 8px; border: 3px solid #1e293b;
+    }
+    .screen {
+        width: 100%; height: 100%; border-radius: 32px;
+        overflow: hidden; position: relative;
+    }
+    .notch {
+        position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+        width: 100px; height: 20px; background: #020617;
+        border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 20;
+    }
+</style>
