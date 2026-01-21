@@ -1,124 +1,104 @@
 ---
 // src/layouts/Layout.astro
-import logo from '../assets/logo-madecem.svg';
-
 interface Props {
 	title: string;
-    description?: string;
-    // AÑADIMOS LOS NUEVOS TEMAS AQUÍ
-    theme?: 'default' | 'taller' | 'carniceria' | 'restaurante';
+	description?: string;
+	theme?: 'carniceria' | 'taller' | 'peluqueria' | 'restaurante' | 'empresa';
 }
 
-const { title, description, theme = 'default' } = Astro.props;
+const { title, description = "Ingeniería de IA para negocios reales", theme } = Astro.props;
 
-// --- LÓGICA DE COLORES ---
-let bgBody, bgHeader, hoverText, btnColor, selectionColor;
+// Lógica de colores según el sector
+const themeColors = {
+	carniceria: 'hover:text-red-500 border-red-500 bg-red-600 shadow-red-600/20',
+	taller: 'hover:text-orange-500 border-orange-500 bg-orange-600 shadow-orange-600/20',
+	peluqueria: 'hover:text-blue-500 border-blue-500 bg-blue-600 shadow-blue-600/20',
+	restaurante: 'hover:text-yellow-500 border-yellow-500 bg-yellow-600 shadow-yellow-600/20',
+	empresa: 'hover:text-indigo-500 border-indigo-500 bg-indigo-600 shadow-indigo-600/20',
+	default: 'hover:text-blue-400 border-blue-400 bg-blue-600 shadow-blue-600/20'
+};
 
-switch (theme) {
-    case 'taller': // Naranja Industrial
-        bgBody = 'bg-[#0c0a09]';
-        bgHeader = 'bg-[#0c0a09]/90 border-orange-900/30';
-        hoverText = 'hover:text-orange-500';
-        btnColor = 'bg-orange-600 hover:bg-orange-500 shadow-[0_0_15px_rgba(234,88,12,0.3)]';
-        selectionColor = 'selection:bg-orange-500';
-        break;
-    case 'carniceria': // Rojo Intenso
-        bgBody = 'bg-[#1a0505]'; // Rojo muy oscuro casi negro
-        bgHeader = 'bg-[#1a0505]/90 border-red-900/30';
-        hoverText = 'hover:text-red-500';
-        btnColor = 'bg-red-600 hover:bg-red-500 shadow-[0_0_15px_rgba(220,38,38,0.3)]';
-        selectionColor = 'selection:bg-red-500';
-        break;
-    case 'restaurante': // Dorado / Champagne
-        bgBody = 'bg-[#0f0f0a]'; // Negro con toque dorado
-        bgHeader = 'bg-[#0f0f0a]/90 border-yellow-900/30';
-        hoverText = 'hover:text-yellow-500';
-        btnColor = 'bg-yellow-600 hover:bg-yellow-500 text-black shadow-[0_0_15px_rgba(202,138,4,0.3)]';
-        selectionColor = 'selection:bg-yellow-500';
-        break;
-    default: // Default (Azul Tech)
-        bgBody = 'bg-[#020617]';
-        bgHeader = 'bg-[#020617]/90 border-white/5';
-        hoverText = 'hover:text-blue-400';
-        btnColor = 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_15px_rgba(37,99,235,0.3)]';
-        selectionColor = 'selection:bg-blue-500';
-}
+const currentTheme = theme ? themeColors[theme] : themeColors.default;
+const buttonColor = theme ? themeColors[theme].split(' ')[2] : themeColors.default.split(' ')[2];
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description || "Soluciones de IA para negocios"} />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
 	</head>
-	
-	<body class={`${bgBody} text-white font-sans antialiased min-h-screen flex flex-col ${selectionColor} selection:text-white`}>
+	<body class="bg-[#020617] text-white font-sans selection:bg-blue-500/30">
 		
-        <header class={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-colors duration-300 ${bgHeader}`}>
-            <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <a href="/" class="flex items-center gap-3 group">
-                    <img src={logo.src} alt="MADECEM AI Logo" class="h-9 w-auto" />
-                    <span class={`text-xl font-black tracking-tight text-white transition-colors ${hoverText}`}>
-                        MADECEM
-                    </span>
-                </a>
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                    <a href="/#soluciones" class="hover:text-white transition-colors">Soluciones</a>
-                    <a href="/empresa" class="text-sm font-medium hover:text-white transition-colors">Empresa</a>
-                    <a href="#contacto" class={`${btnColor} text-white px-5 py-2.5 rounded-lg transition-all font-semibold`}>
-                        Contacto
-                    </a>
-                </div>
-            </nav>
-        </header>
+		<nav class="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-white/5">
+			<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+				<a href="/" class="flex items-center gap-2 group">
+					<div class="w-8 h-8 bg-blue-600 rounded-lg shadow-lg group-hover:rotate-12 transition-transform"></div>
+					<span class="text-2xl font-black tracking-tighter">MADECEM</span>
+				</a>
+				
+				<div class="hidden md:flex gap-8 items-center text-sm font-bold uppercase tracking-widest">
+					<a href="/#soluciones" class="text-slate-400 hover:text-white transition-colors">Soluciones</a>
+					<a href="/empresa" class="text-slate-400 hover:text-white transition-colors">Empresa</a>
+					<a href="/#contacto" class={`${buttonColor} text-white px-6 py-2.5 rounded-full shadow-lg transition-all hover:scale-105 active:scale-95`}>
+						Contacto
+					</a>
+				</div>
+			</div>
+		</nav>
 
-		<main class="flex-1 pt-20"> 
+		<main>
 			<slot />
 		</main>
 
-        <footer id="contacto" class="border-t border-slate-800/50 bg-[#020617] pt-16 pb-8 relative overflow-hidden mt-auto">
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-slate-900/50 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                    <div class="col-span-1 lg:col-span-1">
-                        <div class="flex items-center gap-2 mb-6 opacity-90">
-                             <img src={logo.src} alt="Madecem" class="h-6 w-auto" />
-                             <span class="text-lg font-bold tracking-tight">MADECEM</span>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Ingeniería de automatización e Inteligencia Artificial.</p>
-                    </div>
-                    <div class="col-span-1">
-                        <h4 class="text-white font-bold mb-6">Contacto</h4>
-                        <ul class="space-y-4 text-sm text-slate-400">
-                            <li class="flex items-start gap-3">
-                                <span>📍</span>
-                                <span>C/ San Antón 2<br>19171 Cabanillas del Campo<br>Guadalajara</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span>📧</span>
-                                <a href="mailto:info@madecem.com" class="hover:text-white transition-colors">info@madecem.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-span-1 md:col-span-2 h-52 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl relative z-10">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.548773956405!2d-3.2355419234473854!3d40.63004384351639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43acdd9a287239%3A0x6280435178619677!2sC.%20San%20Ant%C3%B3n%2C%202%2C%2019171%20Cabanillas%20del%20Campo%2C%20Guadalajara!5e0!3m2!1ses!2ses!4v1705851234567!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="absolute inset-0 bg-blue-950/30 mix-blend-multiply pointer-events-none"></div>
-                    </div>
-                </div>
-                <div class="border-t border-slate-800/50 pt-8 flex justify-between items-center text-xs text-slate-500">
-                    <p>© {new Date().getFullYear()} MADECEM.</p>
-                </div>
-            </div>
-        </footer>
+		<footer class="bg-[#010413] border-t border-white/5 py-20">
+			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+				<div class="md:col-span-2">
+					<div class="flex items-center gap-2 mb-6">
+						<div class="w-6 h-6 bg-blue-600 rounded"></div>
+						<span class="text-xl font-bold tracking-tighter">MADECEM AI</span>
+					</div>
+					<p class="text-slate-500 max-w-sm leading-relaxed mb-6">
+						Ingeniería de automatización pragmática. No instalamos software, resolvemos problemas de negocio mediante inteligencia artificial aplicada.
+					</p>
+					<p class="text-xs text-slate-600 font-mono">EST. 2026 // MADRID, ESPAÑA</p>
+				</div>
+				
+				<div>
+					<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sectores</h4>
+					<ul class="text-slate-500 space-y-3 text-sm">
+						<li><a href="/negocios/taller" class="hover:text-orange-500 transition-colors">Talleres Mecánicos</a></li>
+						<li><a href="/negocios/carniceria" class="hover:text-red-500 transition-colors">Carnicerías</a></li>
+						<li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors">Restauración</a></li>
+						<li><a href="/negocios/peluqueria" class="hover:text-blue-500 transition-colors">Peluquerías</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
+					<ul class="text-slate-500 space-y-3 text-sm">
+						<li><a href="#" class="hover:text-white transition-colors">Cumplimiento Veri*Factu</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Privacidad de Datos</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Términos de Servicio</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+				<p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2026 MADECEM AUTOMATION SYSTEMS. Todos los derechos reservados.</p>
+				<div class="flex gap-6">
+					<span class="text-[10px] text-emerald-500 font-bold uppercase">System Status: Operational</span>
+				</div>
+			</div>
+		</footer>
+
 	</body>
 </html>
 
 <style is:global>
-	html { font-family: 'Inter', system-ui, sans-serif; background-color: #020617; scroll-behavior: smooth; }
-    iframe { filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%); }
+	:root { --accent: 37, 99, 235; }
+	html { font-family: 'Inter', system-ui, sans-serif; background: #020617; }
 </style>

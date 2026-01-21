@@ -3,82 +3,127 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="MADECEM | Ingeniería de IA: Recupera +10h de tu semana" description="Automatización real para PYMEs. Eliminamos el error humano y optimizamos tu tiempo.">
+<Layout title="MADECEM | Recupera +10h de tu semana con Ingeniería de IA">
 	
-	<section class="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-[#020617]">
-		
+	<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex flex-col justify-center">
 		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
 
 		<div class="max-w-7xl mx-auto px-6 z-10 relative">
-			
-			<div class="text-center mb-20">
-				<div class="inline-flex items-center gap-2 bg-blue-950/50 border border-blue-800/50 text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-8 backdrop-blur-md">
-					<span class="relative flex h-2 w-2">
-					  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-					  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-					</span>
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-blue-950/50 border border-blue-800/50 text-blue-300 px-4 py-1.5 rounded-full text-xs font-bold mb-8 uppercase tracking-widest">
 					Ingeniería de Automatización Pragmática
 				</div>
-
-				<h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-8 leading-tight">
-					Recupera <span class="text-blue-500">10 horas</span> de tu<br>
-					semana. La IA hace el resto.
+				<h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
+					Recupera <span class="text-blue-500">10 horas</span><br>de tu semana.
 				</h1>
-
-				<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-					No vendemos software genérico. Instalamos <strong>cerebros digitales</strong> que eliminan el trabajo repetitivo para que tú te enfoques en escalar.
+				<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+					Eliminamos el trabajo manual que te frena. Instalamos cerebros digitales que gestionan citas, pedidos y facturación mientras tú escalas tu negocio.
 				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl shadow-blue-600/20 transition-all hover:scale-105">
+						Empezar Auditoría Gratuita
+					</a>
+				</div>
 			</div>
 
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-slate-800/50 mb-24 bg-slate-900/10 backdrop-blur-sm rounded-3xl">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 py-12 border-y border-white/5 bg-white/[0.02] backdrop-blur-sm rounded-3xl px-8">
 				<div class="text-center">
-					<p class="text-4xl lg:text-5xl font-black text-blue-500 mb-2">+10h</p>
-					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Ahorro Semanal Medio</p>
+					<p class="text-4xl font-black text-blue-500 mb-1">+10h</p>
+					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Ahorro Semanal</p>
 				</div>
-				<div class="text-center border-l border-slate-800/50">
-					<p class="text-4xl lg:text-5xl font-black text-emerald-500 mb-2">0%</p>
-					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Error en Facturación</p>
+				<div class="text-center md:border-l border-white/10">
+					<p class="text-4xl font-black text-emerald-500 mb-1">0%</p>
+					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Error Humano</p>
 				</div>
-				<div class="text-center border-l border-slate-800/50">
-					<p class="text-4xl lg:text-5xl font-black text-orange-500 mb-2">24/7</p>
-					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Operativa Ininterrumpida</p>
+				<div class="text-center border-l border-white/10">
+					<p class="text-4xl font-black text-orange-500 mb-1">24/7</p>
+					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Disponibilidad IA</p>
 				</div>
-				<div class="text-center border-l border-slate-800/50">
-					<p class="text-4xl lg:text-5xl font-black text-indigo-500 mb-2">100%</p>
-					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Cumplimiento Veri*Factu</p>
+				<div class="text-center border-l border-white/10">
+					<p class="text-4xl font-black text-indigo-500 mb-1">100%</p>
+					<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Ley Veri*Factu</p>
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<div id="soluciones" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<a href="/negocios/peluqueria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-blue-500/50 transition-all duration-300">
-					<div class="text-3xl mb-4">💇‍♀️</div>
-					<h3 class="text-2xl font-bold text-white mb-2">Peluquerías</h3>
-					<p class="text-slate-400 text-sm">Citas automáticas y gestión de agenda 24/7.</p>
+	<section id="soluciones" class="py-24 relative bg-slate-950/50">
+		<div class="max-w-7xl mx-auto px-6">
+			<h2 class="text-4xl font-black text-white mb-16 text-center">Sectores Optimizados</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<a href="/negocios/peluqueria" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/50 transition-all">
+					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">💇‍♀️</div>
+					<h3 class="text-2xl font-bold text-white mb-4">Peluquerías y Estética</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">Agenda llena sin tocar el teléfono. Gestión de citas y recordatorios automáticos.</p>
 				</a>
-				<a href="/negocios/taller" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-orange-500/50 transition-all duration-300">
-					<div class="text-3xl mb-4">🔧</div>
-					<h3 class="text-2xl font-bold text-white mb-2">Talleres</h3>
-					<p class="text-slate-400 text-sm">Recepcionista virtual y recordatorios de ITV.</p>
+				<a href="/negocios/taller" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-orange-500/50 transition-all">
+					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🔧</div>
+					<h3 class="text-2xl font-bold text-white mb-4">Talleres Mecánicos</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">Recepción virtual y control de entradas. Avisos de ITV y presupuestos instantáneos.</p>
 				</a>
-				<a href="/negocios/carniceria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-red-500/50 transition-all duration-300">
-					<div class="text-3xl mb-4">🥩</div>
-					<h3 class="text-2xl font-bold text-white mb-2">Carnicerías</h3>
-					<p class="text-slate-400 text-sm">Pedidos de WhatsApp directos a tu tablet.</p>
+				<a href="/negocios/carniceria" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-red-500/50 transition-all">
+					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🥩</div>
+					<h3 class="text-2xl font-bold text-white mb-4">Carnicerías y Alimentación</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">De WhatsApp a tu tablet de preparación. Sin audios, sin errores, más despacho.</p>
 				</a>
-				<a href="/negocios/restaurante" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-yellow-500/50 transition-all duration-300">
-					<div class="text-3xl mb-4">🥂</div>
-					<h3 class="text-2xl font-bold text-white mb-2">Restaurantes</h3>
-					<p class="text-slate-400 text-sm">Reservas sin comisiones y Room Service IA.</p>
+				<a href="/negocios/restaurante" class="group bg-slate-900 border border-white/5 p-10 rounded-[2.5rem] hover:border-yellow-500/50 transition-all">
+					<div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🥂</div>
+					<h3 class="text-2xl font-bold text-white mb-4">Hostelería y Hoteles</h3>
+					<p class="text-slate-400 text-sm leading-relaxed">Reservas inteligentes sin comisiones y Room Service automatizado por IA.</p>
 				</a>
 			</div>
+		</div>
+	</section>
 
-			<div class="mt-32 max-w-4xl mx-auto text-center px-8 py-16 rounded-3xl bg-gradient-to-b from-blue-900/10 to-transparent border border-blue-500/10">
-				<h2 class="text-3xl font-bold text-white mb-8 underline decoration-blue-500/30 underline-offset-8">El Compromiso Madecem</h2>
-				<p class="text-xl text-slate-300 italic leading-relaxed">
+	<section class="py-32">
+		<div class="max-w-4xl mx-auto px-6 text-center">
+			<div class="bg-gradient-to-br from-blue-900/10 to-transparent p-12 rounded-[3rem] border border-blue-500/10 backdrop-blur-sm">
+				<h2 class="text-3xl font-bold text-white mb-8">El Compromiso Madecem</h2>
+				<p class="text-2xl text-slate-300 italic font-light leading-relaxed">
 					"No somos una agencia de marketing, somos <strong>ingenieros</strong>. Bajamos al barro de tu negocio para eliminar las fugas de tiempo. Si nuestra IA no te devuelve horas de vida desde el primer mes, no hemos hecho bien nuestro trabajo."
 				</p>
 			</div>
-
 		</div>
 	</section>
+
+	<section id="contacto" class="py-24 relative overflow-hidden">
+		<div class="max-w-4xl mx-auto px-6 relative z-10">
+			<div class="bg-slate-900 border border-white/10 p-8 md:p-16 rounded-[3rem] shadow-2xl">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-black text-white mb-4">¿Hablamos de rentabilidad?</h2>
+					<p class="text-slate-400">Nuestro equipo de ingeniería analizará tu caso y te propondrá una solución en menos de 24h.</p>
+				</div>
+				
+				<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">Nombre Completo</label>
+						<input type="text" class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all" placeholder="Ej: Ramón García">
+					</div>
+					<div>
+						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">WhatsApp de contacto</label>
+						<input type="tel" class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all" placeholder="+34 ...">
+					</div>
+					<div class="md:col-span-2">
+						<label class="block text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">Negocio o Sector</label>
+						<select class="w-full bg-slate-950 border border-white/5 rounded-2xl px-6 py-4 text-white outline-none focus:border-blue-500 transition-all appearance-none">
+							<option>Taller Mecánico</option>
+							<option>Peluquería / Estética</option>
+							<option>Carnicería / Alimentación</option>
+							<option>Restaurante / Hotel</option>
+							<option>Empresa B2B / Consultoría</option>
+						</select>
+					</div>
+					<div class="md:col-span-2">
+						<button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl shadow-xl shadow-blue-600/20 transition-all hover:scale-[1.02]">
+							Solicitar Auditoría Gratuita
+						</button>
+						<p class="text-center text-[10px] text-slate-600 mt-6 italic uppercase tracking-widest">
+							Cero spam. Solo soluciones de ingeniería.
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
 </Layout>
