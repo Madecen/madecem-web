@@ -3,75 +3,81 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="MADECEM | Ingeniería de IA para Negocios Reales" description="Automatización inteligente para Pymes y sector industrial.">
+<Layout title="MADECEM | Ingeniería de IA: Recupera +10h de tu semana" description="Automatización real para PYMEs. Eliminamos el error humano y optimizamos tu tiempo.">
 	
-	<section class="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden min-h-screen flex flex-col justify-center">
+	<section class="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-[#020617]">
 		
-		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -z-10 mix-blend-screen"></div>
+		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
 
-		<div class="max-w-7xl mx-auto px-6 text-center z-10 relative">
+		<div class="max-w-7xl mx-auto px-6 z-10 relative">
 			
-			<div class="inline-flex items-center gap-2 bg-slate-800/50 border border-slate-700 text-slate-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-md">
-				<span class="relative flex h-2 w-2">
-				  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-				  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-				</span>
-				Ingeniería de Automatización
+			<div class="text-center mb-20">
+				<div class="inline-flex items-center gap-2 bg-blue-950/50 border border-blue-800/50 text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-8 backdrop-blur-md">
+					<span class="relative flex h-2 w-2">
+					  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+					  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+					</span>
+					Ingeniería de Automatización Pragmática
+				</div>
+
+				<h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-8 leading-tight">
+					Recupera <span class="text-blue-500">10 horas</span> de tu<br>
+					semana. La IA hace el resto.
+				</h1>
+
+				<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+					No vendemos software genérico. Instalamos <strong>cerebros digitales</strong> que eliminan el trabajo repetitivo para que tú te enfoques en escalar.
+				</p>
 			</div>
 
-			<h1 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
-				Automatizamos lo aburrido.<br>
-				<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-					Tú escalas el negocio.
-				</span>
-			</h1>
-
-			<p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-				MADECEM instala cerebros digitales en empresas reales. Sin tecnicismos. Sin humo. Solo resultados que llenan tu agenda y responden a tus clientes.
-			</p>
-
-			<div id="soluciones" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto scroll-mt-24">
-				
-				<a href="/negocios/peluqueria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-8 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(16,185,129,0.15)] text-left flex flex-col h-full overflow-hidden">
-					<div class="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="w-12 h-12 bg-emerald-900/30 rounded-2xl flex items-center justify-center text-2xl mb-6 border border-emerald-500/20 group-hover:scale-110 transition-transform duration-300">💇‍♀️</div>
-					<h3 class="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Peluquerías</h3>
-					<p class="text-slate-400 mb-4 flex-1">Citas automáticas por WhatsApp.</p>
-					<div class="flex items-center text-emerald-400 font-semibold gap-2 text-sm">Ver Demo →</div>
-				</a>
-
-				<a href="/negocios/taller" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-8 hover:border-orange-500/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] text-left flex flex-col h-full overflow-hidden">
-					<div class="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="w-12 h-12 bg-orange-900/30 rounded-2xl flex items-center justify-center text-2xl mb-6 border border-orange-500/20 group-hover:scale-110 transition-transform duration-300">🔧</div>
-					<h3 class="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">Talleres Mecánicos</h3>
-					<p class="text-slate-400 mb-4 flex-1">Gestión de entrada y citas.</p>
-					<div class="flex items-center text-orange-400 font-semibold gap-2 text-sm">Ver Demo →</div>
-				</a>
-
-                <a href="/negocios/carniceria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(239,68,68,0.15)] text-left flex flex-col h-full overflow-hidden">
-					<div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="w-12 h-12 bg-red-900/30 rounded-2xl flex items-center justify-center text-2xl mb-6 border border-red-500/20 group-hover:scale-110 transition-transform duration-300">🥩</div>
-					<h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Carnicerías</h3>
-					<p class="text-slate-400 mb-4 flex-1">Pedidos por WhatsApp a Tablet.</p>
-					<div class="flex items-center text-red-400 font-semibold gap-2 text-sm">Ver Demo →</div>
-				</a>
-
-                <a href="/negocios/restaurante" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-8 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(234,179,8,0.15)] text-left flex flex-col h-full overflow-hidden">
-					<div class="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="w-12 h-12 bg-yellow-900/30 rounded-2xl flex items-center justify-center text-2xl mb-6 border border-yellow-500/20 group-hover:scale-110 transition-transform duration-300">🥂</div>
-					<h3 class="text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Restaurantes</h3>
-					<p class="text-slate-400 mb-4 flex-1">Reservas y Room Service.</p>
-					<div class="flex items-center text-yellow-400 font-semibold gap-2 text-sm">Ver Demo →</div>
-				</a>
-
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-slate-800/50 mb-24 bg-slate-900/10 backdrop-blur-sm rounded-3xl">
+				<div class="text-center">
+					<p class="text-4xl lg:text-5xl font-black text-blue-500 mb-2">+10h</p>
+					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Ahorro Semanal Medio</p>
+				</div>
+				<div class="text-center border-l border-slate-800/50">
+					<p class="text-4xl lg:text-5xl font-black text-emerald-500 mb-2">0%</p>
+					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Error en Facturación</p>
+				</div>
+				<div class="text-center border-l border-slate-800/50">
+					<p class="text-4xl lg:text-5xl font-black text-orange-500 mb-2">24/7</p>
+					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Operativa Ininterrumpida</p>
+				</div>
+				<div class="text-center border-l border-slate-800/50">
+					<p class="text-4xl lg:text-5xl font-black text-indigo-500 mb-2">100%</p>
+					<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Cumplimiento Veri*Factu</p>
+				</div>
 			</div>
 
-            <div class="mt-16">
-                <p class="text-slate-500 text-sm mb-4">¿Tu negocio es diferente?</p>
-                <a href="#contacto" class="text-slate-300 hover:text-white underline underline-offset-4 decoration-slate-700 hover:decoration-white transition-all">
-                    Hablemos de una solución a medida
-                </a>
-            </div>
+			<div id="soluciones" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<a href="/negocios/peluqueria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-blue-500/50 transition-all duration-300">
+					<div class="text-3xl mb-4">💇‍♀️</div>
+					<h3 class="text-2xl font-bold text-white mb-2">Peluquerías</h3>
+					<p class="text-slate-400 text-sm">Citas automáticas y gestión de agenda 24/7.</p>
+				</a>
+				<a href="/negocios/taller" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-orange-500/50 transition-all duration-300">
+					<div class="text-3xl mb-4">🔧</div>
+					<h3 class="text-2xl font-bold text-white mb-2">Talleres</h3>
+					<p class="text-slate-400 text-sm">Recepcionista virtual y recordatorios de ITV.</p>
+				</a>
+				<a href="/negocios/carniceria" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-red-500/50 transition-all duration-300">
+					<div class="text-3xl mb-4">🥩</div>
+					<h3 class="text-2xl font-bold text-white mb-2">Carnicerías</h3>
+					<p class="text-slate-400 text-sm">Pedidos de WhatsApp directos a tu tablet.</p>
+				</a>
+				<a href="/negocios/restaurante" class="group relative bg-[#0f172a] border border-slate-800 rounded-3xl p-10 hover:border-yellow-500/50 transition-all duration-300">
+					<div class="text-3xl mb-4">🥂</div>
+					<h3 class="text-2xl font-bold text-white mb-2">Restaurantes</h3>
+					<p class="text-slate-400 text-sm">Reservas sin comisiones y Room Service IA.</p>
+				</a>
+			</div>
+
+			<div class="mt-32 max-w-4xl mx-auto text-center px-8 py-16 rounded-3xl bg-gradient-to-b from-blue-900/10 to-transparent border border-blue-500/10">
+				<h2 class="text-3xl font-bold text-white mb-8 underline decoration-blue-500/30 underline-offset-8">El Compromiso Madecem</h2>
+				<p class="text-xl text-slate-300 italic leading-relaxed">
+					"No somos una agencia de marketing, somos <strong>ingenieros</strong>. Bajamos al barro de tu negocio para eliminar las fugas de tiempo. Si nuestra IA no te devuelve horas de vida desde el primer mes, no hemos hecho bien nuestro trabajo."
+				</p>
+			</div>
 
 		</div>
 	</section>
