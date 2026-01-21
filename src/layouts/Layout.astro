@@ -1,110 +1,22 @@
----
-import '../styles/global.css';
-import { Image } from 'astro:assets';
-// Importamos el logo para que Astro lo procese
-import logoImg from '../assets/logo-madecem.svg';
-
-interface Props {
-    title: string;
-    description?: string;
-}
-
-const { 
-    title, 
-    description = "Expertos en IA Industrial y Mantenimiento Predictivo en Guadalajara. Optimizamos tu planta con agentes autónomos para eliminar tiempos de inactividad." 
-} = Astro.props;
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://www.madecem.com");
-
-// Usamos una URL absoluta para SEO, pero asegúrate de que el archivo sea ligero
-const socialImageURL = new URL("/favicon.svg", Astro.site || "https://www.madecem.com");
----
-
 <!doctype html>
-<html lang="es" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="canonical" href={canonicalURL} />
-
-        <title>{title} | MADECEM - IA Industrial y Automatización</title>
-        <meta name="title" content={`${title} | MADECEM`} />
-        <meta name="description" content={description} />
-        <meta name="keywords" content="IA industrial, Agentes de IA, Industria 4.0, Visión Artificial, Mantenimiento Predictivo, Guadalajara, Cabanillas del Campo, Transformación Digital" />
-        <meta name="author" content="MADECEM" />
-        <meta name="robots" content="index, follow" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalURL} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={socialImageURL} />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonicalURL} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={socialImageURL} />
-
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "MADECEM",
-            "image": "https://www.madecem.com/favicon.svg",
-            "description": "Expertos en Inteligencia Artificial y Visión Artificial para el sector industrial en Guadalajara.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Calle San Anton, 2",
-              "addressLocality": "Cabanillas del Campo",
-              "addressRegion": "Guadalajara",
-              "postalCode": "19171",
-              "addressCountry": "ES"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 40.6385, 
-              "longitude": -3.2355
-            },
-            "url": "https://www.madecem.com",
-            "telephone": "+34637819789"
-          }
-        </script>
-    </head>
-    <body class="m-0 w-full h-full bg-[#020617] text-white antialiased">
-        
-        <header class="fixed w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-white/10">
-            <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-                
-                <div class="flex items-center gap-2">
-                    <Image 
-                        src={logoImg} 
-                        alt="Logo MADECEM" 
-                        class="h-10 w-auto rounded-lg"
-                        width={40}
-                        height={40}
-                        loading="eager"
-                    />
-                    <span class="text-xl font-bold tracking-tighter uppercase ml-1">Madecem</span>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300 mr-4">
-                        <a href="/" class="hover:text-blue-400 transition-colors">Inicio</a>
-                        <a href="#servicios" class="hover:text-blue-400 transition-colors">Servicios</a>
-                        <a href="#nosotros" class="hover:text-blue-400 transition-colors">Nosotros</a>
-                    </div>
-                    <a href="mailto:info@madecem.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold transition-all shadow-md">
-                        Contacto
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <div class="pt-20"> 
-            <slot />
-        </div>
-
-    </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
