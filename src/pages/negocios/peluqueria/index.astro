@@ -16,7 +16,7 @@ import Layout from '../../../layouts/Layout.astro';
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
         
-        <div class="text-left order-2 md:order-1">
+        <div class="text-left">
           
           <div class="inline-flex items-center gap-2 bg-blue-950/50 border border-blue-800/50 text-blue-300 px-3 py-1 rounded-full text-xs font-bold mb-8 uppercase tracking-wider backdrop-blur-md">
             <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-400/50"></span>
@@ -60,7 +60,7 @@ import Layout from '../../../layouts/Layout.astro';
 
         </div>
 
-        <div class="flex justify-center md:justify-end relative order-1 md:order-2">
+        <div class="flex justify-center md:justify-end relative">
             <div class="phone-frame">
                 <div class="notch"></div>
                 <div class="screen">
@@ -92,7 +92,7 @@ import Layout from '../../../layouts/Layout.astro';
 </Layout>
 
 <script>
-    // 1. TEXTO CAMBIANTE (MÁQUINA DE ESCRIBIR)
+    // 1. TEXTO CAMBIANTE
     const textElement = document.getElementById('changing-text');
     const phrases = ["más clientes.", "menos estrés.", "agenda llena.", "cero fallos."];
     let phraseIndex = 0; let charIndex = 0; let isDeleting = false;
@@ -115,7 +115,7 @@ import Layout from '../../../layouts/Layout.astro';
     }
     typeWriter();
 
-    // 2. CHAT (LÓGICA ORIGINAL)
+    // 2. CHAT
     const chatContainer = document.getElementById('phone-chat');
     const messages = [
         { text: "Hola, ¿tienes hueco para cortar puntas?", type: 'user', delay: 500 },
