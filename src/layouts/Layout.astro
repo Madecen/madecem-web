@@ -5,9 +5,20 @@ import logo from '../assets/logo-madecem.svg';
 interface Props {
 	title: string;
     description?: string;
+    // Nueva propiedad para decidir el color
+    theme?: 'default' | 'taller';
 }
 
-const { title, description } = Astro.props;
+const { title, description, theme = 'default' } = Astro.props;
+
+// LÓGICA DE COLORES SEGÚN EL TEMA
+const isTaller = theme === 'taller';
+
+// Colores dinámicos
+const bgBody = isTaller ? 'bg-[#0c0a09]' : 'bg-[#020617]';
+const bgHeader = isTaller ? 'bg-[#0c0a09]/90 border-orange-900/30' : 'bg-[#020617]/90 border-white/5';
+const hoverText = isTaller ? 'hover:text-orange-500' : 'hover:text-blue-400';
+const btnColor = isTaller ? 'bg-orange-600 hover:bg-orange-500 shadow-[0_0_15px_rgba(234,88,12,0.3)]' : 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_15px_rgba(37,99,235,0.3)]';
 ---
 
 <!doctype html>
@@ -22,14 +33,14 @@ const { title, description } = Astro.props;
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
 	</head>
 	
-	<body class="bg-[#020617] text-white font-sans antialiased min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+    <body class={`${bgBody} text-white font-sans antialiased min-h-screen flex flex-col selection:bg-orange-500 selection:text-white`}>
 		
-        <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#020617]/90 backdrop-blur-xl">
+        <header class={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-colors duration-300 ${bgHeader}`}>
             <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 
                 <a href="/" class="flex items-center gap-3 group">
                     <img src={logo.src} alt="MADECEM AI Logo" class="h-9 w-auto" />
-                    <span class="text-xl font-black tracking-tight text-white group-hover:text-blue-400 transition-colors">
+                    <span class={`text-xl font-black tracking-tight text-white transition-colors ${hoverText}`}>
                         MADECEM
                     </span>
                 </a>
@@ -37,25 +48,22 @@ const { title, description } = Astro.props;
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
                     <a href="#" class="hover:text-white transition-colors">Soluciones</a>
                     <a href="#" class="hover:text-white transition-colors">Empresa</a>
-                    <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] font-semibold">
+                    <a href="#contacto" class={`${btnColor} text-white px-5 py-2.5 rounded-lg transition-all font-semibold`}>
                         Contacto
                     </a>
                 </div>
             </nav>
         </header>
 
-        <main class="flex-1 pt-20"> 
+		<main class="flex-1 pt-20"> 
 			<slot />
 		</main>
 
-        <footer id="contacto" class="border-t border-slate-800 bg-[#020617] pt-16 pb-8 relative overflow-hidden mt-auto">
-			
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <footer id="contacto" class="border-t border-slate-800/50 bg-[#020617] pt-16 pb-8 relative overflow-hidden mt-auto">
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-slate-900/50 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10">
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                    
                     <div class="col-span-1 lg:col-span-1">
                         <div class="flex items-center gap-2 mb-6 opacity-90">
                              <img src={logo.src} alt="Madecem" class="h-6 w-auto" />
@@ -70,57 +78,35 @@ const { title, description } = Astro.props;
                         <h4 class="text-white font-bold mb-6">Contacto</h4>
                         <ul class="space-y-4 text-sm text-slate-400">
                             <li class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                <span>
-                                    C/ San Antón 2<br>
-                                    19171 Cabanillas del Campo<br>
-                                    Guadalajara, España
-                                </span>
+                                <span>📍</span>
+                                <span>C/ San Antón 2<br>19171 Cabanillas del Campo<br>Guadalajara, España</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                <a href="mailto:info@madecem.com" class="hover:text-blue-400 transition-colors">info@madecem.com</a>
+                                <span>📧</span>
+                                <a href="mailto:info@madecem.com" class="hover:text-white transition-colors">info@madecem.com</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-span-1 md:col-span-2 h-52 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl relative z-10">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.664472784176!2d-3.238412688375652!3d40.60766877130981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43ad4746d60685%3A0x36127170019727!2sC.%20San%20Ant%C3%B3n%2C%202%2C%2019171%20Cabanillas%20del%20Campo%2C%20Guadalajara!5e0!3m2!1ses!2ses!4v1708514567351!5m2!1ses!2ses"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.548773956405!2d-3.2355419234473854!3d40.63004384351639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43acdd9a287239%3A0x6280435178619677!2sC.%20San%20Ant%C3%B3n%2C%202%2C%2019171%20Cabanillas%20del%20Campo%2C%20Guadalajara!5e0!3m2!1ses!2ses!4v1705851234567!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="absolute inset-0 bg-blue-950/30 mix-blend-multiply pointer-events-none"></div>
                     </div>
-
                 </div>
 
                 <div class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                     <p>© {new Date().getFullYear()} MADECEM. Ingeniería e IA.</p>
-                    <div class="flex gap-6">
-                        <a href="#" class="hover:text-slate-300 transition-colors">Aviso Legal</a>
-                        <a href="#" class="hover:text-slate-300 transition-colors">Privacidad</a>
-                    </div>
                 </div>
-
             </div>
         </footer>
-
 	</body>
 </html>
 
 <style is:global>
 	html {
 		font-family: 'Inter', system-ui, sans-serif;
-        background-color: #020617;
+        background-color: #020617; /* Fallback */
         scroll-behavior: smooth;
 	}
-    /* Filtro CSS para el mapa de Google */
-    iframe {
-        filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%);
-    }
+    iframe { filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%); }
 </style>

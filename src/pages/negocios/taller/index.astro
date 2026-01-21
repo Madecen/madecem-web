@@ -1,0 +1,199 @@
+---
+// src/pages/negocios/taller/index.astro
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="MADECEM | IA para Talleres Mecánicos" description="Automatización de citas y presupuestos." theme="taller">
+  
+  <section class="min-h-[calc(100vh-80px)] flex items-center justify-center py-12 relative overflow-hidden">
+    
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-orange-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
+        <div class="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] bg-amber-700/20 rounded-full blur-[100px] mix-blend-screen"></div>
+    </div>
+
+    <div class="max-w-7xl w-full mx-auto px-6 relative z-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        
+        <div class="text-left">
+          
+          <div class="inline-flex items-center gap-2 bg-orange-950/40 border border-orange-700/50 text-orange-300 px-3 py-1 rounded-full text-xs font-bold mb-8 uppercase tracking-wider backdrop-blur-md">
+            <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse shadow-[0_0_10px_#f97316]"></span>
+            Tecnología para Talleres
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-white">
+            Repara vehículos.<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500">
+                Deja de atender llamadas.
+            </span>
+          </h1>
+
+          <div class="text-xl md:text-2xl text-stone-300 mb-8 font-medium flex flex-wrap items-center gap-2 min-h-[36px]">
+              <span>Tu taller necesita</span>
+              <span class="font-bold text-orange-500 inline-flex items-center">
+                  <span id="changing-text">más reparaciones</span>
+                  <span class="animate-blink ml-1 text-orange-500">|</span>
+              </span>
+          </div>
+          
+          <p class="text-lg text-stone-400 mb-10 font-light max-w-lg leading-relaxed">
+            Tu recepcionista IA gestiona citas de taller, revisiones e ITV por WhatsApp. Llena tus elevadores mientras tú tienes las manos en la grasa.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+              <a href="https://wa.me/34637819789?text=Hola,%20quiero%20información%20sobre%20la%20IA%20para%20mi%20taller%20mecánico" target="_blank" class="group bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(234,88,12,0.4)] hover:shadow-[0_0_40px_rgba(234,88,12,0.6)] flex items-center gap-3">
+                <span>Implementar IA</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+              
+              <div class="flex items-center gap-3 text-sm text-stone-500">
+                  <div class="flex -space-x-3">
+                      <div class="w-9 h-9 rounded-full bg-stone-800 border-2 border-stone-950 flex items-center justify-center text-lg">🔧</div>
+                      <div class="w-9 h-9 rounded-full bg-stone-700 border-2 border-stone-950 flex items-center justify-center text-lg">⚙️</div>
+                      <div class="w-9 h-9 rounded-full bg-stone-600 border-2 border-stone-950 flex items-center justify-center text-white text-xs font-bold">+</div>
+                  </div>
+                  <p>En más de <span class="text-stone-300 font-semibold">80 talleres</span></p>
+              </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-center md:justify-end relative">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <div class="screen">
+                    <div class="wa-header">
+                        <div class="wa-back-arrow">←</div>
+                        <div class="wa-avatar"><span>TM</span></div>
+                        <div class="wa-info">
+                            <h3>Taller Motor</h3>
+                            <p>Cuenta de Empresa</p>
+                        </div>
+                    </div>
+                    <div id="phone-chat" class="wa-chat-area">
+                        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                             <span class="wa-date-badge">HOY</span>
+                        </div>
+                    </div>
+                    <div class="wa-input-area">
+                        <div class="wa-plus">+</div>
+                        <div class="wa-input-box">Mensaje...</div>
+                        <div class="wa-send-btn">➤</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+    const textElement = document.getElementById('changing-text');
+    const phrases = ["más reparaciones.", "menos interrupciones.", "agenda optimizada.", "clientes felices."];
+    let phraseIndex = 0; let charIndex = 0; let isDeleting = false;
+
+    function typeWriter() {
+        if (!textElement) return;
+        const currentPhrase = phrases[phraseIndex];
+        if (isDeleting) {
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1); charIndex--;
+        } else {
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1); charIndex++;
+        }
+        let typeSpeed = isDeleting ? 50 : 100;
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true; typeSpeed = 2000;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500;
+        }
+        setTimeout(typeWriter, typeSpeed);
+    }
+    typeWriter();
+
+    const chatContainer = document.getElementById('phone-chat');
+    const messages = [
+        { text: "Hola, ¿tenéis hueco para una revisión?", type: 'user', delay: 500 },
+        { text: "¡Hola! 👋 Soy el asistente del taller. Déjame mirar el elevador...", type: 'bot', delay: 2000 },
+        { text: "Tengo sitio este jueves a las 09:30 o a las 15:00. ¿Te encaja?", type: 'bot', delay: 2000 },
+        { text: "A las 09:30 mejor.", type: 'user', delay: 2000 },
+        { text: "¡Oído! ✅ Elevador reservado para el jueves 09:30. Tráenos el coche un poco antes.", type: 'bot', delay: 2000 }
+    ];
+
+    function createBubble(text, type) {
+        const div = document.createElement('div');
+        const isUser = type === 'user';
+        const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        div.className = isUser ? 'wa-bubble wa-bubble-user' : 'wa-bubble wa-bubble-bot';
+        div.innerHTML = `${text}<div class="wa-time">${time} ${isUser ? '<span class="wa-ticks">✓✓</span>' : ''}</div>`;
+        return div;
+    }
+
+    function runSimulation() {
+        if (!chatContainer) return;
+        const bubbles = chatContainer.querySelectorAll('.wa-bubble');
+        bubbles.forEach(b => b.remove());
+        let currentDelay = 0;
+        messages.forEach(msg => {
+            currentDelay += msg.delay;
+            setTimeout(() => {
+                const bubble = createBubble(msg.text, msg.type);
+                chatContainer.appendChild(bubble); chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, currentDelay);
+        });
+    }
+    runSimulation(); setInterval(runSimulation, 15000);
+</script>
+
+<style is:global>
+    @keyframes blink { 50% { opacity: 0; } }
+    .animate-blink { animation: blink 1s step-end infinite; }
+
+    /* ESTILOS ESPECÍFICOS TALLER */
+    .phone-frame {
+        position: relative; width: 300px; height: 600px;
+        background: #0c0a09; border-radius: 45px;
+        box-shadow: 0 0 60px -20px rgba(234,88,12,0.4); 
+        padding: 10px; box-sizing: border-box; transform: translateZ(0);
+        border: 3px solid #1c1917; margin: 0 auto; 
+    }
+    .screen {
+        width: 100%; height: 100%; border-radius: 35px;
+        /* FONDO MÁS CLARO: Pasamos de negro total a un gris piedra oscuro */
+        background-color: #1c1917; 
+        background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+        /* Blend mode más suave para ver los dibujos */
+        background-blend-mode: soft-light; 
+        opacity: 1; /* Opacidad al 100% para que brille */
+        position: relative; overflow: hidden; display: flex; flex-direction: column;
+        /* Borde sutil para separar pantalla del marco */
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+    }
+    .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0c0a09; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
+
+    .wa-header { background-color: #1c1917; height: 75px; width: 100%; display: flex; align-items: center; padding-top: 25px; padding-left: 10px; padding-right: 15px; box-sizing: border-box; color: white; z-index: 50; border-bottom: 1px solid #292524; }
+    .wa-back-arrow { font-size: 18px; margin-right: 5px; color: #f97316; }
+    .wa-avatar { width: 32px; height: 32px; background: #292524; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-weight: bold; font-size: 11px; color: #f97316; border: 1px solid #44403c; }
+    .wa-info h3 { margin: 0; font-size: 14px; font-weight: 600; color: #f5f5f4; }
+    .wa-info p { margin: 0; font-size: 10px; opacity: 0.7; color: #a8a29e; }
+
+    .wa-chat-area { flex: 1; overflow-y: auto; padding: 12px; padding-bottom: 80px; display: flex; flex-direction: column; }
+    .wa-chat-area::-webkit-scrollbar { display: none; } .wa-chat-area { -ms-overflow-style: none; scrollbar-width: none; }
+    .wa-date-badge { background: #292524; color: #a8a29e; font-size: 10px; font-weight: bold; padding: 4px 10px; border-radius: 8px; border: 1px solid #44403c; }
+
+    .wa-bubble { max-width: 85%; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 18px; margin-bottom: 6px; position: relative; font-family: Helvetica, Arial, sans-serif; }
+    .wa-bubble-user { align-self: flex-end; background-color: #005c4b; color: #e9edef; border-top-right-radius: 0; }
+    /* BURBUJA DEL BOT MÁS CLARA PARA CONTRASTE */
+    .wa-bubble-bot { align-self: flex-start; background-color: #292524; color: #e7e5e4; border-top-left-radius: 0; border: 1px solid #44403c; }
+    
+    .wa-time { font-size: 9px; color: #a8a29e; text-align: right; margin-top: 2px; display: flex; justify-content: flex-end; align-items: center; opacity: 0.8; }
+    .wa-ticks { color: #53bdeb; font-weight: bold; margin-left:3px; font-size: 10px; }
+
+    .wa-input-area { position: absolute; bottom: 0; left: 0; right: 0; height: 55px; background-color: #1c1917; display: flex; align-items: center; padding: 0 8px; z-index: 60; border-top: 1px solid #292524; }
+    .wa-plus { font-size: 20px; color: #78716c; margin-right: 8px; }
+    .wa-input-box { flex: 1; background: #292524; height: 34px; border-radius: 17px; display: flex; align-items: center; padding-left: 12px; font-size: 13px; color: #a8a29e; border: 1px solid #44403c; }
+    .wa-send-btn { width: 34px; height: 34px; background: #ea580c; border-radius: 50%; margin-left: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
+</style>
