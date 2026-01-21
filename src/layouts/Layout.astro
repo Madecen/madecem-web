@@ -1,22 +1,61 @@
+---
+// src/layouts/Layout.astro
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Automatización con IA para negocios y pymes." } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title} | Madecem</title>
+		<ViewTransitions />
 	</head>
-	<body>
-		<slot />
+	<body class="bg-gray-50 text-gray-900 font-sans flex flex-col min-h-screen">
+		
+		<nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between h-16">
+					<div class="flex items-center">
+						<a href="/" class="text-2xl font-bold text-blue-700 tracking-tight">
+							Madecem<span class="text-blue-400">.AI</span>
+						</a>
+					</div>
+					
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="/negocios" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Pymes y Negocios</a>
+						<a href="/industria" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Industria</a>
+						<a href="mailto:contacto@madecem.com" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">
+							Contacto
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<footer class="bg-slate-900 text-white py-10 mt-auto">
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<h3 class="text-xl font-bold mb-4">Madecem</h3>
+				<p class="text-slate-400 text-sm mb-6">Automatización inteligente para el mundo real.</p>
+				<div class="text-slate-500 text-xs border-t border-slate-800 pt-6">
+					&copy; {new Date().getFullYear()} Madecem. Todos los derechos reservados.
+				</div>
+			</div>
+		</footer>
+
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
