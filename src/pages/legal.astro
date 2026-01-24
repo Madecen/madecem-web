@@ -1,0 +1,112 @@
+---
+// src/pages/legal.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Marco Legal y Privacidad | MADECEM" description="Aviso Legal, Política de Privacidad y Cookies.">
+  
+  <section class="pt-32 pb-20 bg-[#020617] min-h-screen">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <div class="mb-16 border-b border-white/10 pb-8">
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Marco Legal</h1>
+        <p class="text-slate-400">
+            Transparencia y cumplimiento normativo. Última actualización: {new Date().toLocaleDateString('es-ES')}
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-4 mb-16">
+          <a href="#aviso" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-blue-600 hover:border-blue-500 transition-colors">
+              1. Aviso Legal
+          </a>
+          <a href="#privacidad" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-blue-600 hover:border-blue-500 transition-colors">
+              2. Privacidad y RGPD
+          </a>
+          <a href="#cookies" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm hover:bg-blue-600 hover:border-blue-500 transition-colors">
+              3. Política de Cookies
+          </a>
+      </div>
+
+      <div class="space-y-24 text-slate-300 leading-relaxed font-light">
+          
+          <article id="aviso" class="scroll-mt-32">
+              <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span class="text-blue-500">01.</span> Aviso Legal
+              </h2>
+              <div class="space-y-4 text-sm md:text-base bg-slate-900/30 p-8 rounded-2xl border border-white/5">
+                  <p>
+                      En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), se exponen a continuación los datos identificativos de la empresa:
+                  </p>
+                  <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                      <li><strong>Denominación Social:</strong> MADECEM AI Solutions (Nombre Fiscal Pendiente)</li>
+                      <li><strong>CIF/NIF:</strong> [PENDIENTE DE INSERTAR]</li>
+                      <li><strong>Domicilio Social:</strong> [DIRECCIÓN DE LA EMPRESA], Madrid, España.</li>
+                      <li><strong>Email de contacto:</strong> hola@madecem.com</li>
+                      <li><strong>Actividad:</strong> Desarrollo de software, ingeniería de inteligencia artificial y consultoría tecnológica.</li>
+                  </ul>
+                  <p>
+                      El acceso a este sitio web implica la aceptación expresa y sin reservas de las presentes condiciones de uso.
+                  </p>
+              </div>
+          </article>
+
+          <article id="privacidad" class="scroll-mt-32">
+              <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span class="text-blue-500">02.</span> Política de Privacidad
+              </h2>
+              <div class="space-y-6 text-sm md:text-base">
+                  <p>
+                      En MADECEM nos tomamos muy en serio la privacidad de tus datos, especialmente en el contexto de nuestras soluciones de <strong>Veri*Factu</strong> y gestión de datos sensibles.
+                  </p>
+                  
+                  <h3 class="text-lg font-bold text-white mt-8">Finalidad del tratamiento</h3>
+                  <p>Recogemos tus datos únicamente para:</p>
+                  <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                      <li>Gestionar las consultas realizadas a través del formulario de contacto o WhatsApp.</li>
+                      <li>Realizar las demostraciones de producto solicitadas.</li>
+                      <li>El envío de presupuestos y facturación de servicios.</li>
+                  </ul>
+
+                  <h3 class="text-lg font-bold text-white mt-8">Legitimación</h3>
+                  <p>
+                      La base legal para el tratamiento de sus datos es el consentimiento del interesado al contactar con nosotros o la ejecución de un contrato de servicios en caso de contratar nuestras soluciones.
+                  </p>
+
+                  <h3 class="text-lg font-bold text-white mt-8">Tus Derechos</h3>
+                  <p>
+                      Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO) enviando un email a <strong>hola@madecem.com</strong>.
+                  </p>
+              </div>
+          </article>
+
+          <article id="cookies" class="scroll-mt-32">
+              <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span class="text-blue-500">03.</span> Política de Cookies
+              </h2>
+              <div class="space-y-4 text-sm md:text-base">
+                  <p>
+                      Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de usuario y obtener estadísticas de uso.
+                  </p>
+                  
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                      <div class="p-6 bg-slate-900/50 rounded-xl border border-white/5">
+                          <h4 class="font-bold text-white mb-2">Cookies Técnicas</h4>
+                          <p class="text-xs text-slate-400">Necesarias para que la web funcione (ej: navegación, seguridad). No se pueden desactivar.</p>
+                      </div>
+                      <div class="p-6 bg-slate-900/50 rounded-xl border border-white/5">
+                          <h4 class="font-bold text-white mb-2">Cookies Analíticas</h4>
+                          <p class="text-xs text-slate-400">Nos ayudan a entender cómo usas la web (Google Analytics). Son anónimas.</p>
+                      </div>
+                  </div>
+
+                  <p class="mt-4 text-xs text-slate-500">
+                      Puedes configurar tu navegador para rechazar todas las cookies, aunque esto podría afectar al funcionamiento de algunas secciones de la web.
+                  </p>
+              </div>
+          </article>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
