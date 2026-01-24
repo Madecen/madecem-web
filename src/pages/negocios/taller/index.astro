@@ -6,7 +6,6 @@ import Layout from '../../../layouts/Layout.astro';
 <Layout title="MADECEM | IA para Talleres Mecánicos" description="Automatización de citas y presupuestos." theme="taller">
   
   <section class="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-[#0c0a09]">
-    
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-orange-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
         <div class="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] bg-amber-700/20 rounded-full blur-[100px] mix-blend-screen"></div>
@@ -14,20 +13,17 @@ import Layout from '../../../layouts/Layout.astro';
 
     <div class="max-w-7xl w-full mx-auto px-6 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-        
         <div class="text-left">
           <div class="inline-flex items-center gap-2 bg-orange-950/40 border border-orange-700/50 text-orange-300 px-3 py-1 rounded-full text-xs font-bold mb-8 uppercase tracking-wider backdrop-blur-md">
             <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse shadow-[0_0_10px_#f97316]"></span>
             Tecnología para Talleres
           </div>
-          
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-white">
             Repara vehículos.<br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500">
                 Deja de atender llamadas.
             </span>
           </h1>
-
           <div class="text-xl md:text-2xl text-stone-300 mb-8 font-medium flex flex-wrap items-center gap-2 min-h-[36px]">
               <span>Tu taller necesita</span>
               <span class="font-bold text-orange-500 inline-flex items-center">
@@ -35,18 +31,15 @@ import Layout from '../../../layouts/Layout.astro';
                   <span class="animate-blink ml-1 text-orange-500">|</span>
               </span>
           </div>
-          
           <p class="text-lg text-stone-400 mb-10 font-light max-w-lg leading-relaxed">
             Tu recepcionista IA gestiona citas de taller, revisiones e ITV por WhatsApp.
             Llena tus elevadores mientras tú tienes las manos en la grasa.
           </p>
-          
           <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
               <a href="#calculadora" class="group bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(234,88,12,0.4)] hover:shadow-[0_0_40px_rgba(234,88,12,0.6)] flex items-center gap-3">
                 <span>Calcular Ahorro</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
               </a>
-              
               <div class="flex items-center gap-3 text-sm text-stone-500">
                   <div class="flex -space-x-3">
                       <div class="w-9 h-9 rounded-full bg-stone-800 border-2 border-stone-950 flex items-center justify-center text-lg">🔧</div>
@@ -56,7 +49,6 @@ import Layout from '../../../layouts/Layout.astro';
               </div>
           </div>
         </div>
-
         <div class="flex justify-center md:justify-end relative scale-90 md:scale-100 origin-top">
             <div class="phone-frame">
                 <div class="notch"></div>
@@ -82,7 +74,6 @@ import Layout from '../../../layouts/Layout.astro';
                 </div>
             </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -96,9 +87,7 @@ import Layout from '../../../layouts/Layout.astro';
                   Calcula cuánto te está costando no tener IA.
               </p>
           </div>
-
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-stone-900/50 rounded-3xl p-8 border border-white/5 shadow-2xl">
-              
               <div class="space-y-10 p-4">
                   <div>
                       <div class="flex justify-between mb-4">
@@ -108,7 +97,6 @@ import Layout from '../../../layouts/Layout.astro';
                       <input type="range" id="input-calls" min="5" max="50" value="15" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-600">
                       <p class="text-xs text-stone-500 mt-2">Citas, preguntas de precios, "está mi coche", etc.</p>
                   </div>
-
                   <div>
                       <div class="flex justify-between mb-4">
                           <label class="text-stone-300 font-bold">Minutos perdidos por llamada</label>
@@ -117,7 +105,6 @@ import Layout from '../../../layouts/Layout.astro';
                       <input type="range" id="input-minutes" min="1" max="10" value="4" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-600">
                       <p class="text-xs text-stone-500 mt-2">Incluye: limpiarse las manos, hablar, apuntar, volver al coche.</p>
                   </div>
-
                   <div>
                       <div class="flex justify-between mb-4">
                           <label class="text-stone-300 font-bold">Precio hora de mano de obra</label>
@@ -126,10 +113,8 @@ import Layout from '../../../layouts/Layout.astro';
                       <input type="range" id="input-price" min="30" max="90" value="45" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-600">
                   </div>
               </div>
-
               <div class="bg-gradient-to-br from-orange-600 to-amber-700 rounded-2xl p-8 flex flex-col justify-center text-white relative overflow-hidden group">
                   <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
-                  
                   <div class="relative z-10">
                       <p class="text-orange-100 text-sm font-medium mb-2 uppercase tracking-wide">Pérdidas Mensuales Estimadas</p>
                       <div class="text-6xl font-black mb-2 flex items-baseline gap-2">
@@ -138,7 +123,6 @@ import Layout from '../../../layouts/Layout.astro';
                       <p class="text-orange-100/80 text-sm mb-8 border-b border-white/20 pb-8">
                           Dinero que dejas de facturar por atender el teléfono.
                       </p>
-
                       <div class="flex items-center gap-4 mb-2">
                           <div class="text-3xl font-bold" id="result-hours">22</div>
                           <div class="text-sm leading-tight text-orange-100">
@@ -148,7 +132,6 @@ import Layout from '../../../layouts/Layout.astro';
                       <p class="text-xs text-orange-200 mt-4 italic opacity-80">*Cálculo basado en 22 días laborables.</p>
                   </div>
               </div>
-
           </div>
       </div>
   </section>
@@ -175,6 +158,53 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
   </section>
 
+  <section class="py-20 border-t border-white/5 bg-gradient-to-b from-[#0c0a09] to-orange-950/20">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-orange-500 font-bold tracking-widest text-xs uppercase mb-4 block">POTENCIAL OCULTO</span>
+            <h3 class="text-3xl md:text-4xl font-black text-white mb-6">
+                Esto es solo la punta del iceberg.
+            </h3>
+            <p class="text-stone-400 mb-6 leading-relaxed">
+                El agente de citas es solo el comienzo. En <strong>MADECEM</strong> diseñamos arquitecturas completas que conectan el taller con tu oficina.
+            </p>
+            <ul class="space-y-3 text-stone-300">
+                <li class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Control de Stock de Recambios
+                </li>
+                <li class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Facturación Automática (Veri*Factu)
+                </li>
+                <li class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Avisos de ITV a Clientes Antiguos
+                </li>
+            </ul>
+        </div>
+
+        <div class="relative h-64 md:h-80 bg-orange-900/10 rounded-2xl border border-orange-500/20 flex items-center justify-center overflow-hidden">
+            <div class="absolute top-1/3 left-0 w-full h-0.5 bg-orange-500/50 z-10"></div>
+            
+            <div class="absolute top-[10%] w-24 h-24 bg-white/10 backdrop-blur-md rounded-t-3xl border border-white/20 flex flex-col items-center justify-center text-center p-2 z-20">
+                <span class="text-2xl">🤖</span>
+                <span class="text-[10px] font-bold text-white mt-1">Citas</span>
+            </div>
+
+            <div class="absolute top-[35%] w-64 h-48 bg-orange-600/10 backdrop-blur-md rounded-b-[3rem] border border-orange-500/30 flex flex-col items-center justify-start pt-8 text-center p-4">
+                <span class="text-xs text-orange-200 font-mono mb-2">INGENIERÍA MADECEM</span>
+                <div class="grid grid-cols-2 gap-4 w-full">
+                    <div class="bg-orange-900/40 p-2 rounded text-[10px] text-orange-100">Facturación</div>
+                    <div class="bg-orange-900/40 p-2 rounded text-[10px] text-orange-100">Stock</div>
+                    <div class="bg-orange-900/40 p-2 rounded text-[10px] text-orange-100">Marketing</div>
+                    <div class="bg-orange-900/40 p-2 rounded text-[10px] text-orange-100">Legal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
   <section class="py-20 bg-gradient-to-t from-orange-950/40 to-[#0c0a09] border-t border-white/5">
       <div class="max-w-4xl mx-auto px-6 text-center">
           <h2 class="text-3xl md:text-5xl font-black text-white mb-8">Deja que los robots hablen.<br>Tú repara los coches.</h2>
@@ -192,7 +222,6 @@ import Layout from '../../../layouts/Layout.astro';
 </Layout>
 
 <script>
-    // --- SCRIPTS EXISTENTES (Simulador y Texto) ---
     const textElement = document.getElementById('changing-text');
     const phrases = ["más reparaciones.", "menos interrupciones.", "agenda optimizada.", "clientes felices."];
     let phraseIndex = 0; let charIndex = 0; let isDeleting = false;
@@ -251,56 +280,38 @@ import Layout from '../../../layouts/Layout.astro';
     }
     runSimulation(); setInterval(runSimulation, 15000);
 
-    // --- NUEVO SCRIPT: CALCULADORA ---
     const inCalls = document.getElementById('input-calls') as HTMLInputElement;
     const inMins = document.getElementById('input-minutes') as HTMLInputElement;
     const inPrice = document.getElementById('input-price') as HTMLInputElement;
-    
     const dispCalls = document.getElementById('display-calls');
     const dispMins = document.getElementById('display-minutes');
     const dispPrice = document.getElementById('display-price');
-    
     const resMoney = document.getElementById('result-money');
     const resHours = document.getElementById('result-hours');
 
     function calculate() {
         if(!inCalls || !inMins || !inPrice) return;
-
         const calls = parseInt(inCalls.value);
         const mins = parseInt(inMins.value);
         const price = parseInt(inPrice.value);
         const workingDays = 22;
-
-        // Actualizar visualización de inputs
         if(dispCalls) dispCalls.innerText = calls.toString();
         if(dispMins) dispMins.innerText = mins + " min";
         if(dispPrice) dispPrice.innerText = price + " €";
-
-        // Cálculos
-        // Horas perdidas al mes = (Llamadas * Minutos * Días) / 60
         const lostHours = Math.round(((calls * mins * workingDays) / 60));
-        // Dinero perdido = Horas * Precio Hora
         const lostMoney = Math.round(lostHours * price);
-
-        // Actualizar resultados con animación simple
         if(resHours) resHours.innerText = lostHours.toString();
         if(resMoney) resMoney.innerText = lostMoney.toLocaleString('es-ES');
     }
-
-    // Event Listeners
     inCalls?.addEventListener('input', calculate);
     inMins?.addEventListener('input', calculate);
     inPrice?.addEventListener('input', calculate);
-
-    // Ejecutar una vez al inicio
     calculate();
 </script>
 
 <style is:global>
     @keyframes blink { 50% { opacity: 0; } }
     .animate-blink { animation: blink 1s step-end infinite; }
-
-    /* ESTILOS ESPECÍFICOS TALLER */
     .phone-frame {
         position: relative; width: 300px; height: 600px;
         background: #0c0a09; border-radius: 45px;
@@ -319,25 +330,20 @@ import Layout from '../../../layouts/Layout.astro';
     }
     .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0c0a09;
     border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
-
     .wa-header { background-color: #1c1917; height: 75px; width: 100%; display: flex;
     align-items: center; padding-top: 25px; padding-left: 10px; padding-right: 15px; box-sizing: border-box; color: white; z-index: 50; border-bottom: 1px solid #292524; }
     .wa-back-arrow { font-size: 18px; margin-right: 5px; color: #f97316; }
     .wa-avatar { width: 32px; height: 32px; background: #292524; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-weight: bold; font-size: 11px; color: #f97316; border: 1px solid #44403c; }
     .wa-info h3 { margin: 0; font-size: 14px; font-weight: 600; color: #f5f5f4; }
     .wa-info p { margin: 0; font-size: 10px; opacity: 0.7; color: #a8a29e; }
-
     .wa-chat-area { flex: 1; overflow-y: auto; padding: 12px; padding-bottom: 80px; display: flex; flex-direction: column; }
     .wa-chat-area::-webkit-scrollbar { display: none; } .wa-chat-area { -ms-overflow-style: none; scrollbar-width: none; }
     .wa-date-badge { background: #292524; color: #a8a29e; font-size: 10px; font-weight: bold; padding: 4px 10px; border-radius: 8px; border: 1px solid #44403c; }
-
     .wa-bubble { max-width: 85%; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 18px; margin-bottom: 6px; position: relative; font-family: Helvetica, Arial, sans-serif; }
     .wa-bubble-user { align-self: flex-end; background-color: #005c4b; color: #e9edef; border-top-right-radius: 0; }
     .wa-bubble-bot { align-self: flex-start; background-color: #292524; color: #e7e5e4; border-top-left-radius: 0; border: 1px solid #44403c; }
-    
     .wa-time { font-size: 9px; color: #a8a29e; text-align: right; margin-top: 2px; display: flex; justify-content: flex-end; align-items: center; opacity: 0.8; }
     .wa-ticks { color: #53bdeb; font-weight: bold; margin-left:3px; font-size: 10px; }
-
     .wa-input-area { position: absolute; bottom: 0; left: 0; right: 0; height: 55px; background-color: #1c1917; display: flex; align-items: center; padding: 0 8px; z-index: 60; border-top: 1px solid #292524; }
     .wa-plus { font-size: 20px; color: #78716c; margin-right: 8px; }
     .wa-input-box { flex: 1; background: #292524; height: 34px; border-radius: 17px; display: flex; align-items: center; padding-left: 12px; font-size: 13px; color: #a8a29e; border: 1px solid #44403c; }
