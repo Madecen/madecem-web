@@ -39,39 +39,23 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 
 				<div class="relative lg:h-[500px] flex items-center justify-center mt-8 lg:mt-0">
-					<div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full"></div>
+					<div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full animate-pulse-slow"></div>
 					
-					<div class="relative w-full max-w-sm bg-slate-900 border border-slate-700 rounded-[2rem] p-4 shadow-2xl">
-						<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-950 rounded-b-xl"></div>
+					<div class="relative w-full max-w-sm bg-slate-900 border border-slate-700 rounded-[2rem] p-4 shadow-2xl overflow-hidden min-h-[380px]">
+						<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-950 rounded-b-xl z-20"></div>
 						
-						<div class="space-y-4 mt-8 font-sans text-sm">
-							<div class="flex gap-3 animate-slide-in-1">
-								<div class="w-8 h-8 rounded-full bg-slate-700 flex-shrink-0"></div>
-								<div class="bg-slate-800 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[80%]">
-									Hola, quería mesa para 4 personas el viernes.
-								</div>
-							</div>
-
-							<div class="flex gap-3 flex-row-reverse animate-slide-in-2" style="animation-delay: 1s;">
-								<div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0">IA</div>
-								<div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-2xl rounded-tr-none text-blue-100 max-w-[80%]">
-									¡Hola! 👋 Claro, tengo hueco a las 21:00 o a las 22:30. ¿Cuál prefieres?
-								</div>
-							</div>
-
-							<div class="flex gap-3 animate-slide-in-3" style="animation-delay: 2.5s;">
-								<div class="w-8 h-8 rounded-full bg-slate-700 flex-shrink-0"></div>
-								<div class="bg-slate-800 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[80%]">
-									A las 21:00 perfecto.
-								</div>
-							</div>
-
-							<div class="flex justify-center animate-pop-in" style="animation-delay: 3.5s;">
-								<div class="bg-green-500/20 border border-green-500/40 text-green-400 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
-									<span>✅ Cita Agendada en ERP</span>
-								</div>
+						<div class="flex items-center gap-3 border-b border-white/5 pb-4 mt-2 mb-4 px-2">
+							<div id="demo-avatar" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-lg shadow-lg shadow-blue-500/30 transition-all duration-500">🍽️</div>
+							<div>
+								<h3 id="demo-title" class="font-bold text-white text-sm transition-all duration-500">Restaurante</h3>
+								<p class="text-[10px] text-green-400 font-mono flex items-center gap-1">
+									<span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> ONLINE
+								</p>
 							</div>
 						</div>
+
+						<div id="demo-messages" class="space-y-4 font-sans text-sm h-[260px] flex flex-col justify-end pb-2">
+							</div>
 					</div>
 				</div>
 			</div>
@@ -116,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all group hover:-translate-y-1">
 					<div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
 						</svg>
 					</div>
 					<h3 class="text-xl font-bold mb-3">Gestión de Pedidos</h3>
@@ -305,19 +289,138 @@ import Layout from '../layouts/Layout.astro';
 
 </Layout>
 
-<style>
-	/* Animaciones personalizadas para el chat en vivo */
-	@keyframes slide-in {
-		from { opacity: 0; transform: translateY(20px); }
-		to { opacity: 1; transform: translateY(0); }
+<script>
+	const scenarios = [
+		{
+			icon: "🍽️",
+			title: "Restaurante",
+			color: "bg-blue-600",
+			msgs: [
+				{ text: "Hola, mesa para 4 este viernes.", side: "left", delay: 0 },
+				{ text: "¡Hola! 👋 Tengo hueco a las 21:00 o 22:30.", side: "right", delay: 1500 },
+				{ text: "A las 21:00 está bien.", side: "left", delay: 3500 },
+				{ text: "✅ Confirmado. Te envío el localizador.", side: "right", delay: 5000, tag: "Reserva ERP OK" }
+			]
+		},
+		{
+			icon: "🦷",
+			title: "Clínica Dental",
+			color: "bg-emerald-600",
+			msgs: [
+				{ text: "Me duele una muela, ¿tenéis hueco?", side: "left", delay: 0 },
+				{ text: "Vaya 😢 ¿Puedes venir mañana a las 10:00?", side: "right", delay: 1500 },
+				{ text: "Sí, perfecto.", side: "left", delay: 3500 },
+				{ text: "Agendado con el Dr. Pérez. 🏥", side: "right", delay: 5000, tag: "Cita Médica OK" }
+			]
+		},
+		{
+			icon: "⚖️",
+			title: "Despacho Legal",
+			color: "bg-slate-600",
+			msgs: [
+				{ text: "¿Cómo va mi expediente de divorcio?", side: "left", delay: 0 },
+				{ text: "Hola Carlos. El juzgado ya lo ha admitido.", side: "right", delay: 1500 },
+				{ text: "¿Tengo que ir a firmar algo?", side: "left", delay: 3500 },
+				{ text: "No, te avisaremos. Todo en orden. 📄", side: "right", delay: 5000, tag: "Info Cliente OK" }
+			]
+		},
+		{
+			icon: "📦",
+			title: "Logística",
+			color: "bg-orange-600",
+			msgs: [
+				{ text: "¿Dónde está mi pedido #4599?", side: "left", delay: 0 },
+				{ text: "Un momento, lo consulto en el sistema... 🚚", side: "right", delay: 1500 },
+				{ text: "Está en reparto. Llega hoy antes de las 14h.", side: "right", delay: 3500 },
+				{ text: "¡Genial, gracias!", side: "left", delay: 5000, tag: "Tracking API OK" }
+			]
+		}
+	];
+
+	let currentScenario = 0;
+	const container = document.getElementById('demo-messages');
+	const avatar = document.getElementById('demo-avatar');
+	const title = document.getElementById('demo-title');
+
+	function runScenario(index) {
+		if(!container || !avatar || !title) return;
+		
+		const data = scenarios[index];
+		
+		// 1. Cambiar cabecera
+		avatar.innerText = data.icon;
+		avatar.className = `w-10 h-10 rounded-full flex items-center justify-center text-lg shadow-lg transition-all duration-500 ${data.color} shadow-${data.color.replace('bg-', '')}/30`;
+		title.innerText = data.title;
+		
+		// 2. Limpiar chat con efecto fade out
+		container.innerHTML = '';
+
+		// 3. Escribir mensajes
+		data.msgs.forEach(msg => {
+			setTimeout(() => {
+				const div = document.createElement('div');
+				div.className = `flex gap-3 w-full ${msg.side === 'right' ? 'flex-row-reverse' : ''} animate-slide-in`;
+				
+				let content = '';
+				if(msg.side === 'left') { // Usuario
+					content = `
+						<div class="w-8 h-8 rounded-full bg-slate-700 flex-shrink-0"></div>
+						<div class="bg-slate-800 p-3 rounded-2xl rounded-tl-none text-slate-200 text-xs md:text-sm max-w-[80%] shadow-sm">
+							${msg.text}
+						</div>`;
+				} else { // Bot
+					content = `
+						<div class="w-8 h-8 rounded-full ${data.color} flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0 shadow-lg">IA</div>
+						<div class="${data.color}/20 border border-${data.color.replace('bg-', '')}/30 p-3 rounded-2xl rounded-tr-none text-blue-100 text-xs md:text-sm max-w-[80%] shadow-sm">
+							${msg.text}
+						</div>`;
+				}
+				
+				div.innerHTML = content;
+				container.appendChild(div);
+
+				// Si hay etiqueta de sistema (ej: Cita Agendada)
+				if(msg.tag) {
+					setTimeout(() => {
+						const tag = document.createElement('div');
+						tag.className = "flex justify-center animate-pop-in mt-2";
+						tag.innerHTML = `<div class="bg-green-500/20 border border-green-500/40 text-green-400 px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-2 shadow-lg backdrop-blur-md"><span>⚡ ${msg.tag}</span></div>`;
+						container.appendChild(tag);
+					}, 600);
+				}
+
+			}, msg.delay);
+		});
 	}
-	.animate-slide-in-1 { animation: slide-in 0.5s ease-out forwards; opacity: 0; }
-	.animate-slide-in-2 { animation: slide-in 0.5s ease-out forwards; opacity: 0; }
-	.animate-slide-in-3 { animation: slide-in 0.5s ease-out forwards; opacity: 0; }
+
+	// Iniciar ciclo
+	if(container) {
+		runScenario(0);
+		setInterval(() => {
+			currentScenario = (currentScenario + 1) % scenarios.length;
+			runScenario(currentScenario);
+		}, 9000); // CAMBIADO A 9 SEGUNDOS
+	}
+</script>
+
+<style>
+	@keyframes slide-in-up {
+		0% { opacity: 0; transform: translateY(10px); }
+		100% { opacity: 1; transform: translateY(0); }
+	}
+	.animate-slide-in { animation: slide-in-up 0.4s ease-out forwards; }
 	
-	@keyframes pop-in {
+	@keyframes pulse-slow {
+		0%, 100% { opacity: 0.2; transform: scale(1); }
+		50% { opacity: 0.3; transform: scale(1.05); }
+	}
+	.animate-pulse-slow { animation: pulse-slow 4s infinite ease-in-out; }
+    
+    @keyframes pop-in {
 		0% { transform: scale(0.8); opacity: 0; }
 		100% { transform: scale(1); opacity: 1; }
 	}
 	.animate-pop-in { animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; }
+    
+    .animate-fade-in-up { animation: slide-in-up 0.6s ease-out forwards; }
 </style>
