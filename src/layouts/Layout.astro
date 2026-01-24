@@ -42,7 +42,6 @@ const currentYear = new Date().getFullYear();
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={socialImageURL} />
-
 	</head>
 	<body class="bg-[#020617] text-white font-sans selection:bg-blue-500/30 flex flex-col min-h-screen">
 		
@@ -68,7 +67,7 @@ const currentYear = new Date().getFullYear();
 					</a>
 				</div>
 
-				<button id="mobile-menu-button" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menú">
+                <button id="mobile-menu-button" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menú de navegación">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
 					</svg>
@@ -88,82 +87,50 @@ const currentYear = new Date().getFullYear();
 			<slot />
 		</main>
 
-		<footer class="bg-[#010413] pt-24 pb-12 relative overflow-hidden">
+		<footer class="bg-[#010413] border-t border-white/5 py-20 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-900/50 to-transparent"></div>
 
-			<div class="max-w-7xl mx-auto px-6">
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+				<div class="md:col-span-2">
+					<a href="/" class="text-xl font-black tracking-tighter text-white mb-6 block">MADECEM AI</a>
+                    <p class="text-slate-400 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm">
+						Ingeniería de automatización pragmática para PYMEs en España.
+                        Recuperamos tu tiempo eliminando el trabajo manual repetitivo.
+					</p>
                     
-                    <div class="space-y-6">
-                        <a href="/" class="block">
-                            <span class="text-2xl font-black tracking-tighter text-white">MADECEM AI</span>
+                    <div class="flex gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all" aria-label="Visitar nuestro LinkedIn">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
-                            Ingeniería de automatización pragmática. Eliminamos la fricción operativa para que las empresas escalen sin aumentar personal.
-                        </p>
-                        <div class="flex gap-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all" aria-label="LinkedIn">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all" aria-label="Twitter">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            </a>
-                        </div>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all" aria-label="Visitar nuestro Twitter">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
                     </div>
-
-                    <div>
-                        <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest border-b border-white/10 pb-2 inline-block">Sectores</h3>
-                        <ul class="space-y-4 text-sm font-medium text-slate-400">
-                            <li><a href="/negocios/taller" class="hover:text-orange-500 transition-colors flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 opacity-0 hover:opacity-100 transition-opacity"></span> Talleres Mecánicos
-                            </a></li>
-                            <li><a href="/negocios/carniceria" class="hover:text-red-500 transition-colors flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-red-500 opacity-0 hover:opacity-100 transition-opacity"></span> Carnicerías
-                            </a></li>
-                            <li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-yellow-500 opacity-0 hover:opacity-100 transition-opacity"></span> Hostelería
-                            </a></li>
-                            <li><a href="/negocios/peluqueria" class="hover:text-pink-500 transition-colors flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 rounded-full bg-pink-500 opacity-0 hover:opacity-100 transition-opacity"></span> Peluquería & Estética
-                            </a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest border-b border-white/10 pb-2 inline-block">Corporativo</h3>
-                        <ul class="space-y-4 text-sm text-slate-400">
-                            <li><a href="/empresa" class="hover:text-blue-400 transition-colors">Ingeniería a Medida</a></li>
-                            <li><a href="/empresa#contacto" class="hover:text-blue-400 transition-colors">Auditoría Técnica</a></li>
-                            <li><span class="text-slate-600 cursor-not-allowed">Partner Program (Pronto)</span></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest border-b border-white/10 pb-2 inline-block">Contacto</h3>
-                        <ul class="space-y-4 text-sm text-slate-400">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                <a href="mailto:hola@madecem.com" class="hover:text-white transition-colors">hola@madecem.com</a>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <span>Madrid, España<br><span class="text-xs text-slate-500">Operamos en toda la UE</span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                    <p>&copy; {currentYear} MADECEM S.L. Todos los derechos reservados.</p>
-                    <div class="flex gap-6">
-                        <a href="/legal#aviso" class="hover:text-slate-300 transition-colors">Aviso Legal</a>
-                        <a href="/legal#privacidad" class="hover:text-slate-300 transition-colors">Privacidad</a>
-                        <a href="/legal#cookies" class="hover:text-slate-300 transition-colors">Cookies</a>
-                    </div>
-                </div>
-
+				</div>
+				
+                <div>
+					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sectores</h3>
+					<ul class="text-slate-400 space-y-3 text-sm">
+						<li><a href="/negocios/taller" class="hover:text-orange-500 transition-colors">Talleres Mecánicos</a></li>
+						<li><a href="/negocios/carniceria" class="hover:text-red-500 transition-colors">Carnicerías</a></li>
+						<li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors">Hostelería</a></li>
+                        <li><a href="/negocios/peluqueria" class="hover:text-pink-500 transition-colors">Peluquería</a></li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h3>
+					<ul class="text-slate-400 space-y-3 text-sm">
+                        <li><a href="/legal#aviso" class="hover:text-white transition-colors">Aviso Legal</a></li>
+                        <li><a href="/legal#privacidad" class="hover:text-white transition-colors">Privacidad</a></li>
+                        <li><a href="/legal#cookies" class="hover:text-white transition-colors">Cookies</a></li>
+					</ul>
+				</div>
 			</div>
+            
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/5 text-center md:text-left">
+                <p class="text-xs text-slate-500">&copy; {currentYear} MADECEM S.L. Todos los derechos reservados.</p>
+            </div>
 		</footer>
 
 		<script>
