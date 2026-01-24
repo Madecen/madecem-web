@@ -8,6 +8,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="min-h-screen pt-32 pb-20 flex flex-col items-center justify-center relative overflow-hidden bg-[#020617]">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-600/5 rounded-full blur-[100px]"></div>
     </div>
 
     <div class="max-w-7xl w-full mx-auto px-6 relative z-10 text-center">
@@ -95,17 +96,11 @@ import Layout from '../layouts/Layout.astro';
                 <div class="text-cyan-400 font-mono text-xs mb-4">/// CASE_STUDY: STOCK_OPTIMIZATION</div>
                 <h3 class="text-3xl font-bold text-white mb-4">Control de Stock en Tiempo Real</h3>
                 <p class="text-slate-400 leading-relaxed mb-6">
-                    Nuestros agentes de visión computacional analizan el feed de tus cámaras de seguridad existentes. Detectan faltas de stock y actualizan tu ERP automáticamente, sin intervención humana.
+                    Nuestros agentes de visión computacional analizan el feed de tus cámaras de seguridad existentes. Detectan faltas de stock y actualizan tu ERP automáticamente.
                 </p>
                 <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-3">
-                        <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
-                        Detección de objetos con 99.8% de precisión.
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
-                        Alertas al almacén vía Telegram/Slack.
-                    </li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-cyan-500 rounded-full"></span> Detección de objetos 99.8%.</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-cyan-500 rounded-full"></span> Alertas vía Telegram/Slack.</li>
                 </ul>
             </div>
 
@@ -113,35 +108,25 @@ import Layout from '../layouts/Layout.astro';
                 <div class="flex items-center justify-between relative z-10">
                     <div class="flex flex-col items-center gap-2">
                         <div class="w-16 h-16 bg-slate-800 rounded-xl border border-slate-600 flex items-center justify-center text-2xl relative shadow-lg shadow-cyan-500/10">
-                            📹
-                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                            📹<div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                         </div>
                         <span class="text-[10px] font-mono text-slate-500">INPUT: RTSP</span>
                     </div>
-
                     <div class="flex-1 h-px bg-slate-700 relative mx-4">
                         <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right shadow-[0_0_10px_#22d3ee]"></div>
                     </div>
-
                     <div class="flex flex-col items-center gap-2">
-                        <div class="w-16 h-16 bg-cyan-950/30 rounded-xl border border-cyan-500/50 flex items-center justify-center text-2xl relative">
-                            🧠
-                        </div>
+                        <div class="w-16 h-16 bg-cyan-950/30 rounded-xl border border-cyan-500/50 flex items-center justify-center text-2xl relative">🧠</div>
                         <span class="text-[10px] font-mono text-cyan-400">ANALYSIS</span>
                     </div>
-
                     <div class="flex-1 h-px bg-slate-700 relative mx-4">
                         <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right" style="animation-delay: 1s;"></div>
                     </div>
-
                     <div class="flex flex-col items-center gap-2">
-                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-green-500/30 flex items-center justify-center text-2xl">
-                            💾
-                        </div>
+                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-green-500/30 flex items-center justify-center text-2xl">💾</div>
                         <span class="text-[10px] font-mono text-green-400">ERP UPDATE</span>
                     </div>
                 </div>
-                
                 <div class="mt-8 bg-black/80 rounded-lg p-4 font-mono text-[10px] text-slate-400 border-t border-white/5">
                     <p>> connected to cam_04</p>
                     <p class="text-cyan-400">> object_detected: "caja_ref_2024" (conf: 0.98)</p>
@@ -150,11 +135,9 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
             <div class="bg-slate-900/40 border border-indigo-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
                  <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none"></div>
-                 
                  <div class="flex flex-col gap-6 relative z-10">
                     <div class="flex items-center gap-4 p-3 rounded-lg bg-slate-800/50 border border-slate-700">
                         <div class="w-10 h-10 bg-white text-black flex items-center justify-center rounded font-bold">PDF</div>
@@ -164,18 +147,14 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                         <div class="text-indigo-400 animate-pulse">⬇</div>
                     </div>
-
                     <div class="p-4 rounded-xl border border-indigo-500/40 bg-indigo-950/20 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-[1px] bg-indigo-500 animate-scan-fast"></div>
                         <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] text-indigo-300 font-mono">HASHING PROCESS</span>
+                            <span class="text-[10px] text-indigo-300 font-mono">HASHING</span>
                             <span class="text-[10px] text-green-400 font-mono">SECURE</span>
                         </div>
-                        <div class="font-mono text-[8px] text-slate-500 break-all leading-tight">
-                            9a0f9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0
-                        </div>
+                        <div class="font-mono text-[8px] text-slate-500 break-all leading-tight">9a0f9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0</div>
                     </div>
-
                     <div class="flex items-center gap-4 p-3 rounded-lg bg-green-900/20 border border-green-500/30">
                         <div class="w-10 h-10 bg-green-500/20 text-green-500 flex items-center justify-center rounded-full text-xl">🏛️</div>
                         <div class="flex-1">
@@ -191,42 +170,174 @@ import Layout from '../layouts/Layout.astro';
                 <div class="text-indigo-400 font-mono text-xs mb-4">/// COMPLIANCE: ES_VERIFACTU_2026</div>
                 <h3 class="text-3xl font-bold text-white mb-4">Facturación Criptográfica</h3>
                 <p class="text-slate-400 leading-relaxed mb-6">
-                    No cambies tu forma de trabajar. Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
+                    Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
                 </p>
                 <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-3">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
-                        Generación de Huella Digital automática.
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
-                        Código QR autogenerado para facturas PDF.
-                    </li>
-                     <li class="flex items-center gap-3">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
-                        Certificado de inalterabilidad.
-                    </li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Huella Digital automática.</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Certificado de inalterabilidad.</li>
                 </ul>
             </div>
         </div>
+
+        <div class="mt-32">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-pink-900/30 border border-pink-500/30 text-pink-300 px-3 py-1 rounded text-xs font-mono mb-4">
+                    MODULE: ADAPTABILITY_ENGINE
+                </div>
+                <h3 class="text-3xl font-bold text-white">Tu entorno es único. Nuestra solución también.</h3>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                    No instalamos plugins genéricos. Construimos tuberías de datos que conectan tu caos operativo con soluciones ordenadas.
+                </p>
+            </div>
+
+            <div class="relative bg-[#050510] border border-slate-800 rounded-3xl p-6 lg:p-12 overflow-hidden">
+                <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-slate-800/50 rounded-2xl border border-slate-600 border-dashed flex flex-wrap content-center justify-center p-2 gap-2 mb-4 relative">
+                            <span class="text-xl animate-float-1">🏭</span>
+                            <span class="text-xl animate-float-2">🏥</span>
+                            <span class="text-xl animate-float-3">🚚</span>
+                            <span class="text-xl animate-float-1">⚖️</span>
+                            <div class="absolute -bottom-2 bg-slate-900 text-[10px] text-slate-400 px-2 border border-slate-700 rounded">TU SECTOR</div>
+                        </div>
+                        <p class="text-sm text-slate-300 font-bold">Requisitos Crudos</p>
+                        <p class="text-[10px] text-slate-500">Logística, Legal, Salud...</p>
+                    </div>
+
+                    <div class="hidden lg:flex flex-1 h-2 bg-slate-800 rounded-full relative overflow-hidden mx-4">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600 to-transparent w-1/2 animate-conveyor"></div>
+                    </div>
+                    <div class="lg:hidden text-2xl text-slate-600">⬇</div>
+
+                    <div class="flex flex-col items-center relative group">
+                        <div class="w-32 h-32 bg-indigo-950/20 rounded-full border border-indigo-500/30 flex items-center justify-center relative">
+                            <div class="absolute text-5xl opacity-80 animate-spin-slow">⚙️</div>
+                            <div class="absolute text-3xl opacity-60 animate-spin-reverse ml-8 mt-8">⚙️</div>
+                            
+                            <div class="absolute inset-0 border-2 border-indigo-400/50 rounded-full animate-ping-slow"></div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-indigo-300 font-bold">Ingeniería MADECEM</p>
+                            <p class="text-[10px] text-indigo-400/60">Adaptación de algoritmos</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:flex flex-1 h-2 bg-slate-800 rounded-full relative overflow-hidden mx-4">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pink-600 to-transparent w-1/2 animate-conveyor"></div>
+                    </div>
+                     <div class="lg:hidden text-2xl text-slate-600">⬇</div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-900 to-slate-900 rounded-2xl border border-pink-500/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(236,72,153,0.2)]">
+                            <span class="text-5xl animate-pulse">💎</span>
+                        </div>
+                        <p class="text-sm text-white font-bold">Solución a Medida</p>
+                        <p class="text-[10px] text-pink-400">Eficiencia Pura</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
       </div>
-      <div class="mt-24">
-          <a href="/#contacto" class="inline-flex items-center gap-3 bg-white text-black px-12 py-6 rounded-2xl font-bold text-xl hover:bg-slate-200 transition-all">
-              Agendar Auditoría Corporativa
-          </a>
+
+      <div id="contacto" class="w-full max-w-4xl mx-auto mt-40 mb-20">
+          <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-700 rounded-3xl p-1 overflow-hidden">
+              <div class="bg-slate-900 px-6 py-3 flex items-center justify-between border-b border-slate-800">
+                  <div class="flex gap-2">
+                      <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                      <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                      <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                  </div>
+                  <div class="text-[10px] font-mono text-slate-500">ROOT_ACCESS_GRANTED</div>
+              </div>
+              
+              <div class="p-8 md:p-12 text-center">
+                  <h3 class="text-3xl font-bold text-white mb-4">¿Iniciamos Protocolo?</h3>
+                  <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+                      Tienes un problema complejo. Nosotros tenemos la ingeniería. 
+                      Agendemos una sesión técnica de 30 minutos para evaluar la viabilidad.
+                  </p>
+
+                  <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                      <a href="mailto:hola@madecem.com" class="group relative px-8 py-4 bg-white text-black font-bold rounded-lg overflow-hidden transition-all hover:scale-105">
+                          <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-200 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+                          <span class="relative flex items-center gap-2">
+                              <span>📧 Iniciar Contacto</span>
+                              <span class="text-lg">→</span>
+                          </span>
+                      </a>
+                      
+                      <a href="tel:+34000000000" class="text-slate-400 text-sm hover:text-white transition-colors flex items-center gap-2 font-mono">
+                          <span>📞 Llamada de Emergencia</span>
+                      </a>
+                  </div>
+
+                  <div class="mt-8 pt-8 border-t border-slate-800 flex justify-center gap-8 text-[10px] text-slate-600 font-mono">
+                      <span>LATENCY: 12ms</span>
+                      <span>ENCRYPTION: ON</span>
+                      <span>AVAILABILITY: 24/7</span>
+                  </div>
+              </div>
+          </div>
       </div>
+
     </div>
   </section>
 </Layout>
 
 <style is:global>
-    /* Estilos Originales */
+    /* ANIMACIONES BASE */
     @keyframes scan { 
         0%, 100% { top: 0; } 
         50% { top: 100%; } 
     }
     .animate-scan { animation: scan 3s linear infinite; }
     
+    @keyframes flow-right {
+        0% { left: 0; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { left: 100%; opacity: 0; }
+    }
+    .animate-flow-right { animation: flow-right 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+    @keyframes scan-fast { 
+        0% { top: 0; } 
+        100% { top: 100%; } 
+    }
+    .animate-scan-fast { animation: scan-fast 1.5s linear infinite; }
+
+    /* ANIMACIONES FÁBRICA */
+    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .animate-spin-slow { animation: spin-slow 8s linear infinite; }
+
+    @keyframes spin-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+    .animate-spin-reverse { animation: spin-reverse 8s linear infinite; }
+
+    @keyframes ping-slow { 
+        75%, 100% { transform: scale(1.5); opacity: 0; } 
+    }
+    .animate-ping-slow { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+    @keyframes conveyor { 
+        0% { transform: translateX(-100%); } 
+        100% { transform: translateX(200%); } 
+    }
+    .animate-conveyor { animation: conveyor 2s linear infinite; }
+
+    @keyframes float { 
+        0%, 100% { transform: translateY(0); } 
+        50% { transform: translateY(-5px); } 
+    }
+    .animate-float-1 { animation: float 3s ease-in-out infinite; }
+    .animate-float-2 { animation: float 4s ease-in-out infinite; }
+    .animate-float-3 { animation: float 2.5s ease-in-out infinite; }
+
+    /* ESTILOS TELÉFONO */
     .phone-frame {
         position: relative; width: 200px; height: 400px;
         background: #020617; border-radius: 35px;
@@ -240,24 +351,5 @@ import Layout from '../layouts/Layout.astro';
         position: absolute; top: 0; left: 50%; transform: translateX(-50%);
         width: 80px; height: 18px; background: #020617; 
         border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; z-index: 50; 
-    }
-
-    /* Nuevos Estilos para las demos visuales */
-    @keyframes flow-right {
-        0% { left: 0; opacity: 0; }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { left: 100%; opacity: 0; }
-    }
-    .animate-flow-right {
-        animation: flow-right 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-
-    @keyframes scan-fast {
-        0% { top: 0; }
-        100% { top: 100%; }
-    }
-    .animate-scan-fast {
-        animation: scan-fast 1.5s linear infinite;
     }
 </style>
