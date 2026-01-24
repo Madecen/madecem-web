@@ -11,6 +11,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <div class="max-w-7xl w-full mx-auto px-6 relative z-10 text-center">
+      
       <div class="inline-flex items-center gap-2 bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 px-4 py-1.5 rounded-full text-[10px] font-bold mb-12 uppercase tracking-[0.2em]">
         Ingeniería a Medida B2B
       </div>
@@ -21,10 +22,11 @@ import Layout from '../layouts/Layout.astro';
       </h1>
 
       <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-20 font-light leading-relaxed">
-        Desarrollamos infraestructura inteligente para empresas que no pueden permitirse errores. Expertos en <strong>Visión Artificial</strong>, <strong>OCR</strong> y cumplimiento legal <strong>Veri*Factu 2026</strong>.
+        Desarrollamos infraestructura inteligente para empresas que no pueden permitirse errores.
+        Expertos en <strong>Visión Artificial</strong>, <strong>OCR</strong> y cumplimiento legal <strong>Veri*Factu 2026</strong>.
       </p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mt-12 mb-32">
         
         <div class="lg:col-span-4 flex flex-col items-center bg-slate-900/50 p-8 rounded-[3rem] border border-white/5">
             <div class="phone-frame border-indigo-900/50 mb-8">
@@ -80,9 +82,134 @@ import Layout from '../layouts/Layout.astro';
             <h4 class="text-white font-bold mb-2">Procesamiento de Voz</h4>
             <p class="text-slate-500 text-xs">Dictado inteligente de albaranes y presupuestos al CRM.</p>
         </div>
-
       </div>
 
+      <div class="w-full max-w-6xl mx-auto mb-32 text-left">
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ingeniería Transparente</h2>
+            <p class="text-slate-400">No es magia, es arquitectura de datos eficiente.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 group">
+            <div class="order-2 lg:order-1">
+                <div class="text-cyan-400 font-mono text-xs mb-4">/// CASE_STUDY: STOCK_OPTIMIZATION</div>
+                <h3 class="text-3xl font-bold text-white mb-4">Control de Stock en Tiempo Real</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    Nuestros agentes de visión computacional analizan el feed de tus cámaras de seguridad existentes. Detectan faltas de stock y actualizan tu ERP automáticamente, sin intervención humana.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
+                        Detección de objetos con 99.8% de precisión.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
+                        Alertas al almacén vía Telegram/Slack.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="order-1 lg:order-2 bg-slate-900/40 border border-cyan-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+                <div class="flex items-center justify-between relative z-10">
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-slate-600 flex items-center justify-center text-2xl relative shadow-lg shadow-cyan-500/10">
+                            📹
+                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        </div>
+                        <span class="text-[10px] font-mono text-slate-500">INPUT: RTSP</span>
+                    </div>
+
+                    <div class="flex-1 h-px bg-slate-700 relative mx-4">
+                        <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right shadow-[0_0_10px_#22d3ee]"></div>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="w-16 h-16 bg-cyan-950/30 rounded-xl border border-cyan-500/50 flex items-center justify-center text-2xl relative">
+                            🧠
+                        </div>
+                        <span class="text-[10px] font-mono text-cyan-400">ANALYSIS</span>
+                    </div>
+
+                    <div class="flex-1 h-px bg-slate-700 relative mx-4">
+                        <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right" style="animation-delay: 1s;"></div>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-green-500/30 flex items-center justify-center text-2xl">
+                            💾
+                        </div>
+                        <span class="text-[10px] font-mono text-green-400">ERP UPDATE</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-black/80 rounded-lg p-4 font-mono text-[10px] text-slate-400 border-t border-white/5">
+                    <p>> connected to cam_04</p>
+                    <p class="text-cyan-400">> object_detected: "caja_ref_2024" (conf: 0.98)</p>
+                    <p class="text-green-400">> update_stock(-1) -> SUCCESS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="bg-slate-900/40 border border-indigo-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+                 <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none"></div>
+                 
+                 <div class="flex flex-col gap-6 relative z-10">
+                    <div class="flex items-center gap-4 p-3 rounded-lg bg-slate-800/50 border border-slate-700">
+                        <div class="w-10 h-10 bg-white text-black flex items-center justify-center rounded font-bold">PDF</div>
+                        <div class="flex-1">
+                            <div class="h-2 bg-slate-600 rounded w-12 mb-1"></div>
+                            <div class="text-[10px] text-slate-400">Factura #F2026-001</div>
+                        </div>
+                        <div class="text-indigo-400 animate-pulse">⬇</div>
+                    </div>
+
+                    <div class="p-4 rounded-xl border border-indigo-500/40 bg-indigo-950/20 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-[1px] bg-indigo-500 animate-scan-fast"></div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] text-indigo-300 font-mono">HASHING PROCESS</span>
+                            <span class="text-[10px] text-green-400 font-mono">SECURE</span>
+                        </div>
+                        <div class="font-mono text-[8px] text-slate-500 break-all leading-tight">
+                            9a0f9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-3 rounded-lg bg-green-900/20 border border-green-500/30">
+                        <div class="w-10 h-10 bg-green-500/20 text-green-500 flex items-center justify-center rounded-full text-xl">🏛️</div>
+                        <div class="flex-1">
+                            <div class="text-xs text-green-300 font-bold">Enviado a Hacienda</div>
+                            <div class="text-[10px] text-green-500/60">Registro Veri*Factu OK</div>
+                        </div>
+                        <div class="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
+                    </div>
+                 </div>
+            </div>
+
+            <div>
+                <div class="text-indigo-400 font-mono text-xs mb-4">/// COMPLIANCE: ES_VERIFACTU_2026</div>
+                <h3 class="text-3xl font-bold text-white mb-4">Facturación Criptográfica</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    No cambies tu forma de trabajar. Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                        Generación de Huella Digital automática.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                        Código QR autogenerado para facturas PDF.
+                    </li>
+                     <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                        Certificado de inalterabilidad.
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
       <div class="mt-24">
           <a href="/#contacto" class="inline-flex items-center gap-3 bg-white text-black px-12 py-6 rounded-2xl font-bold text-xl hover:bg-slate-200 transition-all">
               Agendar Auditoría Corporativa
@@ -93,13 +220,44 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style is:global>
-    @keyframes scan { 0%, 100% { top: 0; } 50% { top: 100%; } }
+    /* Estilos Originales */
+    @keyframes scan { 
+        0%, 100% { top: 0; } 
+        50% { top: 100%; } 
+    }
     .animate-scan { animation: scan 3s linear infinite; }
+    
     .phone-frame {
         position: relative; width: 200px; height: 400px;
         background: #020617; border-radius: 35px;
         padding: 6px; border: 2px solid #1e293b;
     }
-    .screen { width: 100%; height: 100%; border-radius: 30px; overflow: hidden; position: relative; }
-    .notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 18px; background: #020617; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; z-index: 50; }
+    .screen { 
+        width: 100%; height: 100%;
+        border-radius: 30px; overflow: hidden; position: relative; 
+    }
+    .notch { 
+        position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+        width: 80px; height: 18px; background: #020617; 
+        border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; z-index: 50; 
+    }
+
+    /* Nuevos Estilos para las demos visuales */
+    @keyframes flow-right {
+        0% { left: 0; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { left: 100%; opacity: 0; }
+    }
+    .animate-flow-right {
+        animation: flow-right 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes scan-fast {
+        0% { top: 0; }
+        100% { top: 100%; }
+    }
+    .animate-scan-fast {
+        animation: scan-fast 1.5s linear infinite;
+    }
 </style>
