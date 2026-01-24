@@ -5,7 +5,7 @@ import Layout from '../../../layouts/Layout.astro';
 
 <Layout title="MADECEM | IA para Carnicerías: Recupera 10h de tu semana" description="De WhatsApp a tu lista de preparación. Sin errores, sin audios eternos." theme="carniceria">
   
-  <section class="min-h-[calc(100vh-80px)] flex items-center justify-center py-12 relative overflow-hidden bg-[#1a0502]">
+  <section class="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-[#1a0502]">
     
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-red-700/20 rounded-full blur-[120px] mix-blend-screen"></div>
@@ -14,13 +14,13 @@ import Layout from '../../../layouts/Layout.astro';
 
     <div class="max-w-7xl w-full mx-auto px-6 relative z-10">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
         <div class="text-left">
           
           <div class="inline-flex items-center gap-2 bg-red-950/50 border border-red-800/50 text-red-200 px-3 py-1 rounded-full text-xs font-bold mb-8 uppercase tracking-wider backdrop-blur-md">
             <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></span>
-            Ingeniería para el Sector Alimentación
+            Ingeniería para Alimentación
           </div>
           
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-white">
@@ -39,13 +39,14 @@ import Layout from '../../../layouts/Layout.astro';
           </div>
           
           <p class="text-lg text-slate-400 mb-10 font-light max-w-lg leading-relaxed">
-            Elimina los audios eternos y las notas en papel. <strong>Madecem AI</strong> procesa los pedidos de WhatsApp, genera tu lista de preparación y cumple con la normativa <strong>Veri*Factu</strong> automáticamente.
+            Olvídate de escuchar 50 audios de WhatsApp cada noche.
+            <strong>Madecem AI</strong> transcribe los pedidos, genera tu lista de corte y prepara el ticket automáticamente.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-              <a href="https://wa.me/34637819789?text=Hola,%20quiero%20ver%20la%20demo%20de%20la%20IA%20para%20carnicería" target="_blank" class="group bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_40px_rgba(220,38,38,0.5)] flex items-center gap-3">
-                <span>Ver Demo en Vivo</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              <a href="#calculadora" class="group bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_40px_rgba(220,38,38,0.5)] flex items-center gap-3">
+                <span>Calcular Tiempo Perdido</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
               </a>
               
               <div class="flex items-center gap-3 text-sm text-slate-500">
@@ -53,13 +54,13 @@ import Layout from '../../../layouts/Layout.astro';
                       <div class="w-9 h-9 rounded-full bg-slate-800 border-2 border-slate-950 flex items-center justify-center text-xs">🥩</div>
                       <div class="w-9 h-9 rounded-full bg-slate-700 border-2 border-slate-950 flex items-center justify-center text-xs">🔪</div>
                   </div>
-                  <p><span class="text-slate-300 font-semibold">0% errores</span> en pedidos</p>
+                  <p><span class="text-slate-300 font-semibold">0% errores</span> en corte</p>
               </div>
           </div>
 
         </div>
 
-        <div class="flex justify-center md:justify-end relative">
+        <div class="flex justify-center md:justify-end relative scale-90 md:scale-100 origin-top">
             <div class="phone-frame">
                 <div class="notch"></div>
                 <div class="screen">
@@ -88,6 +89,108 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <section id="calculadora" class="py-24 bg-[#1a0502] relative border-t border-white/5 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-3xl md:text-5xl font-black text-white mb-6">¿Cuánto tiempo pierdes con el móvil?</h2>
+              <p class="text-slate-400 max-w-2xl mx-auto">
+                  Escuchar audios, descifrarlos y pasarlos a limpio te roba horas de descanso o de producción.
+              </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-red-950/20 rounded-3xl p-8 border border-white/5 shadow-2xl">
+              
+              <div class="space-y-10 p-4">
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-slate-300 font-bold">Pedidos diarios por WhatsApp</label>
+                          <span class="text-red-400 font-mono text-xl" id="display-orders">20</span>
+                      </div>
+                      <input type="range" id="input-orders" min="5" max="80" value="20" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                      <p class="text-xs text-slate-500 mt-2">Incluye audios, textos y fotos mal hechas.</p>
+                  </div>
+
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-slate-300 font-bold">Minutos por pedido (gestión completa)</label>
+                          <span class="text-red-400 font-mono text-xl" id="display-minutes">5 min</span>
+                      </div>
+                      <input type="range" id="input-minutes" min="2" max="15" value="5" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                      <p class="text-xs text-slate-500 mt-2">Escuchar, apuntar, preguntar dudas, confirmar precio.</p>
+                  </div>
+
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-slate-300 font-bold">Valor de tu hora (€)</label>
+                          <span class="text-red-400 font-mono text-xl" id="display-price">20 €</span>
+                      </div>
+                      <input type="range" id="input-price" min="10" max="60" value="20" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                  </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-red-900 to-red-950 rounded-2xl p-8 flex flex-col justify-center text-white relative overflow-hidden group border border-red-800/30">
+                  <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+                  
+                  <div class="relative z-10">
+                      <p class="text-red-200 text-sm font-medium mb-2 uppercase tracking-wide">Tiempo perdido al mes</p>
+                      <div class="text-6xl font-black mb-2 flex items-baseline gap-2">
+                          <span id="result-hours">43</span>h
+                      </div>
+                      <p class="text-red-200/80 text-sm mb-8 border-b border-white/10 pb-8">
+                          ¡Eso es más de una semana laboral completa tirada a la basura!
+                      </p>
+
+                      <div class="flex items-center gap-4 mb-2">
+                          <div class="text-3xl font-bold text-red-400" id="result-money">860</div>
+                          <div class="text-sm leading-tight text-red-100">
+                              Euros (€) de coste<br>mensual invisible
+                          </div>
+                      </div>
+                      <p class="text-xs text-red-300 mt-4 italic opacity-60">*Cálculo basado en 26 días laborables.</p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  <section class="py-24 bg-[#1a0502]">
+      <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="p-6 border border-red-900/30 rounded-2xl hover:border-red-500/50 transition-colors group bg-red-950/10">
+                  <div class="w-12 h-12 bg-red-950/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-900/20">🎤</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Audio Caótico</h3>
+                  <p class="text-slate-400 text-sm">El cliente manda un audio de 2 min mientras pasea al perro pidiendo "carne pa' guisar".</p>
+              </div>
+              <div class="p-6 border border-red-900/30 rounded-2xl hover:border-red-500/50 transition-colors group bg-red-950/10">
+                  <div class="w-12 h-12 bg-red-950/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-900/20">📝</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Transcripción Perfecta</h3>
+                  <p class="text-slate-400 text-sm">La IA entiende el audio, identifica el corte exacto y cantidad, y te lo pone en una lista limpia.</p>
+              </div>
+              <div class="p-6 border border-red-900/30 rounded-2xl hover:border-red-500/50 transition-colors group bg-red-950/10">
+                  <div class="w-12 h-12 bg-red-950/50 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-900/20">🚀</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Listo para Cortar</h3>
+                  <p class="text-slate-400 text-sm">Recibes un resumen: "Pedido Juan: 1kg Aguja, 500g Picada Mixta". ¡Solo tienes que cortar!</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-t from-red-950/40 to-[#1a0502] border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-8">Cuelga el delantal a tu hora.<br>La IA cierra la caja.</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://wa.me/34637819789?text=Hola,%20soy%20carnicero%20y%20quiero%20probar%20la%20IA" class="bg-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-red-500 transition-colors shadow-lg shadow-red-600/20">
+                  Probar con un Audio mío
+              </a>
+              <a href="mailto:hola@madecem.com" class="border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/5 transition-colors">
+                  Solicitar Presupuesto
+              </a>
+          </div>
+      </div>
+  </section>
+
 </Layout>
 
 <script>
@@ -100,15 +203,19 @@ import Layout from '../../../layouts/Layout.astro';
         if (!textElement) return;
         const currentPhrase = phrases[phraseIndex];
         if (isDeleting) {
-            textElement.textContent = currentPhrase.substring(0, charIndex - 1); charIndex--;
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
         } else {
-            textElement.textContent = currentPhrase.substring(0, charIndex + 1); charIndex++;
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
         }
         let typeSpeed = isDeleting ? 50 : 100;
         if (!isDeleting && charIndex === currentPhrase.length) {
-            isDeleting = true; typeSpeed = 2000;
+            isDeleting = true;
+            typeSpeed = 2000;
         } else if (isDeleting && charIndex === 0) {
-            isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500;
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500;
         }
         setTimeout(typeWriter, typeSpeed);
     }
@@ -117,13 +224,12 @@ import Layout from '../../../layouts/Layout.astro';
     // 2. SIMULACIÓN DE CHAT
     const chatContainer = document.getElementById('phone-chat');
     const messages = [
-        { text: "Hola Ramón, ponme 2kg de solomillo y 1 de picada.", type: 'user', delay: 500 },
+        { text: "Hola Ramón, ponme 2kg de solomillo y 1 de picada para mañana.", type: 'user', delay: 500 },
         { text: "¡Hola! 👋 Soy tu asistente IA. Marchando ese pedido...", type: 'bot', delay: 1500 },
-        { text: "Pedido anotado: \n✅ 2kg Solomillo \n✅ 1kg Carne Picada \n\n¿Lo recoges a las 12:00?", type: 'bot', delay: 1500 },
-        { text: "Sí, a esa hora paso.", type: 'user', delay: 2000 },
-        { text: "¡Hecho! Te espero a las 12:00. ✅", type: 'bot', delay: 1500 }
+        { text: "Pedido anotado: \n✅ 2kg Solomillo \n✅ 1kg Carne Picada \n\n¿Te lo preparo para las 12:00?", type: 'bot', delay: 1500 },
+        { text: "Sí, a esa hora paso. Gracias.", type: 'user', delay: 2000 },
+        { text: "¡Hecho! Te espero a las 12:00. Ticket generado. ✅", type: 'bot', delay: 1500 }
     ];
-
     function createBubble(text, type) {
         const div = document.createElement('div');
         const isUser = type === 'user';
@@ -147,6 +253,46 @@ import Layout from '../../../layouts/Layout.astro';
         });
     }
     runSimulation(); setInterval(runSimulation, 15000);
+
+    // 3. CALCULADORA CARNICERÍA
+    const inOrders = document.getElementById('input-orders') as HTMLInputElement;
+    const inMins = document.getElementById('input-minutes') as HTMLInputElement;
+    const inPrice = document.getElementById('input-price') as HTMLInputElement;
+    
+    const dispOrders = document.getElementById('display-orders');
+    const dispMins = document.getElementById('display-minutes');
+    const dispPrice = document.getElementById('display-price');
+    
+    const resHours = document.getElementById('result-hours');
+    const resMoney = document.getElementById('result-money');
+
+    function calculate() {
+        if(!inOrders || !inMins || !inPrice) return;
+
+        const orders = parseInt(inOrders.value);
+        const mins = parseInt(inMins.value);
+        const price = parseInt(inPrice.value);
+        const workDays = 26; // Carnicerías suelen abrir lunes a sábado
+
+        // Actualizar visualización
+        if(dispOrders) dispOrders.innerText = orders.toString();
+        if(dispMins) dispMins.innerText = mins + " min";
+        if(dispPrice) dispPrice.innerText = price + " €";
+
+        // Cálculos: (Pedidos * Minutos * Días) / 60
+        const lostHours = Math.round(((orders * mins * workDays) / 60));
+        const lostMoney = Math.round(lostHours * price);
+
+        if(resHours) resHours.innerText = lostHours.toString();
+        if(resMoney) resMoney.innerText = lostMoney.toLocaleString('es-ES');
+    }
+
+    inOrders?.addEventListener('input', calculate);
+    inMins?.addEventListener('input', calculate);
+    inPrice?.addEventListener('input', calculate);
+    
+    // Init
+    calculate();
 </script>
 
 <style is:global>
@@ -158,7 +304,8 @@ import Layout from '../../../layouts/Layout.astro';
         position: relative; width: 300px; height: 600px;
         background: #0f0202; border-radius: 45px;
         box-shadow: 0 0 60px -20px rgba(220,38,38,0.4); 
-        padding: 10px; box-sizing: border-box; border: 3px solid #450a0a; margin: 0 auto; 
+        padding: 10px; box-sizing: border-box; transform: translateZ(0);
+        border: 3px solid #450a0a; margin: 0 auto; 
     }
     .screen {
         width: 100%; height: 100%; border-radius: 35px;
@@ -167,26 +314,32 @@ import Layout from '../../../layouts/Layout.astro';
         background-blend-mode: overlay; opacity: 0.95;
         position: relative; overflow: hidden; display: flex; flex-direction: column;
     }
-    .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0f0202; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
+    .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0f0202;
+    border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
 
-    .wa-header { background-color: #2b0b0b; height: 75px; width: 100%; display: flex; align-items: center; padding-top: 25px; padding-left: 10px; color: white; border-bottom: 1px solid #450a0a; }
+    .wa-header { background-color: #2b0b0b; height: 75px; width: 100%; display: flex;
+    align-items: center; padding-top: 25px; padding-left: 10px; padding-right: 15px; box-sizing: border-box; color: white; z-index: 50; border-bottom: 1px solid #450a0a; }
     .wa-back-arrow { font-size: 18px; margin-right: 5px; color: #fca5a5; }
-    .wa-avatar { width: 32px; height: 32px; background: #450a0a; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-weight: bold; font-size: 11px; color: #fca5a5; border: 1px solid #7f1d1d; }
+    .wa-avatar { width: 32px; height: 32px; background: #450a0a; border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; margin-right: 8px; font-weight: bold; font-size: 11px; color: #fca5a5; border: 1px solid #7f1d1d; }
     .wa-info h3 { margin: 0; font-size: 14px; font-weight: 600; color: #f3f4f6; }
     .wa-info p { margin: 0; font-size: 10px; opacity: 0.7; color: #fca5a5; }
 
     .wa-chat-area { flex: 1; overflow-y: auto; padding: 12px; padding-bottom: 80px; display: flex; flex-direction: column; }
-    .wa-chat-area::-webkit-scrollbar { display: none; }
+    .wa-chat-area::-webkit-scrollbar { display: none; } .wa-chat-area { -ms-overflow-style: none; scrollbar-width: none; }
     .wa-date-badge { background: #2b0b0b; color: #9ca3af; font-size: 10px; font-weight: bold; padding: 4px 10px; border-radius: 8px; border: 1px solid #450a0a; }
 
     .wa-bubble { max-width: 85%; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 18px; margin-bottom: 6px; position: relative; font-family: Helvetica, Arial, sans-serif; }
     .wa-bubble-user { align-self: flex-end; background-color: #059669; color: #ecfdf5; border-top-right-radius: 0; }
     .wa-bubble-bot { align-self: flex-start; background-color: #2b0b0b; color: #f3f4f6; border-top-left-radius: 0; border: 1px solid #450a0a; }
+    
     .wa-time { font-size: 9px; color: #9ca3af; text-align: right; margin-top: 2px; display: flex; justify-content: flex-end; align-items: center; opacity: 0.8; }
     .wa-ticks { color: #34d399; font-weight: bold; margin-left:3px; font-size: 10px; }
 
-    .wa-input-area { position: absolute; bottom: 0; left: 0; right: 0; height: 55px; background-color: #2b0b0b; display: flex; align-items: center; padding: 0 8px; z-index: 60; border-top: 1px solid #450a0a; }
+    .wa-input-area { position: absolute; bottom: 0; left: 0; right: 0; height: 55px; background-color: #2b0b0b; display: flex;
+    align-items: center; padding: 0 8px; z-index: 60; border-top: 1px solid #450a0a; }
     .wa-plus { font-size: 20px; color: #7f1d1d; margin-right: 8px; }
-    .wa-input-box { flex: 1; background: #450a0a; height: 34px; border-radius: 17px; display: flex; align-items: center; padding-left: 12px; font-size: 13px; color: #fca5a5; border: 1px solid #7f1d1d; }
+    .wa-input-box { flex: 1; background: #450a0a; height: 34px; border-radius: 17px; display: flex;
+    align-items: center; padding-left: 12px; font-size: 13px; color: #fca5a5; border: 1px solid #7f1d1d; }
     .wa-send-btn { width: 34px; height: 34px; background: #dc2626; border-radius: 50%; margin-left: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
 </style>

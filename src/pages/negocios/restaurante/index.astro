@@ -5,16 +5,16 @@ import Layout from '../../../layouts/Layout.astro';
 
 <Layout title="MADECEM | IA para Hostelería" description="Reservas automáticas y Room Service." theme="restaurante">
   
-  <section class="min-h-[calc(100vh-80px)] flex items-center justify-center py-12 relative overflow-hidden bg-[#0a0a05]">
+  <section class="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-[#0a0a05]">
     
     <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-yellow-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-amber-900/20 rounded-full blur-[100px] mix-blend-screen"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-yellow-600/10 rounded-full blur-[120px] mix-blend-screen"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-amber-900/10 rounded-full blur-[100px] mix-blend-screen"></div>
     </div>
 
     <div class="max-w-7xl w-full mx-auto px-6 relative z-10">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
         <div class="text-left">
           
@@ -25,33 +25,34 @@ import Layout from '../../../layouts/Layout.astro';
           
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-white drop-shadow-md">
             Servicio 5 estrellas.<br>
-            <span class="text-yellow-500">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600">
                 Respuesta inmediata.
             </span>
           </h1>
 
-          <div class="text-xl md:text-2xl text-white mb-8 font-medium flex flex-wrap items-center gap-2">
+          <div class="text-xl md:text-2xl text-stone-300 mb-8 font-medium flex flex-wrap items-center gap-2 min-h-[36px]">
               <span>Tu restaurante necesita</span>
               <span class="font-bold text-yellow-400 inline-flex items-center">
                   <span id="changing-text">más reservas</span>
-                  <span class="animate-blink ml-1 text-white">|</span>
+                  <span class="animate-blink ml-1 text-yellow-500">|</span>
               </span>
           </div>
           
-          <p class="text-lg text-stone-300 mb-10 font-normal max-w-lg leading-relaxed">
-            Automatiza la gestión de mesas, pedidos de Room Service y dudas frecuentes. Tu IA atiende a los comensales en su idioma, 24/7, con la elegancia de tu mejor maître.
+          <p class="text-lg text-stone-400 mb-10 font-light max-w-lg leading-relaxed">
+            Mientras tus camareros sirven platos, nuestra IA llena el libro de reservas. 
+            Atiende llamadas, gestiona cambios y confirma mesas 24/7 sin interrumpir el servicio.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-              <a href="https://wa.me/34637819789?text=Hola,%20quiero%20ver%20la%20demo%20de%20restaurantes" target="_blank" class="group bg-yellow-600 hover:bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(202,138,4,0.3)] hover:shadow-[0_0_40px_rgba(202,138,4,0.5)] flex items-center gap-3">
-                <span>Solicitar Demo</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              <a href="#calculadora" class="group bg-yellow-600 hover:bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_30px_rgba(202,138,4,0.3)] hover:shadow-[0_0_40px_rgba(202,138,4,0.5)] flex items-center gap-3">
+                <span>Calcular Rentabilidad</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
               </a>
               
               <div class="flex items-center gap-3 text-sm text-stone-400">
                   <div class="flex -space-x-3">
-                      <div class="w-9 h-9 rounded-full bg-stone-800 border-2 border-yellow-900 flex items-center justify-center text-lg">🍷</div>
-                      <div class="w-9 h-9 rounded-full bg-stone-700 border-2 border-yellow-900 flex items-center justify-center text-lg">🛎️</div>
+                      <div class="w-9 h-9 rounded-full bg-stone-800 border-2 border-stone-950 flex items-center justify-center text-lg">🍷</div>
+                      <div class="w-9 h-9 rounded-full bg-stone-700 border-2 border-stone-950 flex items-center justify-center text-lg">🛎️</div>
                   </div>
                   <p>Para Hoteles y <span class="text-yellow-500 font-bold">Restauración</span></p>
               </div>
@@ -59,7 +60,7 @@ import Layout from '../../../layouts/Layout.astro';
 
         </div>
 
-        <div class="flex justify-center md:justify-end relative">
+        <div class="flex justify-center md:justify-end relative scale-90 md:scale-100 origin-top">
             <div class="phone-frame">
                 <div class="notch"></div>
                 <div class="screen">
@@ -88,10 +89,112 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <section id="calculadora" class="py-24 bg-[#0a0a05] relative border-t border-white/5 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-3xl md:text-5xl font-black text-white mb-6">El coste oculto del teléfono</h2>
+              <p class="text-stone-400 max-w-2xl mx-auto">
+                  Cada minuto que tu personal pasa al teléfono es un minuto que no están atendiendo a los clientes en sala o vendiendo postres.
+              </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-stone-900/50 rounded-3xl p-8 border border-white/5 shadow-2xl">
+              
+              <div class="space-y-10 p-4">
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-stone-300 font-bold">Llamadas diarias (Reservas/Info)</label>
+                          <span class="text-yellow-500 font-mono text-xl" id="display-calls">25</span>
+                      </div>
+                      <input type="range" id="input-calls" min="5" max="100" value="25" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-yellow-600">
+                      <p class="text-xs text-stone-500 mt-2">En hora punta es cuando más suena.</p>
+                  </div>
+
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-stone-300 font-bold">Minutos por gestión</label>
+                          <span class="text-yellow-500 font-mono text-xl" id="display-minutes">3 min</span>
+                      </div>
+                      <input type="range" id="input-minutes" min="1" max="10" value="3" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-yellow-600">
+                      <p class="text-xs text-stone-500 mt-2">Responder, mirar el libro, apuntar, confirmar.</p>
+                  </div>
+
+                  <div>
+                      <div class="flex justify-between mb-4">
+                          <label class="text-stone-300 font-bold">Coste hora personal</label>
+                          <span class="text-yellow-500 font-mono text-xl" id="display-price">18 €</span>
+                      </div>
+                      <input type="range" id="input-price" min="12" max="50" value="18" class="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-yellow-600">
+                  </div>
+              </div>
+
+              <div class="bg-gradient-to-br from-yellow-700 to-amber-900 rounded-2xl p-8 flex flex-col justify-center text-white relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
+                  
+                  <div class="relative z-10">
+                      <p class="text-yellow-100 text-sm font-medium mb-2 uppercase tracking-wide">Coste Mensual Operativo</p>
+                      <div class="text-6xl font-black mb-2 flex items-baseline gap-2">
+                          <span id="result-money">675</span>€
+                      </div>
+                      <p class="text-yellow-100/80 text-sm mb-8 border-b border-white/20 pb-8">
+                          Gasto mensual en personal solo para contestar el teléfono.
+                      </p>
+
+                      <div class="flex items-center gap-4 mb-2">
+                          <div class="text-3xl font-bold" id="result-hours">38</div>
+                          <div class="text-sm leading-tight text-yellow-100">
+                              Horas al mes<br>colgados del teléfono
+                          </div>
+                      </div>
+                      <p class="text-xs text-yellow-200 mt-4 italic opacity-80">*Cálculo basado en 30 días de apertura.</p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  <section class="py-24 bg-[#0a0a05]">
+      <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="p-6 border border-stone-800 rounded-2xl hover:border-yellow-500/50 transition-colors group bg-stone-900/20">
+                  <div class="w-12 h-12 bg-stone-800 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-yellow-900/20">📅</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Petición 24/7</h3>
+                  <p class="text-stone-400 text-sm">El cliente escribe o llama a las 23:00 o a las 11:00. La IA siempre está despierta.</p>
+              </div>
+              <div class="p-6 border border-stone-800 rounded-2xl hover:border-yellow-500/50 transition-colors group bg-stone-900/20">
+                  <div class="w-12 h-12 bg-stone-800 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-yellow-900/20">🧠</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Control de Sala</h3>
+                  <p class="text-stone-400 text-sm">La IA consulta tu libro de reservas en tiempo real. Si no hay sitio, ofrece alternativas.</p>
+              </div>
+              <div class="p-6 border border-stone-800 rounded-2xl hover:border-yellow-500/50 transition-colors group bg-stone-900/20">
+                  <div class="w-12 h-12 bg-stone-800 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-yellow-900/20">🛎️</div>
+                  <h3 class="text-white font-bold text-xl mb-2">Confirmación</h3>
+                  <p class="text-stone-400 text-sm">La reserva aparece en tu sistema y el cliente recibe confirmación inmediata.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-t from-yellow-950/40 to-[#0a0a05] border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-8">Llena tus mesas,<br>no tu centralita.</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://wa.me/34637819789?text=Hola,%20quiero%20ver%20la%20demo%20de%20restaurantes" class="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg shadow-yellow-500/20">
+                  Probar Demo ahora
+              </a>
+              <a href="mailto:hola@madecem.com" class="border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/5 transition-colors">
+                  Contactar Ventas
+              </a>
+          </div>
+      </div>
+  </section>
+
 </Layout>
 
 <script>
-    // 1. TEXTO CAMBIANTE
+    // --- SCRIPTS DE ANIMACIÓN DE TEXTO Y CHAT ---
     const textElement = document.getElementById('changing-text');
     const phrases = ["más reservas.", "menos no-shows.", "servicio premium.", "room service ágil."];
     let phraseIndex = 0; let charIndex = 0; let isDeleting = false;
@@ -100,21 +203,25 @@ import Layout from '../../../layouts/Layout.astro';
         if (!textElement) return;
         const currentPhrase = phrases[phraseIndex];
         if (isDeleting) {
-            textElement.textContent = currentPhrase.substring(0, charIndex - 1); charIndex--;
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
         } else {
-            textElement.textContent = currentPhrase.substring(0, charIndex + 1); charIndex++;
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
         }
         let typeSpeed = isDeleting ? 50 : 100;
         if (!isDeleting && charIndex === currentPhrase.length) {
-            isDeleting = true; typeSpeed = 2000;
+            isDeleting = true;
+            typeSpeed = 2000;
         } else if (isDeleting && charIndex === 0) {
-            isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500;
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500;
         }
         setTimeout(typeWriter, typeSpeed);
     }
     typeWriter();
 
-    // 2. CHAT
+    // CHAT SIMULATOR
     const chatContainer = document.getElementById('phone-chat');
     const messages = [
         { text: "Buenas noches, ¿tenéis mesa para 2 hoy?", type: 'user', delay: 500 },
@@ -123,7 +230,6 @@ import Layout from '../../../layouts/Layout.astro';
         { text: "Sí, perfecto. Gracias.", type: 'user', delay: 3000 },
         { text: "¡Estupendo! 🥂 Mesa reservada a nombre de Javier a las 21:00. Les esperamos.", type: 'bot', delay: 2000 }
     ];
-
     function createBubble(text, type) {
         const div = document.createElement('div');
         const isUser = type === 'user';
@@ -148,6 +254,46 @@ import Layout from '../../../layouts/Layout.astro';
         });
     }
     runSimulation(); setInterval(runSimulation, 14000);
+
+    // --- NUEVO SCRIPT: CALCULADORA RESTAURANTE ---
+    const inCalls = document.getElementById('input-calls') as HTMLInputElement;
+    const inMins = document.getElementById('input-minutes') as HTMLInputElement;
+    const inPrice = document.getElementById('input-price') as HTMLInputElement;
+    
+    const dispCalls = document.getElementById('display-calls');
+    const dispMins = document.getElementById('display-minutes');
+    const dispPrice = document.getElementById('display-price');
+    
+    const resMoney = document.getElementById('result-money');
+    const resHours = document.getElementById('result-hours');
+
+    function calculate() {
+        if(!inCalls || !inMins || !inPrice) return;
+
+        const calls = parseInt(inCalls.value);
+        const mins = parseInt(inMins.value);
+        const price = parseInt(inPrice.value);
+        const openDays = 30; // Restaurantes suelen abrir casi todo el mes
+
+        // Actualizar visualización
+        if(dispCalls) dispCalls.innerText = calls.toString();
+        if(dispMins) dispMins.innerText = mins + " min";
+        if(dispPrice) dispPrice.innerText = price + " €";
+
+        // Cálculos: (Llamadas * Minutos * Días) / 60 * PrecioHora
+        const lostHours = Math.round(((calls * mins * openDays) / 60));
+        const lostMoney = Math.round(lostHours * price);
+
+        if(resHours) resHours.innerText = lostHours.toString();
+        if(resMoney) resMoney.innerText = lostMoney.toLocaleString('es-ES');
+    }
+
+    inCalls?.addEventListener('input', calculate);
+    inMins?.addEventListener('input', calculate);
+    inPrice?.addEventListener('input', calculate);
+    
+    // Init
+    calculate();
 </script>
 
 <style is:global>
@@ -157,11 +303,11 @@ import Layout from '../../../layouts/Layout.astro';
     /* ESTILOS DEL TELÉFONO (VERSIÓN GOLD) */
     .phone-frame {
         position: relative; width: 300px; height: 600px;
-        background: #0f0f0a; /* Negro Dorado */
+        background: #0f0f0a;
         border-radius: 45px;
-        box-shadow: 0 0 80px -20px rgba(202,138,4,0.4); /* Glow Dorado */
+        box-shadow: 0 0 80px -20px rgba(202,138,4,0.4);
         padding: 10px; box-sizing: border-box; transform: translateZ(0);
-        border: 4px solid #422006; margin: 0 auto; 
+        border: 4px solid #422006; margin: 0 auto;
     }
     .screen {
         width: 100%; height: 100%; border-radius: 35px;
@@ -170,9 +316,11 @@ import Layout from '../../../layouts/Layout.astro';
         background-blend-mode: soft-light; opacity: 1;
         position: relative; overflow: hidden; display: flex; flex-direction: column;
     }
-    .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0f0f0a; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
+    .notch { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 100px; height: 24px; background: #0f0f0a;
+    border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 100; }
 
-    .wa-header { background-color: #1a1a10; height: 75px; width: 100%; display: flex; align-items: center; padding-top: 25px; padding-left: 10px; padding-right: 15px; box-sizing: border-box; color: white; z-index: 50; border-bottom: 1px solid #3f3f20; }
+    .wa-header { background-color: #1a1a10; height: 75px; width: 100%; display: flex;
+    align-items: center; padding-top: 25px; padding-left: 10px; padding-right: 15px; box-sizing: border-box; color: white; z-index: 50; border-bottom: 1px solid #3f3f20; }
     .wa-back-arrow { font-size: 18px; margin-right: 5px; color: #eab308; }
     .wa-avatar { width: 32px; height: 32px; background: #3f3f20; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-weight: bold; font-size: 11px; color: #eab308; border: 1px solid #854d0e; }
     .wa-info h3 { margin: 0; font-size: 14px; font-weight: 600; color: #fef08a; }
@@ -185,6 +333,7 @@ import Layout from '../../../layouts/Layout.astro';
     .wa-bubble { max-width: 85%; padding: 6px 10px; border-radius: 8px; font-size: 13px; line-height: 18px; margin-bottom: 6px; position: relative; font-family: Helvetica, Arial, sans-serif; }
     .wa-bubble-user { align-self: flex-end; background-color: #005c4b; color: #ecfdf5; border-top-right-radius: 0; }
     .wa-bubble-bot { align-self: flex-start; background-color: #1a1a10; color: #e7e5e4; border-top-left-radius: 0; border: 1px solid #3f3f20; }
+    
     .wa-time { font-size: 9px; color: #9ca3af; text-align: right; margin-top: 2px; display: flex; justify-content: flex-end; align-items: center; opacity: 0.8; }
     .wa-ticks { color: #53bdeb; font-weight: bold; margin-left:3px; font-size: 10px; }
 
