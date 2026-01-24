@@ -92,7 +92,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 group">
-            <div class="order-1 lg:order-1"> 
+            
+            <div> 
                 <div class="text-cyan-400 font-mono text-xs mb-4">/// CASE_STUDY: STOCK_OPTIMIZATION</div>
                 <h3 class="text-3xl font-bold text-white mb-4">Control de Stock en Tiempo Real</h3>
                 <p class="text-slate-400 leading-relaxed mb-6">
@@ -104,7 +105,7 @@ import Layout from '../layouts/Layout.astro';
                 </ul>
             </div>
 
-            <div class="order-2 lg:order-2 bg-slate-900/40 border border-cyan-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+            <div class="bg-slate-900/40 border border-cyan-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
                 <div class="flex items-center justify-between relative z-10">
                     <div class="flex flex-col items-center gap-2">
                         <div class="w-16 h-16 bg-slate-800 rounded-xl border border-slate-600 flex items-center justify-center text-2xl relative shadow-lg shadow-cyan-500/10">
@@ -137,7 +138,19 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
             
-            <div class="order-2 lg:order-1 bg-slate-900/40 border border-indigo-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
+            <div class="lg:order-2">
+                <div class="text-indigo-400 font-mono text-xs mb-4">/// COMPLIANCE: ES_VERIFACTU_2026</div>
+                <h3 class="text-3xl font-bold text-white mb-4">Facturación Criptográfica</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Huella Digital automática.</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Certificado de inalterabilidad.</li>
+                </ul>
+            </div>
+
+            <div class="lg:order-1 bg-slate-900/40 border border-indigo-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
                  <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none"></div>
                  <div class="flex flex-col gap-6 relative z-10">
                     <div class="flex items-center gap-4 p-3 rounded-lg bg-slate-800/50 border border-slate-700">
@@ -165,18 +178,6 @@ import Layout from '../layouts/Layout.astro';
                         <div class="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
                     </div>
                  </div>
-            </div>
-
-            <div class="order-1 lg:order-2">
-                <div class="text-indigo-400 font-mono text-xs mb-4">/// COMPLIANCE: ES_VERIFACTU_2026</div>
-                <h3 class="text-3xl font-bold text-white mb-4">Facturación Criptográfica</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
-                </p>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Huella Digital automática.</li>
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Certificado de inalterabilidad.</li>
-                </ul>
             </div>
         </div>
 
