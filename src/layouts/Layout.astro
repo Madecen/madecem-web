@@ -8,7 +8,15 @@ interface Props {
 	theme?: 'carniceria' | 'taller' | 'peluqueria' | 'restaurante' | 'empresa';
 }
 
-const { title, description = "Ingeniería de IA para negocios reales", theme } = Astro.props;
+const { 
+    title, 
+    description = "Ingeniería de IA para negocios reales. Recupera tu tiempo y automatiza tareas repetitivas.", 
+    theme 
+} = Astro.props;
+
+// ACTUALIZADO: Ahora busca 'social.png' en lugar de 'social.jpg'
+const socialImageURL = new URL('/social.png', Astro.site || Astro.url);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
 const currentYear = new Date().getFullYear();
 ---
 
@@ -16,10 +24,26 @@ const currentYear = new Date().getFullYear();
 <html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
+		
+        <title>{title}</title>
+		<meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={socialImageURL} />
+        <meta property="og:site_name" content="MADECEM S.L." />
+        <meta property="og:locale" content="es_ES" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImageURL} />
+
 	</head>
 	<body class="bg-[#020617] text-white font-sans selection:bg-blue-500/30 flex flex-col min-h-screen">
 		
@@ -134,13 +158,13 @@ const currentYear = new Date().getFullYear();
                 </div>
 
                 <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
-    				<p>&copy; {currentYear} MADECEM SL. Todos los derechos reservados.</p>
-    				<div class="flex gap-6">
-        			<a href="/legal#aviso" class="hover:text-slate-400 transition-colors">Aviso Legal</a>
-        			<a href="/legal#privacidad" class="hover:text-slate-400 transition-colors">Privacidad</a>
-        			<a href="/legal#cookies" class="hover:text-slate-400 transition-colors">Cookies</a>
-    				</div>
-				</div>
+                    <p>&copy; {currentYear} MADECEM S.L. Todos los derechos reservados.</p>
+                    <div class="flex gap-6">
+                        <a href="/legal#aviso" class="hover:text-slate-400 transition-colors">Aviso Legal</a>
+                        <a href="/legal#privacidad" class="hover:text-slate-400 transition-colors">Privacidad</a>
+                        <a href="/legal#cookies" class="hover:text-slate-400 transition-colors">Cookies</a>
+                    </div>
+                </div>
 
 			</div>
 		</footer>
