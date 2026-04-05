@@ -24,6 +24,7 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
     class="space-y-4 text-left"
     method="POST"
     action={endpoint || '#'}
+    enctype="text/plain"
     data-lead-form
     data-endpoint={endpoint}
   >
@@ -94,7 +95,7 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
     }
 
     form.action = endpoint;
-    form.target = '_self';
+    form.target = 'lead_submit_frame';
 
     form.addEventListener('submit', () => {
       const submitButton = form.querySelector('button[type="submit"]');
@@ -106,18 +107,27 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
       }
 
       if (status) {
-        status.textContent = 'Solicitud enviada correctamente. Te responderemos lo antes posible.';
+        status.textContent = 'Enviando solicitud...';
         status.classList.remove('text-slate-500');
-        status.classList.add('text-emerald-300', 'font-semibold');
+        status.classList.remove('text-emerald-300', 'font-semibold');
       }
 
       window.setTimeout(() => {
         form.reset();
+        if (status) {
+          status.textContent = 'Solicitud enviada correctamente. Te responderemos lo antes posible.';
+          status.classList.add('text-emerald-300', 'font-semibold');
+        }
         if (submitButton instanceof HTMLButtonElement) {
           submitButton.disabled = false;
           submitButton.textContent = originalText || 'Solicitar diagnóstico';
         }
-      }, 800);
+      }, 1200);
     });
+   });
+ </script>
++
++<iframe name="lead_submit_frame" class="hidden" title="Lead form submit target"></iframe>
+
   });
 </script>
