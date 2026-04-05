@@ -80,6 +80,8 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
   </form>
 </div>
 
+<iframe name="lead_submit_frame" class="hidden" title="Lead form submit target"></iframe>
+
 <script>
   document.querySelectorAll('[data-lead-form]').forEach((form) => {
     if (!(form instanceof HTMLFormElement)) return;
@@ -124,10 +126,5 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
         }
       }, 1200);
     });
-   });
- </script>
-+
-+<iframe name="lead_submit_frame" class="hidden" title="Lead form submit target"></iframe>
-
   });
 </script>
