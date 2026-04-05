@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadForm from '../components/LeadForm.astro';
+---
+
+<Layout
+  title="Software e innovación | MADECEM"
+  description="Software específico, integración avanzada e innovación operativa para empresas que necesitan más que una automatización estándar."
+>
+  <section class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-45 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.14),transparent_30%)]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 font-bold text-sm mb-8">
+          Software e innovación
+        </div>
+
+        <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-[1.02] mb-8 max-w-5xl">
+          Cuando una solución estándar no basta, <span class="text-blue-500">hace falta más diseño, más integración y más capacidad técnica.</span>
+        </h1>
+
+        <p class="text-lg md:text-2xl text-slate-300 leading-relaxed max-w-4xl mb-10">
+          En MADECEM abordamos proyectos donde la mejora operativa requiere software específico, lógica a medida, integración avanzada o iniciativas de innovación ligadas a procesos reales de empresa.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-[1.02] text-center shadow-lg shadow-blue-600/20">
+            Solicitar diagnóstico
+          </a>
+          <a href="#bloques" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors text-center">
+            Ver capacidades
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#010413] relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.08),transparent_24%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.92fr] gap-12 items-start mb-14">
+        <div class="max-w-3xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Cuándo entra esta capa</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No todos los problemas se resuelven con una automatización simple.</h2>
+        <p class="text-slate-300 text-lg">Hay empresas que necesitan algo más profundo: conectar sistemas complejos, adaptar lógica propia, construir herramientas internas o desarrollar soluciones que encajen en una operación singular. Ahí es donde esta parte cobra sentido.</p>
+        </div>
+        <div class="rounded-[2rem] border border-white/10 bg-slate-950/60 overflow-hidden shadow-2xl">
+          <img src="/images/madecem-software-innovacion.png" alt="Visual de industria conectada, software e innovación operativa" class="w-full h-[320px] object-cover opacity-84" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Más profundidad técnica</div>
+          <p class="text-slate-300">Proyectos donde no basta con conectar dos herramientas y ya está.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Más adaptación</div>
+          <p class="text-slate-300">Casos donde la operación tiene particularidades que exigen diseño propio.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Más visión de sistema</div>
+          <p class="text-slate-300">Intervenciones que afectan a varios procesos, áreas o capas tecnológicas del negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bloques" class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Capacidades</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Una capa pensada para proyectos con más complejidad o más exigencia operativa.</h2>
+        <p class="text-slate-300 text-lg">Estas son algunas de las líneas sobre las que podemos trabajar cuando el caso necesita más que una implementación estándar.</p>
+      </div>
+
+      <div class="space-y-8">
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">01 · Software específico</p>
+              <h3 class="text-3xl font-black mb-5">Herramientas pensadas para el flujo real de trabajo.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed mb-6">Desarrollamos soluciones adaptadas a necesidades concretas cuando el software existente no encaja bien o se queda corto. El objetivo no es crear software por crear, sino resolver mejor un proceso específico.</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué puede incluir</div>
+                  <p class="text-slate-300">Paneles internos, lógica propia, utilidades operativas, trazabilidad y herramientas de apoyo a proceso.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué buscamos</div>
+                  <p class="text-slate-300">Más control, mejor encaje y menos dependencia de soluciones forzadas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-purple-500/20 bg-purple-500/10 p-6">
+              <div class="text-white font-bold mb-4">Encaja bien cuando</div>
+              <ul class="space-y-3 text-sm text-slate-200">
+                <li>• El proceso es singular</li>
+                <li>• La herramienta estándar limita demasiado</li>
+                <li>• Hace falta control sobre lógica y datos</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">02 · Integración avanzada</p>
+              <h3 class="text-3xl font-black mb-5">Conectar sistemas para que la operación deje de estar fragmentada.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed mb-6">Trabajamos integraciones más profundas entre CRM, ERP, bases de datos, APIs, documentos, formularios, canales de atención y otras fuentes de información para conseguir continuidad operativa real.</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué puede incluir</div>
+                  <p class="text-slate-300">Sincronización, validación de datos, lógica intermedia y automatización entre varias capas del sistema.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué buscamos</div>
+                  <p class="text-slate-300">Menos duplicidad, menos errores de traspaso y más continuidad entre áreas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-cyan-500/20 bg-cyan-500/10 p-6">
+              <div class="text-white font-bold mb-4">Encaja bien cuando</div>
+              <ul class="space-y-3 text-sm text-slate-200">
+                <li>• Hay varias herramientas desconectadas</li>
+                <li>• Los datos pasan por demasiadas manos</li>
+                <li>• La operación necesita trazabilidad real</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">03 · Tratamiento documental y datos</p>
+              <h3 class="text-3xl font-black mb-5">Cuando la información importante vive en documentos, correos o formatos poco estructurados.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed mb-6">Podemos diseñar soluciones orientadas a extraer, ordenar, transformar y mover información desde documentos o entradas desestructuradas hacia sistemas donde realmente sea útil para la operación.</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué puede incluir</div>
+                  <p class="text-slate-300">OCR, clasificación, extracción, estructuración y envío a sistemas internos.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué buscamos</div>
+                  <p class="text-slate-300">Convertir información dispersa en datos utilizables dentro del flujo de trabajo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-emerald-500/20 bg-emerald-500/10 p-6">
+              <div class="text-white font-bold mb-4">Encaja bien cuando</div>
+              <ul class="space-y-3 text-sm text-slate-200">
+                <li>• Hay volumen de documentos o albaranes</li>
+                <li>• Se pierde tiempo transcribiendo</li>
+                <li>• La información llega en formatos difíciles</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">04 · Innovación aplicada a operación</p>
+              <h3 class="text-3xl font-black mb-5">Proyectos donde la mejora exige repensar el sistema, no solo automatizar una tarea.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed mb-6">Aquí entran iniciativas con mayor complejidad técnica o estratégica: digitalización operativa, capas inteligentes de decisión, monitorización, visión artificial o desarrollos conectados con industria e innovación de proceso.</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué puede incluir</div>
+                  <p class="text-slate-300">Monitorización, visión computacional, lógica avanzada, automatización compleja e integración industrial.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                  <div class="font-bold text-white mb-2">Qué buscamos</div>
+                  <p class="text-slate-300">Aumentar capacidad operativa y abrir nuevas posibilidades de control o eficiencia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-amber-500/20 bg-amber-500/10 p-6">
+              <div class="text-white font-bold mb-4">Encaja bien cuando</div>
+              <ul class="space-y-3 text-sm text-slate-200">
+                <li>• La empresa necesita una capa técnica más potente</li>
+                <li>• El proceso tiene impacto crítico</li>
+                <li>• La mejora requiere visión de largo alcance</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Qué tipo de enfoque seguimos</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Más capacidad técnica no significa más complejidad innecesaria.</h2>
+          <p class="text-slate-300 text-lg">Aunque aquí hablamos de proyectos más profundos, el criterio sigue siendo el mismo: resolver mejor un problema real, construir una base coherente y evitar soluciones sobredimensionadas que después nadie quiera mantener.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Diseño con criterio:</strong> la tecnología se decide a partir del proceso, no de la moda.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Viabilidad real:</strong> evaluamos impacto, integración, mantenimiento y encaje operativo.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Escala razonable:</strong> diseñamos para resolver hoy sin hipotecar el mañana.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Utilidad antes que exhibición:</strong> preferimos un sistema útil a una solución espectacular pero frágil.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-gradient-to-b from-[#010413] to-blue-950/20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Siguiente paso</p>
+      <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">Si tu caso requiere más que una automatización estándar, podemos estudiarlo.</h2>
+      <p class="text-xl text-slate-300 mb-10">Cuéntanos qué proceso, sistema o necesidad técnica quieres resolver y valoramos contigo el enfoque más razonable.</p>
+      <LeadForm sourcePage="software-e-innovacion" formType="diagnostico-software" compact={true} subtitle="Primera conversación orientada a alcance, complejidad y viabilidad real." />
+    </div>
+  </section>
+</Layout>

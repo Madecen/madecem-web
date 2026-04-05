@@ -1,0 +1,425 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="MADECEM | Ingeniería operativa para empresas: automatización, software e innovación"
+  description="Automatización, software específico e innovación operativa para empresas, pymes y negocios en Alcalá de Henares, Guadalajara, Cabanillas del Campo, Madrid y Corredor del Henares."
+>
+  <section class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-45 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.20),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.14),transparent_28%)]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 font-bold text-sm mb-8">
+            Ingeniería operativa para empresas: automatización, software e innovación
+          </div>
+
+          <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-[1.02] mb-8 max-w-5xl">
+            Convertimos procesos manuales en <span class="text-blue-500">sistemas que venden, organizan y escalan mejor.</span>
+          </h1>
+
+          <p class="text-lg md:text-2xl text-slate-300 leading-relaxed max-w-4xl mb-10">
+            En MADECEM diseñamos automatización, software específico e innovación aplicada para negocios, pymes y empresas que quieren operar con menos fricción, menos improvisación y más control.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-[1.02] text-center shadow-lg shadow-blue-600/20">
+              Solicitar diagnóstico
+            </a>
+            <a href="#soluciones" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors text-center">
+              Ver soluciones
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="text-white font-bold mb-1">Negocio local y pyme</div>
+              <p class="text-slate-300">Atención, agenda, pedidos y operaciones más limpias.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="text-white font-bold mb-1">Software e integración</div>
+              <p class="text-slate-300">Herramientas conectadas a tu proceso real de trabajo.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="text-white font-bold mb-1">Innovación e industria 4.0</div>
+              <p class="text-slate-300">Digitalización operativa e iniciativas de mayor complejidad técnica.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-6 bg-blue-500/15 blur-[100px] rounded-full"></div>
+          <div class="relative rounded-[2rem] border border-white/10 bg-slate-950/90 p-6 shadow-2xl overflow-hidden">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs uppercase tracking-[0.25em] text-blue-300 font-bold">Escenarios reales</p>
+                <h2 id="scenario-title" class="text-2xl font-black mt-2">Clínica</h2>
+              </div>
+              <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">Ejemplo en vivo</span>
+            </div>
+
+            <p id="scenario-subtitle" class="text-slate-300 text-sm mb-6 max-w-md">
+              Un ejemplo simple de cómo una conversación puede convertirse en una acción útil sin depender de gestión manual constante.
+            </p>
+
+            <div id="scenario-messages" class="space-y-4 min-h-[260px] flex flex-col justify-end"></div>
+
+            <div class="mt-5 border-t border-white/10 pt-4 flex items-center justify-between gap-4">
+              <p class="text-xs text-slate-400">No enseñamos el sistema completo. Solo una muestra de cómo aterrizamos procesos reales.</p>
+              <a href="#soluciones" class="text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors whitespace-nowrap">Ver más →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#010413]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-14">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Problemas reales</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No hace falta más ruido tecnológico. Hace falta que el negocio funcione mejor.</h2>
+        <p class="text-slate-300 text-lg">Automatizar bien no consiste en poner una herramienta de moda, sino en resolver puntos de fricción reales: conversaciones sin seguimiento, pedidos mal recogidos, tareas repetitivas, sistemas desconectados y procesos imposibles de escalar.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Mensajes y leads sin control</h3>
+          <p class="text-slate-300 text-sm">Consultas que llegan, se enfrían o se responden tarde porque no hay sistema detrás.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Agenda y operativa desordenadas</h3>
+          <p class="text-slate-300 text-sm">Reservas, confirmaciones y cambios manuales que consumen tiempo y generan errores.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Herramientas que no se hablan</h3>
+          <p class="text-slate-300 text-sm">CRM, formularios, hojas, chats y sistemas desconectados que obligan a duplicar trabajo.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Procesos sin trazabilidad</h3>
+          <p class="text-slate-300 text-sm">Cuando todo depende de personas concretas, el crecimiento se vuelve frágil y caro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="soluciones" class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Soluciones</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Desde negocio local hasta proyectos de software e innovación industrial</h2>
+        <p class="text-slate-300 text-lg">Trabajamos donde haya operaciones que ordenar, automatizar o rediseñar para que soporten trabajo real.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-2xl font-black mb-4">Atención automática y captación</h3>
+          <p class="text-slate-300 mb-5">WhatsApp, Telegram, web y formularios conectados con lógica de negocio para responder mejor y filtrar oportunidades reales.</p>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li>• Primera respuesta y clasificación</li>
+            <li>• Seguimiento comercial</li>
+            <li>• Derivación a humano cuando toca</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-2xl font-black mb-4">Agenda, reservas y pedidos</h3>
+          <p class="text-slate-300 mb-5">Sistemas que recogen datos, confirman, estructuran y reducen la carga operativa del día a día.</p>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li>• Citas y recordatorios</li>
+            <li>• Pedidos y formularios</li>
+            <li>• Menos errores y menos retrabajo</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-2xl font-black mb-4">Software específico e integración</h3>
+          <p class="text-slate-300 mb-5">Cuando una herramienta estándar no basta, diseñamos soluciones adaptadas a tu flujo y conectadas con tus sistemas.</p>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li>• Software a medida</li>
+            <li>• Integración con CRM, ERP y APIs</li>
+            <li>• Automatización entre plataformas</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-2xl font-black mb-4">Innovación e industria 4.0</h3>
+          <p class="text-slate-300 mb-5">Impulsamos proyectos de digitalización operativa, automatización industrial e inteligencia aplicada a producción y control.</p>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li>• Procesos industriales más inteligentes</li>
+            <li>• Monitorización y digitalización</li>
+            <li>• Innovación conectada con negocio real</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" class="py-24 border-t border-white/5 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Cómo trabajamos</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No montamos herramientas al azar. Diseñamos sistemas útiles para tu operación.</h2>
+          <p class="text-slate-300 text-lg">Empezamos por lo que más duele, priorizamos impacto y construimos una base que pueda crecer contigo sin convertirse en otra fuente de caos.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">1. Diagnóstico:</strong> analizamos procesos, canales, cuellos de botella y oportunidades de automatización.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">2. Diseño:</strong> definimos el flujo, los datos, las herramientas y la lógica del sistema.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">3. Implementación:</strong> conectamos automatización, software, agentes y operativa real.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">4. Evolución:</strong> medimos utilidad, refinamos y ampliamos cuando el sistema lo justifica.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl mb-12">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Posicionamiento local</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Automatización, software e innovación para empresas en Alcalá de Henares, Guadalajara, Cabanillas del Campo, Madrid y Corredor del Henares</h2>
+        <p class="text-slate-300 text-lg leading-relaxed">MADECEM trabaja con negocios, pymes y empresas que necesitan digitalizar atención, agenda, pedidos, procesos internos, integración de herramientas y proyectos de innovación operativa. Desde Alcalá de Henares, Guadalajara y Cabanillas del Campo hasta Madrid y el Corredor del Henares, nuestra propuesta combina cercanía comercial con capacidad de ejecución real.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Negocios y comercios</div>
+          <p class="text-slate-300">Automatización útil para captar, responder, reservar y vender mejor.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Pymes y empresas</div>
+          <p class="text-slate-300">Procesos más limpios, sistemas conectados y menos dependencia del trabajo manual.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Industria e innovación</div>
+          <p class="text-slate-300">Digitalización, software específico e iniciativas ligadas a industria 4.0.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-gradient-to-b from-[#010413] to-blue-950/20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Siguiente paso</p>
+      <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">Si quieres automatizar en serio, primero hay que entender cómo funciona tu negocio.</h2>
+      <p class="text-xl text-slate-300 mb-10">Te ayudamos a detectar qué conviene automatizar, qué parte necesita software específico y dónde una capa de innovación puede tener impacto real.</p>
+      <form class="max-w-md mx-auto space-y-4">
+        <input type="email" placeholder="tu@empresa.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-xl shadow-blue-600/20">Solicitar diagnóstico</button>
+        <p class="text-xs text-slate-300 mt-4">Primera conversación orientada a proceso, impacto y viabilidad real.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="border-t border-white/5 bg-[#010413] py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr] gap-10">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">MADECEM</p>
+          <h2 class="text-2xl font-black tracking-tight mb-4">Automatización, software e innovación aplicada a negocio real.</h2>
+          <p class="text-slate-300 text-sm leading-relaxed max-w-md">
+            Diseñamos sistemas para negocios, pymes y empresas que necesitan captar mejor, operar con más orden y construir procesos preparados para crecer.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-white mb-4">Soluciones</h3>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li><a href="#soluciones" class="hover:text-white transition-colors">Atención automática</a></li>
+            <li><a href="#soluciones" class="hover:text-white transition-colors">Agenda y pedidos</a></li>
+            <li><a href="#soluciones" class="hover:text-white transition-colors">Software e integración</a></li>
+            <li><a href="#soluciones" class="hover:text-white transition-colors">Industria 4.0 e innovación</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-white mb-4">Cobertura</h3>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li>Alcalá de Henares</li>
+            <li>Guadalajara</li>
+            <li>Cabanillas del Campo</li>
+            <li>Corredor del Henares</li>
+            <li>Madrid</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-white mb-4">Siguiente paso</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Si tienes un proceso que consume tiempo, genera errores o depende demasiado de gestión manual, podemos revisarlo contigo.
+          </p>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-bold text-sm">
+            Solicitar diagnóstico →
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs text-slate-400">
+        <p>MADECEM · Ingeniería operativa para empresas: automatización, software e innovación.</p>
+        <p>Enfoque local: Alcalá de Henares · Guadalajara · Cabanillas del Campo · Madrid · Corredor del Henares.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const scenarios = [
+    {
+      title: 'Clínica dental',
+      subtitle: 'Un agente filtra la consulta, propone hueco y deja la cita lista sin intercambio eterno de mensajes.',
+      color: 'blue',
+      msgs: [
+        { text: 'Hola, necesito una cita esta semana para una urgencia dental.', side: 'left', delay: 0 },
+        { text: 'Puedo ofrecerte mañana a las 10:30 o a las 13:00. ¿Cuál te encaja mejor?', side: 'right', delay: 1400 },
+        { text: 'A las 10:30 me vale.', side: 'left', delay: 3000 },
+        { text: 'Perfecto. Queda confirmada y te enviaremos recordatorio automático.', side: 'right', delay: 4600, tag: 'Cita registrada' },
+      ],
+    },
+    {
+      title: 'Distribución / pedidos',
+      subtitle: 'Un pedido entra por mensaje, se estructura y se prepara para seguir operando sin rehacerlo a mano.',
+      color: 'emerald',
+      msgs: [
+        { text: 'Necesito 12 cajas del lote habitual para el lunes.', side: 'left', delay: 0 },
+        { text: 'Recibido. Confirmo referencia, cantidad y ventana de entrega antes de pasarlo a preparación.', side: 'right', delay: 1400 },
+        { text: 'Sí, correcto. Misma dirección.', side: 'left', delay: 3000 },
+        { text: 'Pedido validado y enviado al flujo de operaciones.', side: 'right', delay: 4600, tag: 'Pedido estructurado' },
+      ],
+    },
+    {
+      title: 'Industria / soporte operativo',
+      subtitle: 'Una incidencia se recoge, se clasifica y se deriva con contexto útil en lugar de quedarse en un chat perdido.',
+      color: 'purple',
+      msgs: [
+        { text: 'La línea 2 está dando error en el cierre del turno.', side: 'left', delay: 0 },
+        { text: 'Indícame código o foto de la incidencia para clasificarla y enviarla al responsable correcto.', side: 'right', delay: 1400 },
+        { text: 'Código E-17. Te mando foto ahora.', side: 'left', delay: 3000 },
+        { text: 'Incidencia registrada y derivada con prioridad alta al flujo técnico.', side: 'right', delay: 4600, tag: 'Caso escalado' },
+      ],
+    },
+  ];
+
+  let currentScenario = 0;
+  const container = document.getElementById('scenario-messages');
+  const title = document.getElementById('scenario-title');
+  const subtitle = document.getElementById('scenario-subtitle');
+
+  function bubbleClasses(color, side) {
+    const colors = {
+      blue: {
+        user: 'bg-slate-800 text-slate-200',
+        agent: 'bg-blue-500/20 border border-blue-500/30 text-blue-100',
+        chip: 'bg-blue-500/20 border-blue-500/40 text-blue-300',
+        badge: 'bg-blue-600'
+      },
+      emerald: {
+        user: 'bg-slate-800 text-slate-200',
+        agent: 'bg-emerald-500/20 border border-emerald-500/30 text-emerald-100',
+        chip: 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300',
+        badge: 'bg-emerald-600'
+      },
+      purple: {
+        user: 'bg-slate-800 text-slate-200',
+        agent: 'bg-purple-500/20 border border-purple-500/30 text-purple-100',
+        chip: 'bg-purple-500/20 border-purple-500/40 text-purple-300',
+        badge: 'bg-purple-600'
+      }
+    };
+    return side === 'left' ? colors[color].user : colors[color].agent;
+  }
+
+  function chipClasses(color) {
+    return {
+      blue: 'bg-blue-500/20 border-blue-500/40 text-blue-300',
+      emerald: 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300',
+      purple: 'bg-purple-500/20 border-purple-500/40 text-purple-300'
+    }[color];
+  }
+
+  function badgeClasses(color) {
+    return {
+      blue: 'bg-blue-600',
+      emerald: 'bg-emerald-600',
+      purple: 'bg-purple-600'
+    }[color];
+  }
+
+  function runScenario(index) {
+    if (!container || !title || !subtitle) return;
+
+    const data = scenarios[index];
+    title.textContent = data.title;
+    subtitle.textContent = data.subtitle;
+    container.innerHTML = '';
+
+    data.msgs.forEach((msg) => {
+      setTimeout(() => {
+        const wrapper = document.createElement('div');
+        wrapper.className = `flex gap-3 w-full ${msg.side === 'right' ? 'flex-row-reverse' : ''} animate-slide-in`;
+
+        const avatar = msg.side === 'left'
+          ? `<div class="w-8 h-8 rounded-full bg-slate-700 flex-shrink-0"></div>`
+          : `<div class="w-8 h-8 rounded-full ${badgeClasses(data.color)} flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0 shadow-lg">IA</div>`;
+
+        const bubble = `<div class="${bubbleClasses(data.color, msg.side)} p-3 rounded-2xl ${msg.side === 'right' ? 'rounded-tr-none' : 'rounded-tl-none'} text-xs md:text-sm max-w-[82%] shadow-sm">${msg.text}</div>`;
+
+        wrapper.innerHTML = avatar + bubble;
+        container.appendChild(wrapper);
+
+        if (msg.tag) {
+          setTimeout(() => {
+            const tag = document.createElement('div');
+            tag.className = 'flex justify-center animate-pop-in mt-2';
+            tag.innerHTML = `<div class="${chipClasses(data.color)} border px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-2 shadow-lg backdrop-blur-md"><span>⚡ ${msg.tag}</span></div>`;
+            container.appendChild(tag);
+          }, 500);
+        }
+      }, msg.delay);
+    });
+  }
+
+  if (container) {
+    runScenario(0);
+    setInterval(() => {
+      currentScenario = (currentScenario + 1) % scenarios.length;
+      runScenario(currentScenario);
+    }, 9000);
+  }
+</script>
+
+<style>
+  @keyframes slide-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in-up 0.4s ease-out forwards;
+  }
+
+  @keyframes pop-in {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-pop-in {
+    animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+  }
+</style>

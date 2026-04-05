@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://madecem.com/sitemap-index.xml

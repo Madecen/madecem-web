@@ -1,46 +1,34 @@
-# Astro Starter Kit: Basics
+# MADECEM Web
 
-```sh
-npm create astro@latest -- --template basics
+Sitio corporativo de MADECEM construido con Astro.
+
+## Estado actual
+- Páginas principales de marca ya preparadas
+- Formularios conectados a Google Apps Script mediante `PUBLIC_LEAD_FORM_ENDPOINT`
+- Sitemap y robots incluidos
+- Leads almacenados en Google Sheets y aviso por email a `mcarpi83@gmail.com`
+
+## Comandos
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Variables de entorno
+Crea un archivo `.env` con:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash
+PUBLIC_LEAD_FORM_ENDPOINT=URL_DEL_WEB_APP_DE_GOOGLE_APPS_SCRIPT
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Flujo de captación
+- Los formularios envían datos al endpoint de Google Apps Script
+- El script guarda cada lead en la hoja `Leads`
+- Además envía un aviso por correo a `mcarpi83@gmail.com`
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Archivos útiles
+- `src/components/LeadForm.astro` → formulario reutilizable
+- `google-apps-script-leads.js` → script de Google Apps Script
+- `LEADS-SETUP.md` → guía rápida de configuración

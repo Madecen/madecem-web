@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadForm from '../components/LeadForm.astro';
+---
+
+<Layout
+  title="Cómo trabajamos | MADECEM"
+  description="Así trabaja MADECEM: diagnóstico, diseño, implementación y evolución de soluciones de automatización, software e innovación operativa."
+>
+  <section class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-45 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(139,92,246,0.12),transparent_30%)]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 font-bold text-sm mb-8">
+          Cómo trabajamos
+        </div>
+
+        <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-[1.02] mb-8 max-w-5xl">
+          No implantamos herramientas al azar. <span class="text-blue-500">Diseñamos sistemas con criterio, método y foco en impacto.</span>
+        </h1>
+
+        <p class="text-lg md:text-2xl text-slate-300 leading-relaxed max-w-4xl mb-10">
+          Nuestro trabajo empieza entendiendo cómo funciona de verdad la operación. A partir de ahí definimos qué conviene automatizar, integrar o desarrollar para que la solución sirva al negocio y no al revés.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-[1.02] text-center shadow-lg shadow-blue-600/20">
+            Solicitar diagnóstico
+          </a>
+          <a href="#proceso" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors text-center">
+            Ver proceso
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#010413] relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.10),transparent_28%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.88fr] gap-12 items-start mb-14">
+        <div class="max-w-3xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">La idea de fondo</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Primero entendemos la operación. Después decidimos la tecnología.</h2>
+        <p class="text-slate-300 text-lg">Muchos proyectos fallan porque arrancan por la herramienta en lugar de arrancar por el problema. Nosotros trabajamos al revés: proceso, fricción, prioridad, diseño y ejecución.</p>
+        </div>
+        <div class="rounded-[2rem] border border-white/10 bg-slate-950/60 overflow-hidden shadow-2xl">
+          <img src="/images/madecem-como-trabajamos.png" alt="Visual de proceso, paneles y metodología estructurada" class="w-full h-[320px] object-cover opacity-82" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Menos improvisación</div>
+          <p class="text-slate-300">Cada decisión tiene un motivo operativo, no estético ni comercial.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Más claridad</div>
+          <p class="text-slate-300">Definimos alcance, prioridades y lógica antes de construir nada importante.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="font-bold text-white mb-2">Más utilidad real</div>
+          <p class="text-slate-300">Lo que se implanta tiene que reducir fricción y mejorar trabajo real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Proceso de trabajo</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Una forma de trabajar pensada para reducir incertidumbre y construir con sentido.</h2>
+        <p class="text-slate-300 text-lg">No todos los proyectos tienen la misma profundidad, pero la lógica general es esta: entender, acotar, diseñar, ejecutar y mejorar.</p>
+      </div>
+
+      <div class="space-y-8">
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[120px_1fr_0.8fr] gap-8 items-start">
+            <div>
+              <div class="w-20 h-20 rounded-3xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-3xl font-black text-blue-400">1</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Diagnóstico</p>
+              <h3 class="text-3xl font-black mb-5">Entendemos qué está pasando antes de proponer nada.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed">Analizamos procesos, canales, tareas repetitivas, puntos de fricción, dependencias manuales y oportunidades reales de mejora. La prioridad no es “meter IA”, sino detectar dónde tiene sentido intervenir.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-black/20 p-6">
+              <div class="text-white font-bold mb-3">Qué buscamos aquí</div>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li>• Identificar cuellos de botella</li>
+                <li>• Entender impacto operativo</li>
+                <li>• Separar ruido de prioridades reales</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[120px_1fr_0.8fr] gap-8 items-start">
+            <div>
+              <div class="w-20 h-20 rounded-3xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-3xl font-black text-emerald-400">2</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Priorización y alcance</p>
+              <h3 class="text-3xl font-black mb-5">Decidimos qué tiene sentido abordar primero y hasta dónde llegar.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed">No todo merece la misma inversión ni la misma complejidad. Definimos alcance según impacto, urgencia, viabilidad y encaje con el momento del negocio. Así evitamos proyectos sobredimensionados o poco útiles.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-black/20 p-6">
+              <div class="text-white font-bold mb-3">Qué buscamos aquí</div>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li>• Ordenar prioridades</li>
+                <li>• Delimitar alcance realista</li>
+                <li>• Evitar sobreingeniería</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[120px_1fr_0.8fr] gap-8 items-start">
+            <div>
+              <div class="w-20 h-20 rounded-3xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-3xl font-black text-cyan-400">3</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Diseño de solución</p>
+              <h3 class="text-3xl font-black mb-5">Definimos flujo, lógica, herramientas y estructura antes de construir.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed">Diseñamos cómo va a funcionar el sistema: qué datos recoge, qué decisiones toma, qué herramientas conecta, cuándo interviene una persona y cómo se mantiene la trazabilidad del proceso.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-black/20 p-6">
+              <div class="text-white font-bold mb-3">Qué buscamos aquí</div>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li>• Diseñar con lógica operativa</li>
+                <li>• Conectar bien tecnología y proceso</li>
+                <li>• Preparar una base escalable</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[120px_1fr_0.8fr] gap-8 items-start">
+            <div>
+              <div class="w-20 h-20 rounded-3xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-3xl font-black text-purple-400">4</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Implementación</p>
+              <h3 class="text-3xl font-black mb-5">Construimos lo necesario para que el sistema funcione en un entorno real.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed">Aquí aterrizamos la solución: automatizaciones, integraciones, agentes, lógica de negocio, formularios, paneles o software específico según el caso. La ejecución se orienta a utilidad, estabilidad y encaje con la operación del cliente.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-black/20 p-6">
+              <div class="text-white font-bold mb-3">Qué buscamos aquí</div>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li>• Pasar de idea a sistema usable</li>
+                <li>• Integrar sin romper operativa</li>
+                <li>• Dejar una base funcional</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[120px_1fr_0.8fr] gap-8 items-start">
+            <div>
+              <div class="w-20 h-20 rounded-3xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-3xl font-black text-amber-400">5</div>
+            </div>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Ajuste y evolución</p>
+              <h3 class="text-3xl font-black mb-5">Medimos, corregimos y ampliamos solo cuando tiene sentido.</h3>
+              <p class="text-slate-300 text-lg leading-relaxed">Una buena solución no termina en la puesta en marcha. Revisamos comportamiento, detectamos mejoras y decidimos qué conviene refinar o ampliar según resultados, uso real y nuevas necesidades.</p>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-black/20 p-6">
+              <div class="text-white font-bold mb-3">Qué buscamos aquí</div>
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li>• Afinar utilidad</li>
+                <li>• Corregir fricciones reales</li>
+                <li>• Evolucionar con criterio</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Qué esperamos del cliente</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Para construir bien, hace falta contexto, criterio y comunicación clara.</h2>
+          <p class="text-slate-300 text-lg">No hace falta que el cliente llegue con la solución definida, pero sí ayuda que pueda compartir cómo trabaja, dónde duele más la operación y qué objetivos persigue. Cuanto mejor se entiende el contexto, mejor se diseña la solución.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Transparencia:</strong> necesitamos entender problema, proceso y limitaciones reales.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Colaboración:</strong> algunas decisiones requieren validación de quien vive la operación cada día.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Pragmatismo:</strong> buscamos soluciones útiles, no complejidad innecesaria.</div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><strong class="text-white">Visión:</strong> conviene pensar no solo en el problema actual, sino en cómo debería funcionar mejor el sistema.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-gradient-to-b from-[#010413] to-blue-950/20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Siguiente paso</p>
+      <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">Si quieres saber cómo podría encajar en tu empresa, cuéntanos tu caso.</h2>
+      <p class="text-xl text-slate-300 mb-10">La mejor forma de empezar no es hablar de herramientas, sino entender qué parte de la operación necesitas mejorar.</p>
+      <LeadForm sourcePage="como-trabajamos" formType="diagnostico-proceso" compact={true} subtitle="Primera conversación orientada a proceso, viabilidad y siguiente paso razonable." />
+    </div>
+  </section>
+</Layout>

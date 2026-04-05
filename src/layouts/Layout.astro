@@ -62,10 +62,13 @@ const currentYear = new Date().getFullYear();
 				</a>
 				
 				<div class="hidden md:flex gap-8 items-center">
-					<a href="/#soluciones" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Soluciones</a>
+					<a href="/" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Inicio</a>
 					<a href="/empresa" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Empresa</a>
+					<a href="/servicios" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Servicios</a>
+					<a href="/como-trabajamos" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Cómo trabajamos</a>
+					<a href="/software-e-innovacion" class="text-sm font-bold uppercase tracking-widest text-slate-300 hover:text-white transition-colors">Software e innovación</a>
 					<a href="/#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-600/20 transition-all hover:scale-105">
-						Contacto
+						Solicitar diagnóstico
 					</a>
 				</div>
 
@@ -77,10 +80,13 @@ const currentYear = new Date().getFullYear();
 			</div>
 
 			<div id="mobile-menu" class="hidden md:hidden bg-[#020617] border-b border-white/5 px-6 py-8 space-y-6 shadow-2xl">
-				<a href="/#soluciones" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Soluciones</a>
+				<a href="/" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Inicio</a>
 				<a href="/empresa" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Empresa</a>
+				<a href="/servicios" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Servicios</a>
+				<a href="/como-trabajamos" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Cómo trabajamos</a>
+				<a href="/software-e-innovacion" class="block text-xl font-bold uppercase tracking-widest text-white mobile-link hover:text-blue-500 transition-colors">Software e innovación</a>
 				<a href="/#contacto" class="block w-full text-center bg-blue-600 text-white py-4 rounded-2xl font-black mobile-link active:scale-95 transition-transform">
-					Solicitar Información
+					Solicitar diagnóstico
 				</a>
 			</div>
 		</nav>
@@ -92,37 +98,43 @@ const currentYear = new Date().getFullYear();
 		<footer class="bg-[#010413] border-t border-white/5 py-20 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-900/50 to-transparent"></div>
 
-			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-				<div class="md:col-span-2">
-					<a href="/" class="text-xl font-black tracking-tighter text-white mb-6 block">MADECEM AI</a>
-					<p class="text-slate-300 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm">
-						Ingeniería de automatización pragmática para PYMEs en España.
-                        Recuperamos tu tiempo eliminando el trabajo manual repetitivo.
+			<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 text-center md:text-left">
+				<div class="xl:col-span-1">
+					<a href="/" class="text-xl font-black tracking-tighter text-white mb-6 block">MADECEM</a>
+					<p class="text-slate-300 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm mb-6">
+						Ingeniería operativa para empresas que necesitan automatizar mejor, integrar sistemas con sentido y construir una base más sólida para crecer.
 					</p>
-                    
-                    <div class="flex gap-4 mt-6 justify-center md:justify-start">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all" aria-label="Síguenos en LinkedIn">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all" aria-label="Síguenos en Twitter">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                    </div>
+                    <p class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold">
+                        Automatización · Software · Innovación
+                    </p>
 				</div>
 				
 				<div>
-					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sectores</h3>
+					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Navegación</h3>
 					<ul class="text-slate-300 space-y-3 text-sm">
-						<li><a href="/negocios/taller" class="hover:text-orange-500 transition-colors">Talleres Mecánicos</a></li>
-						<li><a href="/negocios/carniceria" class="hover:text-red-500 transition-colors">Carnicerías</a></li>
-						<li><a href="/negocios/restaurante" class="hover:text-yellow-500 transition-colors">Hostelería</a></li>
-                        <li><a href="/negocios/peluqueria" class="hover:text-pink-500 transition-colors">Peluquería</a></li>
+						<li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+						<li><a href="/empresa" class="hover:text-white transition-colors">Empresa</a></li>
+						<li><a href="/servicios" class="hover:text-white transition-colors">Servicios</a></li>
+						<li><a href="/como-trabajamos" class="hover:text-white transition-colors">Cómo trabajamos</a></li>
+                        <li><a href="/software-e-innovacion" class="hover:text-white transition-colors">Software e innovación</a></li>
 					</ul>
 				</div>
 				
 				<div>
-					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h3>
+					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Capacidades</h3>
 					<ul class="text-slate-300 space-y-3 text-sm">
+                        <li><a href="/servicios" class="hover:text-white transition-colors">Automatización de atención</a></li>
+                        <li><a href="/servicios" class="hover:text-white transition-colors">Agenda, reservas y pedidos</a></li>
+                        <li><a href="/software-e-innovacion" class="hover:text-white transition-colors">Integración de sistemas</a></li>
+                        <li><a href="/software-e-innovacion" class="hover:text-white transition-colors">Software específico</a></li>
+                        <li><a href="/software-e-innovacion" class="hover:text-white transition-colors">Innovación operativa</a></li>
+					</ul>
+				</div>
+
+                <div>
+					<h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Contacto y legal</h3>
+					<ul class="text-slate-300 space-y-3 text-sm">
+                        <li><a href="/#contacto" class="hover:text-white transition-colors">Solicitar diagnóstico</a></li>
                         <li><a href="/legal#aviso" class="hover:text-white transition-colors">Aviso Legal</a></li>
                         <li><a href="/legal#privacidad" class="hover:text-white transition-colors">Privacidad</a></li>
                         <li><a href="/legal#cookies" class="hover:text-white transition-colors">Cookies</a></li>
@@ -130,8 +142,9 @@ const currentYear = new Date().getFullYear();
 				</div>
 			</div>
             
-            <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/5 text-center md:text-left">
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-center md:text-left">
                 <p class="text-xs text-slate-300">&copy; {currentYear} MADECEM S.L. Todos los derechos reservados.</p>
+                <p class="text-xs text-slate-500">Ingeniería operativa para empresas.</p>
             </div>
 		</footer>
 

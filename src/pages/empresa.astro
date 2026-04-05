@@ -1,357 +1,171 @@
 ---
-// src/pages/empresa.astro
 import Layout from '../layouts/Layout.astro';
+import LeadForm from '../components/LeadForm.astro';
 ---
 
-<Layout title="MADECEM | Ingeniería de IA Corporativa" description="OCR, Visión Digital y Facturación Veri*Factu para empresas." theme="empresa">
-  
-  <section class="min-h-screen pt-32 pb-20 flex flex-col items-center justify-center relative overflow-hidden bg-[#020617]">
-    <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-600/5 rounded-full blur-[100px]"></div>
+<Layout
+  title="Empresa | MADECEM"
+  description="Conoce MADECEM: una empresa centrada en automatización, software e innovación operativa para negocios, pymes y empresas."
+>
+  <section class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-45 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_30%)]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 font-bold text-sm mb-8">
+          Empresa
+        </div>
+
+        <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-[1.02] mb-8 max-w-5xl">
+          MADECEM es una empresa orientada a <span class="text-blue-500">mejorar procesos, ordenar operaciones y construir sistemas útiles.</span>
+        </h1>
+
+        <p class="text-lg md:text-2xl text-slate-300 leading-relaxed max-w-4xl mb-10">
+          Trabajamos en el punto donde negocio, operación y tecnología se cruzan. Diseñamos soluciones de automatización, integración, software específico e innovación aplicada para empresas que necesitan menos fricción y más control.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-[1.02] text-center shadow-lg shadow-blue-600/20">
+            Solicitar diagnóstico
+          </a>
+          <a href="#quienes-somos" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors text-center">
+            Conocer MADECEM
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="max-w-7xl w-full mx-auto px-6 relative z-10 text-center">
-      
-      <div class="inline-flex items-center gap-2 bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 px-4 py-1.5 rounded-full text-[10px] font-bold mb-12 uppercase tracking-[0.2em]">
-        Ingeniería a Medida B2B
-      </div>
-      
-      <h1 class="text-5xl md:text-8xl font-black text-white mb-10 leading-[0.9] tracking-tighter">
-        Sistemas críticos.<br>
-        <span class="text-indigo-400">Impacto real.</span>
-      </h1>
-
-      <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-20 font-light leading-relaxed">
-        Desarrollamos infraestructura inteligente para empresas que no pueden permitirse errores.
-        Expertos en <strong>Visión Artificial</strong>, <strong>OCR</strong> y cumplimiento legal <strong>Veri*Factu 2026</strong>.
-      </p>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mt-12 mb-32">
-        
-        <div class="lg:col-span-4 flex flex-col items-center bg-slate-900/50 p-8 rounded-[3rem] border border-white/5">
-            <div class="phone-frame border-indigo-900/50 mb-8">
-                <div class="notch"></div>
-                <div class="screen bg-black/90 p-4">
-                    <p class="text-[8px] text-cyan-400 font-mono mb-4">COMPUTER_VISION_v4</p>
-                    <div class="w-full h-32 border border-cyan-500/20 rounded-lg relative overflow-hidden flex items-center justify-center">
-                         <div class="absolute top-0 left-0 w-full h-0.5 bg-cyan-500 animate-scan"></div>
-                         <span class="text-4xl">⚙️</span>
-                    </div>
-                    <div class="mt-6 space-y-2">
-                        <div class="h-2 bg-slate-800 rounded w-full"></div>
-                        <div class="h-2 bg-slate-800 rounded w-2/3"></div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="text-white font-bold mb-2">Visión Artificial</h4>
-            <p class="text-slate-500 text-xs">Control de stock e inventario automático mediante cámaras.</p>
+  <section id="quienes-somos" class="py-24 border-t border-white/5 bg-[#010413] relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.10),transparent_30%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Quiénes somos</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No entendemos la tecnología como escaparate. La entendemos como herramienta de trabajo.</h2>
+          <p class="text-slate-300 text-lg leading-relaxed mb-6">MADECEM nace desde una idea simple: muchos negocios y empresas no necesitan más ruido digital, sino procesos mejor pensados, herramientas mejor conectadas y sistemas que soporten el trabajo real del día a día.</p>
+          <p class="text-slate-300 text-lg leading-relaxed">Por eso nuestro enfoque no se limita a instalar soluciones estándar. Analizamos cómo funciona la operación, dónde se pierde tiempo, qué tareas generan fricción y qué capa de automatización, software o innovación puede aportar valor de verdad.</p>
         </div>
 
-        <div class="lg:col-span-4 py-12 px-8 bg-indigo-600 rounded-[3rem] shadow-2xl shadow-indigo-600/20 flex flex-col justify-center">
-            <h3 class="text-2xl font-black text-white mb-8">Consultoría Senior</h3>
-            <ul class="text-left space-y-6 text-indigo-100">
-                <li class="flex items-start gap-3 text-sm">
-                    <span class="font-bold">01.</span>
-                    <span><strong>Legal Tech:</strong> Adaptamos tu facturación a la ley Veri*Factu 2026.</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm">
-                    <span class="font-bold">02.</span>
-                    <span><strong>Extracción OCR:</strong> Digitalización masiva de documentos y albaranes.</span>
-                </li>
-                <li class="flex items-start gap-3 text-sm">
-                    <span class="font-bold">03.</span>
-                    <span><strong>Integración CRM:</strong> Tu IA habla directamente con tu base de datos actual.</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="lg:col-span-4 flex flex-col items-center bg-slate-900/50 p-8 rounded-[3rem] border border-white/5">
-            <div class="phone-frame border-indigo-900/50 mb-8">
-                <div class="notch"></div>
-                <div class="screen bg-black/90 p-4">
-                    <p class="text-[8px] text-indigo-400 font-mono mb-4">NLP_INVOICE_ENGINE</p>
-                    <div class="bg-indigo-950/50 p-3 rounded-lg text-[10px] text-indigo-300 italic mb-4 border-l-2 border-indigo-500 text-left">
-                        "Genera presupuesto para Proyecto X con 20h de desarrollo..."
-                    </div>
-                    <div class="bg-white/10 rounded p-4 h-20">
-                        <div class="w-full h-1 bg-white/20 mb-2"></div>
-                        <div class="w-3/4 h-1 bg-white/20"></div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="text-white font-bold mb-2">Procesamiento de Voz</h4>
-            <p class="text-slate-500 text-xs">Dictado inteligente de albaranes y presupuestos al CRM.</p>
-        </div>
-      </div>
-
-      <div class="w-full max-w-6xl mx-auto mb-32 text-left">
-        <div class="text-center mb-20">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ingeniería Transparente</h2>
-            <p class="text-slate-400">No es magia, es arquitectura de datos eficiente.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 group">
-            
-            <div> 
-                <div class="text-cyan-400 font-mono text-xs mb-4">/// CASE_STUDY: STOCK_OPTIMIZATION</div>
-                <h3 class="text-3xl font-bold text-white mb-4">Control de Stock en Tiempo Real</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    Nuestros agentes de visión computacional analizan el feed de tus cámaras de seguridad existentes. Detectan faltas de stock y actualizan tu ERP automáticamente.
-                </p>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-cyan-500 rounded-full"></span> Detección de objetos 99.8%.</li>
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-cyan-500 rounded-full"></span> Alertas vía Telegram/Slack.</li>
-                </ul>
-            </div>
-
-            <div class="bg-slate-900/40 border border-cyan-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
-                <div class="flex items-center justify-between relative z-10">
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-slate-600 flex items-center justify-center text-2xl relative shadow-lg shadow-cyan-500/10">
-                            📹<div class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                        </div>
-                        <span class="text-[10px] font-mono text-slate-500">INPUT: RTSP</span>
-                    </div>
-                    <div class="flex-1 h-px bg-slate-700 relative mx-4">
-                        <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right shadow-[0_0_10px_#22d3ee]"></div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="w-16 h-16 bg-cyan-950/30 rounded-xl border border-cyan-500/50 flex items-center justify-center text-2xl relative">🧠</div>
-                        <span class="text-[10px] font-mono text-cyan-400">ANALYSIS</span>
-                    </div>
-                    <div class="flex-1 h-px bg-slate-700 relative mx-4">
-                        <div class="absolute top-1/2 left-0 w-2 h-2 bg-cyan-400 rounded-full -mt-1 animate-flow-right" style="animation-delay: 1s;"></div>
-                    </div>
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="w-16 h-16 bg-slate-800 rounded-xl border border-green-500/30 flex items-center justify-center text-2xl">💾</div>
-                        <span class="text-[10px] font-mono text-green-400">ERP UPDATE</span>
-                    </div>
-                </div>
-                <div class="mt-8 bg-black/80 rounded-lg p-4 font-mono text-[10px] text-slate-400 border-t border-white/5">
-                    <p>> connected to cam_04</p>
-                    <p class="text-cyan-400">> object_detected: "caja_ref_2024" (conf: 0.98)</p>
-                    <p class="text-green-400">> update_stock(-1) -> SUCCESS</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
-            
-            <div class="lg:order-2">
-                <div class="text-indigo-400 font-mono text-xs mb-4">/// COMPLIANCE: ES_VERIFACTU_2026</div>
-                <h3 class="text-3xl font-bold text-white mb-4">Facturación Criptográfica</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    Nuestra API intercepta tus facturas, genera el encadenamiento de huellas digitales (Hash) requerido por la ley y se comunica con la AEAT en milisegundos.
-                </p>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Huella Digital automática.</li>
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> Certificado de inalterabilidad.</li>
-                </ul>
-            </div>
-
-            <div class="lg:order-1 bg-slate-900/40 border border-indigo-500/20 rounded-3xl p-8 relative overflow-hidden backdrop-blur-sm">
-                 <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none"></div>
-                 <div class="flex flex-col gap-6 relative z-10">
-                    <div class="flex items-center gap-4 p-3 rounded-lg bg-slate-800/50 border border-slate-700">
-                        <div class="w-10 h-10 bg-white text-black flex items-center justify-center rounded font-bold">PDF</div>
-                        <div class="flex-1">
-                            <div class="h-2 bg-slate-600 rounded w-12 mb-1"></div>
-                            <div class="text-[10px] text-slate-400">Factura #F2026-001</div>
-                        </div>
-                        <div class="text-indigo-400 animate-pulse">⬇</div>
-                    </div>
-                    <div class="p-4 rounded-xl border border-indigo-500/40 bg-indigo-950/20 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-[1px] bg-indigo-500 animate-scan-fast"></div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-[10px] text-indigo-300 font-mono">HASHING</span>
-                            <span class="text-[10px] text-green-400 font-mono">SECURE</span>
-                        </div>
-                        <div class="font-mono text-[8px] text-slate-500 break-all leading-tight">9a0f9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0</div>
-                    </div>
-                    <div class="flex items-center gap-4 p-3 rounded-lg bg-green-900/20 border border-green-500/30">
-                        <div class="w-10 h-10 bg-green-500/20 text-green-500 flex items-center justify-center rounded-full text-xl">🏛️</div>
-                        <div class="flex-1">
-                            <div class="text-xs text-green-300 font-bold">Enviado a Hacienda</div>
-                            <div class="text-[10px] text-green-500/60">Registro Veri*Factu OK</div>
-                        </div>
-                        <div class="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-
-        <div class="mt-32">
-            <div class="text-center mb-16">
-                <div class="inline-block bg-pink-900/30 border border-pink-500/30 text-pink-300 px-3 py-1 rounded text-xs font-mono mb-4">
-                    MODULE: ADAPTABILITY_ENGINE
-                </div>
-                <h3 class="text-3xl font-bold text-white">Tu entorno es único. Nuestra solución también.</h3>
-                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
-                    No instalamos plugins genéricos. Construimos tuberías de datos que conectan tu caos operativo con soluciones ordenadas.
-                </p>
-            </div>
-
-            <div class="relative bg-[#050510] border border-slate-800 rounded-3xl p-6 lg:p-12 overflow-hidden">
-                <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-                    
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-24 h-24 bg-slate-800/50 rounded-2xl border border-slate-600 border-dashed flex flex-wrap content-center justify-center p-2 gap-2 mb-4 relative">
-                            <span class="text-xl animate-float-1">🏭</span>
-                            <span class="text-xl animate-float-2">🏥</span>
-                            <span class="text-xl animate-float-3">🚚</span>
-                            <span class="text-xl animate-float-1">⚖️</span>
-                            <div class="absolute -bottom-2 bg-slate-900 text-[10px] text-slate-400 px-2 border border-slate-700 rounded">TU SECTOR</div>
-                        </div>
-                        <p class="text-sm text-slate-300 font-bold">Requisitos Crudos</p>
-                        <p class="text-[10px] text-slate-500">Logística, Legal, Salud...</p>
-                    </div>
-
-                    <div class="hidden lg:flex flex-1 h-2 bg-slate-800 rounded-full relative overflow-hidden mx-4">
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600 to-transparent w-1/2 animate-conveyor"></div>
-                    </div>
-                    <div class="lg:hidden text-2xl text-slate-600">⬇</div>
-
-                    <div class="flex flex-col items-center relative group">
-                        <div class="w-32 h-32 bg-indigo-950/20 rounded-full border border-indigo-500/30 flex items-center justify-center relative">
-                            <div class="absolute text-5xl opacity-80 animate-spin-slow">⚙️</div>
-                            <div class="absolute text-3xl opacity-60 animate-spin-reverse ml-8 mt-8">⚙️</div>
-                            
-                            <div class="absolute inset-0 border-2 border-indigo-400/50 rounded-full animate-ping-slow"></div>
-                        </div>
-                        <div class="mt-4 text-center">
-                            <p class="text-sm text-indigo-300 font-bold">Ingeniería MADECEM</p>
-                            <p class="text-[10px] text-indigo-400/60">Adaptación de algoritmos</p>
-                        </div>
-                    </div>
-
-                    <div class="hidden lg:flex flex-1 h-2 bg-slate-800 rounded-full relative overflow-hidden mx-4">
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pink-600 to-transparent w-1/2 animate-conveyor"></div>
-                    </div>
-                     <div class="lg:hidden text-2xl text-slate-600">⬇</div>
-
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-900 to-slate-900 rounded-2xl border border-pink-500/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(236,72,153,0.2)]">
-                            <span class="text-5xl animate-pulse">💎</span>
-                        </div>
-                        <p class="text-sm text-white font-bold">Solución a Medida</p>
-                        <p class="text-[10px] text-pink-400">Eficiencia Pura</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-      </div>
-
-      <div id="contacto" class="w-full max-w-4xl mx-auto mt-40 mb-20">
-          <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-700 rounded-3xl p-1 overflow-hidden">
-              <div class="bg-slate-900 px-6 py-3 flex items-center justify-between border-b border-slate-800">
-                  <div class="flex gap-2">
-                      <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                      <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                      <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                  </div>
-                  <div class="text-[10px] font-mono text-slate-500">ROOT_ACCESS_GRANTED</div>
-              </div>
-              
-              <div class="p-8 md:p-12 text-center">
-                  <h3 class="text-3xl font-bold text-white mb-4">¿Iniciamos Protocolo?</h3>
-                  <p class="text-slate-400 mb-8 max-w-lg mx-auto">
-                      Tienes un problema complejo. Nosotros tenemos la ingeniería. 
-                      Agendemos una sesión técnica de 30 minutos para evaluar la viabilidad.
-                  </p>
-
-                  <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                      <a href="mailto:hola@madecem.com" class="group relative px-8 py-4 bg-white text-black font-bold rounded-lg overflow-hidden transition-all hover:scale-105">
-                          <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-200 opacity-0 group-hover:opacity-50 transition-opacity"></div>
-                          <span class="relative flex items-center gap-2">
-                              <span>📧 Iniciar Contacto</span>
-                              <span class="text-lg">→</span>
-                          </span>
-                      </a>
-                      
-                      <a href="tel:+34000000000" class="text-slate-400 text-sm hover:text-white transition-colors flex items-center gap-2 font-mono">
-                          <span>📞 Llamada de Emergencia</span>
-                      </a>
-                  </div>
-
-                  <div class="mt-8 pt-8 border-t border-slate-800 flex justify-center gap-8 text-[10px] text-slate-600 font-mono">
-                      <span>LATENCY: 12ms</span>
-                      <span>ENCRYPTION: ON</span>
-                      <span>AVAILABILITY: 24/7</span>
-                  </div>
-              </div>
+        <div class="space-y-4">
+          <div class="rounded-[2rem] border border-white/10 bg-slate-950/60 overflow-hidden shadow-2xl">
+            <img src="/images/madecem-empresa.png" alt="Arquitectura visual de sistemas y estructura empresarial" class="w-full h-[280px] object-cover opacity-80" />
           </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div class="font-bold text-white mb-2">Visión</div>
+            <p class="text-slate-300">Construir sistemas que ayuden a empresas reales a operar mejor, no a depender de más complejidad.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div class="font-bold text-white mb-2">Enfoque</div>
+            <p class="text-slate-300">Proceso primero. Tecnología después. Siempre con criterio de utilidad.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div class="font-bold text-white mb-2">Objetivo</div>
+            <p class="text-slate-300">Reducir fricción operativa, mejorar coordinación y dejar una base más sólida para crecer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Cómo pensamos</p>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Una empresa útil no se define por lo que promete, sino por cómo aterriza el trabajo.</h2>
+        <p class="text-slate-300 text-lg">Estas son algunas ideas que marcan nuestra forma de trabajar y también el tipo de relación que buscamos con los clientes.</p>
       </div>
 
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Pragmatismo</h3>
+          <p class="text-slate-300 text-sm">Si una solución no mejora la operación, no merece la pena aunque suene avanzada.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Claridad</h3>
+          <p class="text-slate-300 text-sm">Definimos alcance, prioridades y lógica para evitar ruido, expectativas confusas y sobreingeniería.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Adaptación real</h3>
+          <p class="text-slate-300 text-sm">Cada empresa trabaja de una forma distinta. La solución debe ajustarse al proceso, no forzarlo.</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold text-white mb-3">Evolución</h3>
+          <p class="text-slate-300 text-sm">Buscamos dejar una base que pueda crecer bien, sin convertirse en otra fuente de caos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Con quién trabajamos</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">Encajamos mejor con empresas que quieren ordenar su operación de verdad.</h2>
+          <p class="text-slate-300 text-lg">No trabajamos desde una idea genérica de “IA para todo”. Encajamos especialmente bien con negocios, pymes y empresas que ya sienten fricción operativa y quieren resolverla con criterio.</p>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <strong class="text-white">Negocios con alta carga manual:</strong>
+            <p class="text-slate-300 mt-2">Consultas, reservas, pedidos, coordinación o tareas repetitivas que absorben demasiado tiempo.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <strong class="text-white">Pymes con herramientas desconectadas:</strong>
+            <p class="text-slate-300 mt-2">Empresas que han crecido con sistemas parciales y necesitan integrarlos mejor.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <strong class="text-white">Organizaciones con procesos propios:</strong>
+            <p class="text-slate-300 mt-2">Casos donde una herramienta estándar no encaja bien y hace falta adaptar más el sistema.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <strong class="text-white">Empresas que quieren evolucionar:</strong>
+            <p class="text-slate-300 mt-2">Equipos que buscan una base más sólida para crecer, mejorar coordinación o ganar capacidad operativa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Qué nos diferencia</p>
+          <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-6">No nos interesa vender complejidad. Nos interesa que el sistema tenga sentido.</h2>
+          <p class="text-slate-300 text-lg">Nuestra diferencia no está solo en la tecnología que usamos, sino en la forma de enfocar cada caso. Buscamos comprender el negocio, traducirlo a lógica operativa y construir una solución que realmente encaje.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="font-bold text-white mb-2">Mirada de proceso</div>
+            <p class="text-slate-300">No tratamos síntomas aislados sin entender el flujo completo.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="font-bold text-white mb-2">Capacidad técnica</div>
+            <p class="text-slate-300">Podemos movernos entre automatización, integración, software e innovación según el caso.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="font-bold text-white mb-2">Lógica de negocio</div>
+            <p class="text-slate-300">La solución no se diseña solo para funcionar, sino para encajar en la operación real.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div class="font-bold text-white mb-2">Escala razonable</div>
+            <p class="text-slate-300">Construimos desde lo útil hoy, pero dejando espacio para crecer mañana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-gradient-to-b from-[#010413] to-blue-950/20 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">Siguiente paso</p>
+      <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">Si buscas una empresa que piense en proceso, podemos hablar.</h2>
+      <p class="text-xl text-slate-300 mb-10">Cuéntanos qué parte de la operación te preocupa y te ayudaremos a ver qué enfoque tendría sentido en tu caso.</p>
+      <LeadForm sourcePage="empresa" formType="diagnostico-empresa" compact={true} subtitle="Primera conversación orientada a encaje, problema y siguiente paso útil." />
     </div>
   </section>
 </Layout>
-
-<style is:global>
-    /* ANIMACIONES BASE */
-    @keyframes scan { 
-        0%, 100% { top: 0; } 
-        50% { top: 100%; } 
-    }
-    .animate-scan { animation: scan 3s linear infinite; }
-    
-    @keyframes flow-right {
-        0% { left: 0; opacity: 0; }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { left: 100%; opacity: 0; }
-    }
-    .animate-flow-right { animation: flow-right 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-
-    @keyframes scan-fast { 
-        0% { top: 0; } 
-        100% { top: 100%; } 
-    }
-    .animate-scan-fast { animation: scan-fast 1.5s linear infinite; }
-
-    /* ANIMACIONES FÁBRICA */
-    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    .animate-spin-slow { animation: spin-slow 8s linear infinite; }
-
-    @keyframes spin-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
-    .animate-spin-reverse { animation: spin-reverse 8s linear infinite; }
-
-    @keyframes ping-slow { 
-        75%, 100% { transform: scale(1.5); opacity: 0; } 
-    }
-    .animate-ping-slow { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
-
-    @keyframes conveyor { 
-        0% { transform: translateX(-100%); } 
-        100% { transform: translateX(200%); } 
-    }
-    .animate-conveyor { animation: conveyor 2s linear infinite; }
-
-    @keyframes float { 
-        0%, 100% { transform: translateY(0); } 
-        50% { transform: translateY(-5px); } 
-    }
-    .animate-float-1 { animation: float 3s ease-in-out infinite; }
-    .animate-float-2 { animation: float 4s ease-in-out infinite; }
-    .animate-float-3 { animation: float 2.5s ease-in-out infinite; }
-
-    /* ESTILOS TELÉFONO */
-    .phone-frame {
-        position: relative; width: 200px; height: 400px;
-        background: #020617; border-radius: 35px;
-        padding: 6px; border: 2px solid #1e293b;
-    }
-    .screen { 
-        width: 100%; height: 100%;
-        border-radius: 30px; overflow: hidden; position: relative; 
-    }
-    .notch { 
-        position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-        width: 80px; height: 18px; background: #020617; 
-        border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; z-index: 50; 
-    }
-</style>

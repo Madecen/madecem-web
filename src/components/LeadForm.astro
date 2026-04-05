@@ -1,0 +1,119 @@
+---
+interface Props {
+  formType?: string;
+  sourcePage?: string;
+  title?: string;
+  subtitle?: string;
+  compact?: boolean;
+}
+
+const {
+  formType = 'diagnostico',
+  sourcePage = 'general',
+  title,
+  subtitle = 'Primera conversación orientada a proceso, impacto y viabilidad real.',
+  compact = false,
+} = Astro.props;
+
+const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
+---
+
+<div class="max-w-2xl mx-auto">
+  {title && <h3 class="text-2xl md:text-3xl font-black tracking-tighter mb-4 text-white">{title}</h3>}
+  <form
+    class="space-y-4 text-left"
+    method="POST"
+    action={endpoint || '#'}
+    data-lead-form
+    data-endpoint={endpoint}
+  >
+    <input type="hidden" name="formType" value={formType} />
+    <input type="hidden" name="sourcePage" value={sourcePage} />
+    <input type="hidden" name="website" value="" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for={`${sourcePage}-name`} class="block text-sm font-bold text-slate-200 mb-2">Nombre</label>
+        <input id={`${sourcePage}-name`} name="name" type="text" required autocomplete="name" placeholder="Tu nombre" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+      <div>
+        <label for={`${sourcePage}-email`} class="block text-sm font-bold text-slate-200 mb-2">Email</label>
+        <input id={`${sourcePage}-email`} name="email" type="email" required autocomplete="email" placeholder="tu@empresa.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for={`${sourcePage}-company`} class="block text-sm font-bold text-slate-200 mb-2">Empresa</label>
+        <input id={`${sourcePage}-company`} name="company" type="text" autocomplete="organization" placeholder="Nombre de tu empresa" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+      <div>
+        <label for={`${sourcePage}-phone`} class="block text-sm font-bold text-slate-200 mb-2">Teléfono o WhatsApp</label>
+        <input id={`${sourcePage}-phone`} name="phone" type="tel" autocomplete="tel" placeholder="Tu número" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+    </div>
+
+    <div>
+      <label for={`${sourcePage}-need`} class="block text-sm font-bold text-slate-200 mb-2">Qué necesitas mejorar</label>
+      <textarea id={`${sourcePage}-need`} name="message" rows={compact ? 4 : 6} required placeholder="Cuéntanos qué proceso, canal o parte de la operación quieres mejorar." class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+    </div>
+
+    <div class="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-slate-300">
+      <label class="flex items-start gap-3">
+        <input type="checkbox" name="privacyAccepted" value="yes" required class="mt-1 h-4 w-4 rounded border-white/20 bg-slate-950 text-blue-500 focus:ring-blue-500" />
+        <span>Acepto la <a href="/legal#privacidad" class="text-blue-300 hover:text-blue-200 underline underline-offset-4">política de privacidad</a> y el tratamiento de mis datos para gestionar esta solicitud.</span>
+      </label>
+      <label class="flex items-start gap-3">
+        <input type="checkbox" name="marketingAccepted" value="yes" class="mt-1 h-4 w-4 rounded border-white/20 bg-slate-950 text-blue-500 focus:ring-blue-500" />
+        <span>Quiero recibir comunicaciones futuras de MADECEM sobre servicios, contenidos o novedades.</span>
+      </label>
+    </div>
+
+    <div class="space-y-3">
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-xl shadow-blue-600/20">
+        Solicitar diagnóstico
+      </button>
+      <p class="text-xs text-slate-300 text-center">{subtitle}</p>
+      <p class="text-xs text-slate-500 text-center" data-form-status aria-live="polite"></p>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll('[data-lead-form]').forEach((form) => {
+    if (!(form instanceof HTMLFormElement)) return;
+    const status = form.querySelector('[data-form-status]');
+    const endpoint = form.dataset.endpoint;
+
+    form.addEventListener('submit', async (event) => {
+      if (!endpoint) {
+        event.preventDefault();
+        if (status) status.textContent = 'Formulario pendiente de conectar. Falta añadir el endpoint definitivo de Google Apps Script.';
+        return;
+      }
+
+      event.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (submitButton instanceof HTMLButtonElement) submitButton.disabled = true;
+      if (status) status.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          mode: 'cors',
+        });
+
+        if (!response.ok) throw new Error('bad_response');
+
+        form.reset();
+        if (status) status.textContent = 'Solicitud enviada. Te responderemos lo antes posible.';
+      } catch (error) {
+        if (status) status.textContent = 'No se pudo enviar ahora mismo. Puedes escribir directamente a info@madecem.com.';
+      } finally {
+        if (submitButton instanceof HTMLButtonElement) submitButton.disabled = false;
+      }
+    });
+  });
+</script>
