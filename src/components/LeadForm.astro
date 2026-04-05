@@ -94,7 +94,7 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
     }
 
     form.action = endpoint;
-    form.target = '_blank';
+    form.target = '_self';
 
     form.addEventListener('submit', () => {
       const submitButton = form.querySelector('button[type="submit"]');
@@ -103,7 +103,7 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
 
       window.setTimeout(() => {
         form.reset();
-        if (status) status.textContent = 'Solicitud enviada. Si no ves confirmación, revisa si se abrió una nueva pestaña.';
+        if (status) status.textContent = 'Solicitud enviada.';
         if (submitButton instanceof HTMLButtonElement) submitButton.disabled = false;
       }, 1200);
     });
