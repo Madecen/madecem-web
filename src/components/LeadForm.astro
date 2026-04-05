@@ -98,14 +98,26 @@ const endpoint = import.meta.env.PUBLIC_LEAD_FORM_ENDPOINT || '';
 
     form.addEventListener('submit', () => {
       const submitButton = form.querySelector('button[type="submit"]');
-      if (submitButton instanceof HTMLButtonElement) submitButton.disabled = true;
-      if (status) status.textContent = 'Abriendo envío del formulario...';
+      const originalText = submitButton instanceof HTMLButtonElement ? submitButton.textContent : '';
+
+      if (submitButton instanceof HTMLButtonElement) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+      }
+
+      if (status) {
+        status.textContent = 'Solicitud enviada correctamente. Te responderemos lo antes posible.';
+        status.classList.remove('text-slate-500');
+        status.classList.add('text-emerald-300', 'font-semibold');
+      }
 
       window.setTimeout(() => {
         form.reset();
-        if (status) status.textContent = 'Solicitud enviada.';
-        if (submitButton instanceof HTMLButtonElement) submitButton.disabled = false;
-      }, 1200);
+        if (submitButton instanceof HTMLButtonElement) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText || 'Solicitar diagnóstico';
+        }
+      }, 800);
     });
   });
 </script>
