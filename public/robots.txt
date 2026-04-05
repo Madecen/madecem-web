@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://madecem.com/sitemap-index.xml
+Sitemap: https://madecem.com/sitemap.xml
